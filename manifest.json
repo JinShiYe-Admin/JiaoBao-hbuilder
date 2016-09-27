@@ -257,7 +257,8 @@
 			"html/tab_official.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/utils/grideControl.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -282,6 +283,16 @@
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"js/utils/gride.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/utils/grideControl.js"
 				],
 				"refer": [],
 				"priority": 0

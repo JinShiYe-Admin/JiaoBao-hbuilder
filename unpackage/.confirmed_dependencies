@@ -28,7 +28,8 @@
       "fonts/mui.ttf",
       "css/mui.min.css",
       "js/app/index.js",
-      "html/home/tab_home.html"
+      "html/home/tab_home.html",
+      "html/tab_home.html"
     ],
     "refer": [
       "html/mine/tab_mine.html",
@@ -59,7 +60,8 @@
   "html/tab_official.html": {
     "resources": [
       "js/mui.min.js",
-      "css/mui.min.css"
+      "css/mui.min.css",
+      "js/utils/grideControl.js"
     ],
     "refer": []
   },
@@ -81,6 +83,15 @@
     "resources": [
       "js/mui.min.js",
       "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "js/utils/gride.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/utils/grideControl.js"
     ],
     "refer": []
   }

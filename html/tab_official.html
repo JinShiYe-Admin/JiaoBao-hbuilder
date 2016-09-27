@@ -10,12 +10,20 @@
 		<script type="text/javascript">
 			mui.init()
 		</script>
+		<script src="../js/utils/grideControl.js"></script>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
-		    <h1 class="mui-title">公文</h1>
+			<h1 class="mui-title">公文</h1>
 		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
 	</body>
+	<script>
+		mui.plusReady(function() {
+			putGrideData(createArray())
+		})
+	</script>
 
 </html>
