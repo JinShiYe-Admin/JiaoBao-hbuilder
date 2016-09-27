@@ -1,0 +1,87 @@
+{
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/app/index.js",
+      "html/home/tab_home.html"
+    ],
+    "refer": [
+      "html/mine/tab_mine.html",
+      "html/dynamic/tab_dynamic.html",
+      "html/interaction/tab_interaction.html",
+      "html/official/tab_official.html"
+    ]
+  },
+  "html/home/tab_home.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/app/index.js"
+    ],
+    "refer": []
+  },
+  "html/index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/app/index.js",
+      "html/home/tab_home.html"
+    ],
+    "refer": [
+      "html/mine/tab_mine.html",
+      "html/dynamic/tab_dynamic.html",
+      "html/interaction/tab_interaction.html",
+      "html/official/tab_official.html",
+      "html/tab_official.html",
+      "html/tab_mine.html",
+      "html/tab_interaction.html",
+      "html/tab_dynamic.html",
+      "html/tab_home.html"
+    ]
+  },
+  "html/official/tab_official.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/tab_home.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/tab_official.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/tab_interaction.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/tab_dynamic.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/tab_mine.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  }
+}
