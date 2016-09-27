@@ -11,7 +11,11 @@ var createGirde = function(array) {
 			console.log("字符串：" + map.key + "图标：" + map.value)
 			var li = document.createElement('li')
 			var bgColor=getRandomColor();
-			li.className = "mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3";
+			if(array.length==3){
+				li.className = "mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4";
+			}else{
+				li.className = "mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3";
+			}
 			li.innerHTML = '<a href="#">' +
 				'<img class="mui-icon circular-square" src="' + map.value + '"style="background-color:'+bgColor+';"></img>' +
 				'<div class="mui-media-body">' + map.key + '</div>' +

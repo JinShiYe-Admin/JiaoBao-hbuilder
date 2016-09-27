@@ -62,7 +62,8 @@
       "js/mui.min.js",
       "css/mui.min.css",
       "js/utils/grideControl.js",
-      "css/utils/imgeControl.css"
+      "css/utils/imgeControl.css",
+      "fonts/mui.ttf"
     ],
     "refer": [
       "html/official/noticelist_main.html"
@@ -112,7 +113,30 @@
     "resources": [
       "image/icon-unread.png",
       "image/icon-accessory.png",
-      "css/utils/notice.css"
+      "css/utils/notice.css",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "html/official/noticedetails_main.html"
     ]
+  },
+  "html/official/noticedetails_main.html": {
+    "resources": [
+      "html/official/noticedetails_sub.html",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "html/official/noticedetails_sub.html"
+    ]
+  },
+  "html/official/noticedetails_sub.html": {
+    "resources": [
+      "image/icon-accessory.png",
+      "css/utils/notice.css"
+    ],
+    "refer": []
   }
 }
