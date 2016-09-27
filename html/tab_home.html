@@ -10,12 +10,32 @@
 		<script type="text/javascript">
 			mui.init()
 		</script>
+		<script src="../js/utils/carouselControl.js"></script>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
 		    <h1 class="mui-title">首页</h1>
 		</header>
+		<div id="slider" class="mui-slider" >
+		  <div class="mui-slider-group mui-slider-loop">
+		  
+		  </div>
+		  <div class="mui-slider-indicator mui-text-right">
+		  </div>
+		</div>
 	</body>
+	<script>
+	mui.plusReady(function(){
+		var titles=["幸福是可以一起睡觉","幸福是可以一起吃饭","幸福是可以一起拉屎"]
+		addImg(getImgArray(),titles)
+		addStrip(getImgArray())
+		var slider = mui("#slider");
+		slider.slider({
+					interval: 5000
+				});
+	})
+		
+	</script>
 
 </html>
