@@ -17,7 +17,7 @@ var createGirde = function(array) {
 				'<div class="mui-media-body">' + map.key + '</div>' +
 				'</a>';
 			li.addEventListener('tap',function(){
-				openWindow(map.tarUrl)
+				openTarWindow(map.tarUrl)
 			})
 			gride.appendChild(li)
 		})
