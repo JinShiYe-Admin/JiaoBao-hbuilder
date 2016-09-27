@@ -302,7 +302,10 @@
 			},
 			"html/official/noticelist_main.html": {
 				"resources": [
-					"html/official/noticelist_sub.html"
+					"html/official/noticelist_sub.html",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
