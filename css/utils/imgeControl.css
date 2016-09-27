@@ -2,8 +2,9 @@
  * @anthor an
  * @time 9.27
  */
+/**圆形*/
 .circular-square{
     border-radius:50%;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
