@@ -261,7 +261,9 @@
 					"js/utils/grideControl.js",
 					"css/utils/imgeControl.css"
 				],
-				"refer": [],
+				"refer": [
+					"html/official/noticelist_main.html"
+				],
 				"priority": 0
 			},
 			"html/tab_interaction.html": {
@@ -294,6 +296,32 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"js/utils/grideControl.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/official/noticelist_main.html": {
+				"resources": [
+					"html/official/noticelist_sub.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/official/noticelist_sub.html": {
+				"resources": [
+					"image/icon-unread.png",
+					"js/mui.min.js",
+					"image/icon-accessory.png",
+					"css/utils/notice.css"
+				],
+				"refer": [
+					"html/official/noticedetails_main.html"
+				],
+				"priority": 0
+			},
+			"html/official/noticedetails_main.html": {
+				"resources": [
+					"html/official/noticedetails_sub.html"
 				],
 				"refer": [],
 				"priority": 0

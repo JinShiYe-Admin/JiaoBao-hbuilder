@@ -1,0 +1,78 @@
+/**
+ * 公告通知样式
+ */
+
+.mui-table-view {
+	background: transparent;
+	/*背景透明*/
+}
+
+.mui-table-view-cell {
+	background: white;
+	/*背景白色*/
+	border-radius: 20px;
+	/*圆角*/
+	margin-top: 10px;
+	/*距离顶部*/
+}
+
+.mui-table-view:before,
+.mui-table-view:after,
+.mui-table-view-cell:after {
+	height: 0px;
+	/*头部和尾部*/
+}
+
+.notice-title {
+	/*通知的标题*/
+	text-align: center;
+	/*居中*/
+	font-size: 24px;
+	/*字体大小*/
+	color: dodgerblue;
+	/*字体颜色*/
+}
+
+.notice-content {
+	/*通知的内容*/
+	font-size: 14px;
+	/*字体大小*/
+	font-weight: 900;
+	/*字体粗细*/
+	margin-top: 10px;
+	/*距离顶部*/
+	margin-bottom: 10px;
+	/*距离底部*/
+	overflow: hidden;
+	/*设置多于3行省略号*/
+	text-overflow: ellipsis;
+	/*设置多于3行省略号*/
+	display: -webkit-box;
+	/*设置多于3行省略号*/
+	-webkit-line-clamp: 3;
+	/*设置多于3行省略号*/
+	-webkit-box-orient: vertical;
+	/*设置多于3行省略号*/
+}
+
+.notice-unread {
+	/*图标：未读*/
+	width: 40px;
+	/*宽度*/
+	position: absolute;
+	/*绝对布局*/
+	left: 0;
+	/*距离左边*/
+}
+
+.notice-time {
+	/*时间*/
+	float: right;
+	/*居右*/
+}
+
+.notice-accessory {
+	/*附件*/
+	text-decoration: underline;
+	/*字体有下划线*/
+}

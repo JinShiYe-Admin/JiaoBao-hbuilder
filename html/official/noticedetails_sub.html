@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/utils/notice.css" />
+		<style>
+			.mui-table-view-cell {
+				background: white;
+				/*背景白色*/
+				border-radius: 0px;
+				/*圆角*/
+				margin-top: 10px;
+				/*距离顶部*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<div>
+							<p class="notice-title">中秋节放假安排通知</p>
+							<font class="notice-content">中秋节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~</font>
+							<p class="notice-time">【公司全体】</p>
+							<br />
+							<p class="notice-time">刚刚</p>
+							<br />
+							<p class="notice-time">行政部发布</p>
+							<div>
+								<img src="../../image/icon-accessory.png" />
+								<a class="notice-accessory">中秋节放假安排时间通知表1</a><br />
+							</div>
+							<div>
+								<img src="../../image/icon-accessory.png" />
+								<a class="notice-accessory">中秋节放假安排时间通知表2</a><br />
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+						<div>
+							<a>30人已读</a>
+							<a style="margin-left: 30px;">0人未读</a>
+							<span class="mui-icon mui-icon-forward mui-pull-right"></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+				}
+			});
+
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.mui-table-view');
+					table.innerHTML = '';
+					var noticelist1 = '<div>\
+							<p class="notice-title">中秋节放假安排通知' + '<font style="color: red;">新</font>' + '</p>\
+							<font class="notice-content">中秋节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~</font>\
+							<p class="notice-time">【公司全体】</p>\
+							<br />\
+							<p class="notice-time">刚刚</p>\
+							<div>\
+								<img src="../../image/icon-accessory.png" />\
+								<a class="notice-accessory">中秋节放假安排时间通知表1</a><br />\
+							</div>\
+							<div>\
+								<img src="../../image/icon-accessory.png" />\
+								<a class="notice-accessory">中秋节放假安排时间通知表2</a><br />\
+							</div>\
+						</div>';
+					var li1 = document.createElement('li');
+					li1.className = 'mui-table-view-cell';
+					li1.innerHTML = noticelist1;
+					var noticelist2 = '<div>\
+							<a>30人已读</a>\
+							<a style="margin-left: 30px;">0人未读</a>\
+							<font style="color: red;">新</font>\
+							<span class="mui-icon mui-icon-forward mui-pull-right"></span>\
+						</div>';
+					var li2 = document.createElement('li');
+					li2.className = 'mui-table-view-cell';
+					li2.innerHTML = noticelist2;
+					//下拉刷新
+					table.appendChild(li1);
+					table.appendChild(li2);
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+
+			mui.plusReady(function() {
+
+			});
+		</script>
+	</body>
+
+</html>
