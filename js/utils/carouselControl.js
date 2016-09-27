@@ -1,4 +1,5 @@
 /**
+ * @author an
  * 轮播图  加载图片
  * @param {Object} imgUrls
  */
@@ -17,7 +18,7 @@ var addImg=function(imgUrls,titles){
 	addDiv(imgUrls[0],group)
 }
 /**
- * 
+ * 加载底部条状物
  * @param {Object} imgUrls
  */
 var addStrip=function(imgUrls){
@@ -34,7 +35,7 @@ var addStrip=function(imgUrls){
 	}
 }
 /**
- * 
+ * 加载第一条和最后一条数据
  * @param {Object} imgUrl
  * @param {Object} group
  */
@@ -47,7 +48,7 @@ var addDiv=function(imgUrl,group){
 	group.appendChild(div);
 }
 /**
- * 
+ * 这个其实没啥用
  */
 var getImgArray=function(){
 	var imgArray=new Array();
