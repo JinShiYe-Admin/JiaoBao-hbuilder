@@ -16,6 +16,9 @@ var createGirde = function(array) {
 				'<img class="mui-icon circular-square" src="' + map.value + '"style="background-color:'+bgColor+';"></img>' +
 				'<div class="mui-media-body">' + map.key + '</div>' +
 				'</a>';
+			li.addEventListener('tap',function(){
+				openWindow(map.tarUrl)
+			})
 			gride.appendChild(li)
 		})
 	}
@@ -30,12 +33,13 @@ var putGrideData = function(array) {
 /**
  * 数据 数据
  */
-var createArray = function(chars, imgUrls) {
+var createArray = function(chars, imgUrls,urls) {
 	var array=new Array();
 	for(i = 0; i < chars.length; i++) {
 		var value = {
 			key: chars[i],
-			value: imgUrls[i]
+			value: imgUrls[i],
+			tarUrl:urls[i]
 		}
 		array.push(value)
 	}
@@ -47,4 +51,13 @@ var createArray = function(chars, imgUrls) {
  */
 var getRandomColor = function(){
   return '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6);
+}
+/**
+ * 打开新页面
+ */
+var openTarWindow=function(tarUrl){
+	mui.openWindow({
+		url:tarUrl,
+		id:tarUrl
+	})
 }
