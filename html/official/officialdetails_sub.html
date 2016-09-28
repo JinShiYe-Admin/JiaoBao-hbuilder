@@ -22,7 +22,7 @@
 			<div class="mui-scroll ">
 				<!--数据列表-->
 				<ul class="mui-table-view">
-					<li class="mui-table-view-cell">
+					<!--<li class="mui-table-view-cell">
 						<div class="offical-height">
 							<img class="offical-image" src="../../image/home/u292.png">
 							<h4 class="offical-name">童童童童童</h4>
@@ -35,10 +35,10 @@
 					</li>
 					<div class="offical-bottom-reply-content-line"></div>
 					<li class="mui-table-view-cell">
-						<font class="offical-bottom-title">综合部拟办</font>
+						<div class="offical-bottom-title">综合部拟办</div>
 						<div class="offical-height">
-							<img class="offical-image" src="../../image/official/u101.png">
-							<font class="offical-bottom-department">综合部</font>
+							<img class="offical-image offical-bottom-image" src="../../image/official/u101.png">
+							<font class="offical-name offical-bottom-department">综合部</font>
 							<div class="offical-bottom-content">
 								<div class="offical-reply">
 									<div>
@@ -56,15 +56,15 @@
 									</div>
 								</div>
 								<div class="offical-arrow"></div>
-								<div class="offical-arrow2"></div>
+								<div class="offical-arrow offical-arrow2"></div>
 							</div>
 						</div>
 					</li>
 					<li class="mui-table-view-cell">
-						<font class="offical-bottom-title">公司领导批示</font>
+						<div class="offical-bottom-title">公司领导批示</div>
 						<div class="offical-height">
-							<img class="offical-image" src="../../image/icon-personal.png">
-							<font class="offical-bottom-department">公司领导</font>
+							<img class="offical-image offical-bottom-image" src="../../image/icon-personal.png">
+							<font class="offical-name offical-bottom-department">公司领导</font>
 							<div class="offical-bottom-content">
 								<div class="offical-reply">
 									<div>
@@ -94,16 +94,18 @@
 											</font>
 										</div>
 									</div>
+									<div class="offical-bottom-reply-content-line"></div>
 								</div>
 								<div class="offical-arrow"></div>
-								<div class="offical-arrow2"></div>
+								<div class=" offical-arrow offical-arrow2"></div>
 							</div>
 						</div>
-					</li>
+					</li>-->
 				</ul>
 			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/app/official/officialdetails.js"></script>
 		<script>
 			mui.init({
 				pullRefresh: {
@@ -119,21 +121,125 @@
 			function pulldownRefresh() {
 				setTimeout(function() {
 					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for(var i = cells.length, len = i + 3; i < len; i++) {
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell';
-						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
-						//下拉刷新，新纪录插到最前面；
-						table.insertBefore(li, table.firstChild);
-					}
+					var bottom3 = officialdetailsAddBottom3();//返回一条底部数据
+					officialdetails.addBottom(table, bottom3[0], bottom3[1]);//增加一条底部数据
 					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 				}, 1500);
 			}
 
 			mui.plusReady(function() {
-
+				var table = document.body.querySelector('.mui-table-view');
+				var top = officialdetailsAddTop();//返回一条顶部数据
+				var bottom1 = officialdetailsAddBottom();//返回一条底部数据
+				var bottom2 = officialdetailsAddBottom2();//返回一条底部数据
+				officialdetails.addTop(table, top);//增加顶部
+				officialdetails.addBottom(table, bottom1[0], bottom1[1]);//增加一条底部数据
+				officialdetails.addBottom(table, bottom2[0], bottom2[1]);//增加一条底部数据
 			});
+
+			/**
+			 * 返回一条顶部数据
+			 */
+			function officialdetailsAddTop() {
+				var mDate = '2016-9-28 13:57:38';
+				var table = document.body.querySelector('.mui-table-view');
+				var topImageUrl = '../../image/home/u292.png';
+				var topName = '小熊猫';
+				var topContent = '新招南片数据员账号申请：姓名：李真，联系方式：\
+								17733124553，申请客服平台（serv.108800.net）账号,，\
+								可将原南片数据王兆玉账号修改为新入职人员姓名，后提供给我，谢谢，\
+								请公司协助处理。由于工作需要，请帮忙给恩施客服陈秋艳建立代理商平台帐号，\
+								请加急处理，着急使用，谢谢';
+				var topTime = mDate;
+				var topData = [topImageUrl, topName, topContent, topTime];
+				return topData;
+			}
+
+			/**
+			 * 返回一条底部数据
+			 */
+			function officialdetailsAddBottom() {
+				var bottomTitle = '综合部拟办'
+				var bottomImageUrl = '../../image/official/u101.png';
+				var bottomDepartment = '综合部';
+				var bottomData = [bottomTitle, bottomImageUrl, bottomDepartment];
+
+				var bottomReplyName1 = '张晓均';
+				var bottomReplyTime1 = '2016-9-28 15:48:05';
+				var bottomReplyContent1 = '请信息系统部办理';
+				var bottomReplyData1 = [bottomReplyName1, bottomReplyTime1, bottomReplyContent1];
+
+				var bottomReplyData = new Array();
+				bottomReplyData.push(bottomReplyData1);
+
+				return [bottomData, bottomReplyData];
+			}
+
+			/**
+			 * 返回一条底部数据
+			 */
+			function officialdetailsAddBottom2() {
+				var bottomTitle = '公司领导批示'
+				var bottomImageUrl = '../../image/icon-personal.png';
+				var bottomDepartment = '公司领导';
+				var bottomData = [bottomTitle, bottomImageUrl, bottomDepartment];
+
+				var bottomReplyName1 = '李丹';
+				var bottomReplyTime1 = '2016-9-28 15:48:05';
+				var bottomReplyContent1 = '同意';
+				var bottomReplyData1 = [bottomReplyName1, bottomReplyTime1, bottomReplyContent1];
+
+				var bottomReplyName2 = '吴伟强';
+				var bottomReplyTime2 = '2016-9-28 15:48:05';
+				var bottomReplyContent2 = '请信息系统部认真学习';
+				var bottomReplyData2 = [bottomReplyName2, bottomReplyTime2, bottomReplyContent2];
+
+				var bottomReplyData = new Array();
+				bottomReplyData.push(bottomReplyData1);
+				bottomReplyData.push(bottomReplyData2);
+				return [bottomData, bottomReplyData];
+			}
+
+			/**
+			 * 返回一条底部数据
+			 */
+			function officialdetailsAddBottom3() {
+				var bottomTitle = '开发部开发部开发部开发部拟办'
+				var bottomImageUrl = '../../image/document_headimg.png';
+				var bottomDepartment = '开发部开发部开发部开发部开发部开发部开发部';
+				var bottomData = [bottomTitle, bottomImageUrl, bottomDepartment];
+
+				var bottomReplyName1 = '小熊猫';
+				var bottomReplyTime1 = '2016-9-28 15:48:05';
+				var bottomReplyContent1 = '同';
+				var bottomReplyData1 = [bottomReplyName1, bottomReplyTime1, bottomReplyContent1];
+
+				var bottomReplyName2 = '小熊猫小熊猫';
+				var bottomReplyTime2 = '2016-9-28 15:48:05';
+				var bottomReplyContent2 = '请信息系统部认真学习';
+				var bottomReplyData2 = [bottomReplyName2, bottomReplyTime2, bottomReplyContent2];
+
+				var bottomReplyName3 = '小熊猫小熊猫小熊猫小熊猫';
+				var bottomReplyTime3 = '2016-9-28 15:48:05';
+				var bottomReplyContent3 = '新招南片数据员账号申请：姓名：李真，联系方式：\
+								17733124553，申请客服平台（serv.108800.net）账号,，\
+								可将原南片数据王兆玉账号修改为新入职人员姓名，后提供给我，谢谢，\
+								请公司协助处理。由于工作需要，请帮忙给恩施客服陈秋艳建立代理商平台帐号，\
+								请加急处理，着急使用，谢谢';
+				var bottomReplyData3 = [bottomReplyName3, bottomReplyTime3, bottomReplyContent3];
+
+				var bottomReplyName4 = '吴伟强';
+				var bottomReplyTime4 = '2016-9-28 15:48:05';
+				var bottomReplyContent4 = '请信息系统部认真学习';
+				var bottomReplyData4 = [bottomReplyName2, bottomReplyTime2, bottomReplyContent2];
+
+				var bottomReplyData = new Array();
+				bottomReplyData.push(bottomReplyData1);
+				bottomReplyData.push(bottomReplyData2);
+				bottomReplyData.push(bottomReplyData3);
+				bottomReplyData.push(bottomReplyData4);
+				return [bottomData, bottomReplyData];
+			}
 		</script>
 	</body>
 
