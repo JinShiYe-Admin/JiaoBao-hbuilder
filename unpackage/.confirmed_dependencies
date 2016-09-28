@@ -29,7 +29,8 @@
 			"css/mui.min.css",
 			"js/app/index.js",
 			"html/home/tab_home.html",
-			"html/tab_home.html"
+			"html/tab_home.html",
+			"html/tab_official.html"
 		],
 		"refer": [
 			"html/mine/tab_mine.html",
@@ -53,7 +54,23 @@
 	"html/tab_home.html": {
 		"resources": [
 			"js/mui.min.js",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"js/utils/carouselControl.js",
+			"js/utils/grideControl.js",
+			"css/utils/imgeControl.css",
+			"image/home/u56.png",
+			"image/home/u197.png",
+			"image/home/u191.png",
+			"image/home/u52.png",
+			"image/home/u193.png",
+			"image/home/u195.png",
+			"image/home/u54.png",
+			"image/home/u296.png",
+			"image/home/u292.png",
+			"image/home/u298.png",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"image/home/u189.png"
 		],
 		"refer": []
 	},
@@ -62,7 +79,17 @@
 			"js/mui.min.js",
 			"css/mui.min.css",
 			"js/utils/grideControl.js",
-			"css/utils/imgeControl.css"
+			"css/utils/imgeControl.css",
+			"fonts/mui.ttf",
+			"image/official/u101.png",
+			"image/official/u44.png",
+			"image/official/u58.png",
+			"image/official/u99.png",
+			"image/official/u97.png",
+			"image/official/u48.png",
+			"image/official/u60.png",
+			"image/official/u62.png",
+			"image/official/u42.png"
 		],
 		"refer": [
 			"html/official/noticelist_main.html"
@@ -100,6 +127,9 @@
 	},
 	"html/official/noticelist_main.html": {
 		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
 			"html/official/noticelist_sub.html"
 		],
 		"refer": [
@@ -109,9 +139,10 @@
 	"html/official/noticelist_sub.html": {
 		"resources": [
 			"image/icon-unread.png",
-			"js/mui.min.js",
 			"image/icon-accessory.png",
-			"css/utils/notice.css"
+			"css/utils/notice.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
 		],
 		"refer": [
 			"html/official/noticedetails_main.html"
@@ -119,10 +150,20 @@
 	},
 	"html/official/noticedetails_main.html": {
 		"resources": [
-			"html/official/noticedetails_sub.html"
+			"html/official/noticedetails_sub.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
 		],
 		"refer": [
 			"html/official/noticedetails_sub.html"
 		]
+	},
+	"html/official/noticedetails_sub.html": {
+		"resources": [
+			"image/icon-accessory.png",
+			"css/utils/notice.css"
+		],
+		"refer": []
 	}
 }

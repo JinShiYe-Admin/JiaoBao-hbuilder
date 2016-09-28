@@ -1,7 +1,7 @@
-/**
+<!--/**
  *@author MSL
  *@describe 添加gride by An 9.27
- */
+ */-->
 <!doctype html>
 <html>
 
@@ -10,7 +10,7 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
-		<link href="../css/utils/imgeControl.css" rel="stylesheet"/>
+		<link href="../css/utils/imgeControl.css" rel="stylesheet" />
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
@@ -24,24 +24,29 @@
 		</header>
 		<div class="mui-content">
 			<ul class="mui-table-view mui-grid-view mui-grid-9">
+			</ul>
+			<button type="button" class="mui-btn mui-btn-blue mui-btn-outlined" id="officialdetails">公文详情</button>
 		</div>
 	</body>
 	<script>
 		mui.plusReady(function() {
-			var chars=["通知公告","预览公文","待批公文","发布公文","待过公文","已批公文","已毕公文","被退公文","规章制度"]
-			var imgUrls=["http://dxlfb468n8ekd.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/公文主页/u42.png?token=3584088cb248c8456622b470e47b97ff",
-			"http://d26uhratvi024l.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/公文主页/u44.png?token=7b8e66a0889fdffb29333585882b33de",
-			"http://d26uhratvi024l.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/公文主页/u62.png?token=c6dd18d6201d48cdc9f2d5a7d1caf17f",
-			"http://d2t44wh9rnwl5y.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/公文主页/u101.png?token=8f8af0f6bee1babc0cc8e44ca898b58e",
-			"http://dxlfb468n8ekd.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/公文主页/u60.png?token=0b588b3d77e9f8f6f0dcc84d73454ff1",
-			"http://d2t44wh9rnwl5y.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/公文主页/u99.png?token=98856da88292fd0bc8ef8884c4949a19",
-			"http://d2v8ggac1o0f6z.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/公文主页/u97.png?token=7d13e2430a4732ddb5b6938a8ad5f58d",
-			"http://d26uhratvi024l.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/公文主页/u48.png?token=69b0b1a09846c7242ad6a9b21209575a",
-			"http://dxlfb468n8ekd.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/公文主页/u58.png?token=764cbbc4e11fd3af36f14bf091ae2bef"
+			var chars = ["通知公告", "预览公文", "待批公文", "发布公文", "待过公文", "已批公文", "已毕公文", "被退公文", "规章制度"]
+			var imgUrls = ["../image/official/u42.png",
+				"../image/official/u44.png",
+				"../image/official/u62.png",
+				"../image/official/u101.png",
+				"../image/official/u60.png",
+				"../image/official/u99.png",
+				"../image/official/u97.png",
+				"../image/official/u48.png",
+				"../image/official/u58.png"
 			]
-			var urls=['official/noticelist_main.html'];
-			putGrideData(createArray(chars,imgUrls,urls))
+			var urls = ['official/noticelist_main.html'];
+			putGrideData(createArray(chars, imgUrls, urls));
+			document.getElementById('officialdetails').addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'official/officialdetails_main.html'
+				});
+			})
 		})
 	</script>
-
-

@@ -1,0 +1,140 @@
+<!--
+	作者：444811716@qq.com
+	时间：2016-09-27
+	描述：公文详情页
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/utils/officialdetails.css" />
+	</head>
+
+	<body>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll ">
+				<!--数据列表-->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<div class="offical-height">
+							<img class="offical-image" src="../../image/home/u292.png">
+							<h4 class="offical-name">童童童童童</h4>
+							<font class="offical-content">
+								新招南片数据员账号申请：姓名：李真，联系方式：17733124553，申请客服平台（serv.108800.net）账号,，可将原南片数据王兆玉账号修改为新入职人员姓名，后提供给我，谢谢，请公司协助处理。由于工作需要，请帮忙给恩施客服陈秋艳建立代理商平台帐号，请加急处理，着急使用，谢谢
+							</font>
+							<br />
+							<font class="offical-time">2016-9-27 16:24</font>
+						</div>
+					</li>
+					<div class="offical-bottom-reply-content-line"></div>
+					<li class="mui-table-view-cell">
+						<font class="offical-bottom-title">综合部拟办</font>
+						<div class="offical-height">
+							<img class="offical-image" src="../../image/official/u101.png">
+							<font class="offical-bottom-department">综合部</font>
+							<div class="offical-bottom-content">
+								<div class="offical-reply">
+									<div>
+										<font>
+											<p class="mui-icon mui-icon-contact"></p>
+											<font class="offical-bottom-reply-name">张晓均</font>
+											<font class="offical-bottom-reply-name">2016-9-28 10:34:19</font>
+										</font>
+										<br />
+										<div class="offical-bottom-reply-content">
+											<font>
+												请信息系统部办理
+											</font>
+										</div>
+									</div>
+								</div>
+								<div class="offical-arrow"></div>
+								<div class="offical-arrow2"></div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+						<font class="offical-bottom-title">公司领导批示</font>
+						<div class="offical-height">
+							<img class="offical-image" src="../../image/icon-personal.png">
+							<font class="offical-bottom-department">公司领导</font>
+							<div class="offical-bottom-content">
+								<div class="offical-reply">
+									<div>
+										<font>
+											<p class="mui-icon mui-icon-contact"></p>
+											<font class="offical-bottom-reply-name">李丹</font>
+											<font class="offical-bottom-reply-name">2016-9-28 10:34:19</font>
+										</font>
+										<br />
+										<div class="offical-bottom-reply-content">
+											<font>
+												同意
+											</font>
+										</div>
+									</div>
+									<div class="offical-bottom-reply-content-line"></div>
+									<div>
+										<font>
+											<p class="mui-icon mui-icon-contact"></p>
+											<font class="offical-bottom-reply-name">吴伟强</font>
+											<font class="offical-bottom-reply-name">2016-9-28 10:34:19</font>
+										</font>
+										<br />
+										<div class="offical-bottom-reply-content">
+											<font>
+												请信息系统部认真学习
+											</font>
+										</div>
+									</div>
+								</div>
+								<div class="offical-arrow"></div>
+								<div class="offical-arrow2"></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for(var i = cells.length, len = i + 3; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						//下拉刷新，新纪录插到最前面；
+						table.insertBefore(li, table.firstChild);
+					}
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+
+			mui.plusReady(function() {
+
+			});
+		</script>
+	</body>
+
+</html>

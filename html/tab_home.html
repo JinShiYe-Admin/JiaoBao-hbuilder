@@ -1,3 +1,4 @@
+<!--/** *@author MSL *@describe 增加轮播 增加图标按钮 by An */-->
 <!doctype html>
 <html>
 
@@ -6,16 +7,59 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
-		<script type="text/javascript" src="../js/mui.min.js" ></script>
+		<link href="../css/utils/imgeControl.css" rel="stylesheet" />
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script src="../js/utils/carouselControl.js"></script>
+		<script src="../js/utils/grideControl.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init({
+				
+			})
 		</script>
+
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
-		    <h1 class="mui-title">首页</h1>
+			<h1 class="mui-title">首页</h1>
 		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+			
+				</div>
+				<div class="mui-slider-indicator mui-text-right">
+				</div>
+			</div>
+				<ul class="mui-table-view mui-grid-view mui-grid-9">
+		</div>
 	</body>
+	<script>
+		mui.plusReady(function() {
+			var titles = ["幸福是可以一起睡觉", "幸福是可以一起吃饭", "幸福是可以一起拉屎"]
+		
+			addStrip(getImgArray())
+			addImg(getImgArray(), titles)
+			var slider = mui("#slider");
+			slider.slider({
+				interval: 5000
+			});
+			getHomeCircle()
+		})
+		var getHomeCircle = function() {
+			var chars = ["待批公文","通知公告","校园通知",   "班级通知", "家长来信", "我的信箱", "校园秀","求知问答"];
+			var imgUrls = ["../image/home/u52.png",
+				"../image/home/u56.png",
+				"../image/home/u54.png",
+				"../image/home/u197.png",
+				"../image/home/u193.png",
+				"../image/home/u191.png",
+				"../image/home/u195.png",
+				"../image/home/u189.png"
+			]
+			var urls = []
+			putGrideData(createArray(chars, imgUrls, urls))
+		}
+	</script>
 
 </html>
