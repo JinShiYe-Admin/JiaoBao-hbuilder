@@ -108,7 +108,7 @@
 	/*相对布局*/
 	top: 15px;
 	/*顶部距离*/
-	left: -10px;
+	left: -20px;
 	/*左侧距离*/
 	width: 0;
 	/*显示正方形*/
@@ -122,7 +122,7 @@
 
 .offical-arrow2 {
 	/*内部部三角形*/
-	left: -8px;
+	left: -18px;
 	/*左侧距离*/
 	border-color: transparent #FAFAFA transparent transparent;
 	/*四个三角形颜色（顶部顺时针开始）*/
