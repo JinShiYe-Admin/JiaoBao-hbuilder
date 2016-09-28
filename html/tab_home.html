@@ -1,3 +1,7 @@
+/**
+ *@author MSL
+ *@describe 增加轮播 增加图标按钮 by An
+ */
 <!doctype html>
 <html>
 
@@ -19,12 +23,15 @@
 		<header class="mui-bar mui-bar-nav">
 		    <h1 class="mui-title">首页</h1>
 		</header>
-		<div id="slider" class="mui-slider" >
-		  <div class="mui-slider-group mui-slider-loop">
-		  </div>
-		  <div class="mui-slider-indicator mui-text-right">
-		  </div>
-		  <ul class="mui-table-view mui-grid-view mui-grid-9">
+		<div class="mui-content">
+			<div id="slider" class="mui-slider" >
+			  <div class="mui-slider-group mui-slider-loop">
+			  </div>
+			  <div class="mui-slider-indicator mui-text-right">
+			  </div>
+			</div>
+		  	<ul class="mui-table-view mui-grid-view mui-grid-9">
+		  		
 		</div>
 	</body>
 	<script>
@@ -40,13 +47,14 @@
 	})
 	var getHomeCircle=function(){
 		var chars=["校园通知","学校通知","年级通知","班级通知","个性表现","家长来信","学校信箱"];
-		var imgUrls=["http://d2v8ggac1o0f6z.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/互动主页/u42.png?token=c4f7d21bb9329248cbc7bf54342739c3",
-		"http://d2t44wh9rnwl5y.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/互动主页/u44.png?token=77843a7df6fa4f4cdf5a163870d58a80",
-		"http://d2v8ggac1o0f6z.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/互动主页/u62.png?token=4770f495ae921ce06af53ce0d761a9a5",
-		"http://d2t44wh9rnwl5y.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/互动主页/u60.png?token=f0b650fd1e90cfef0c72d2760c013286",
-		"http://d2v8ggac1o0f6z.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/互动主页/u96.png?token=08eadaf5173a7d617af05b3dc0c88969",
-		"http://d2t44wh9rnwl5y.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/互动主页/u40.png?token=30630a1ece974226c28d800c3124bf5c",
-		"http://d2t44wh9rnwl5y.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/互动主页/u94.png?token=21bbd98e625cd5c55e44a06d1b7caca3"
+		var imgUrls=["../image/home/u52.png",
+		"../image/home/u56.png",
+		"../image/home/u54.png",
+		"../image/home/u197.png",
+		"../image/home/u193.png",
+		"../image/home/u191.png",
+		"../image/home/u195.png",
+		"../image/home/u189.png"
 		]
 		var urls=[]
 		putGrideData(createArray(chars,imgUrls,urls))

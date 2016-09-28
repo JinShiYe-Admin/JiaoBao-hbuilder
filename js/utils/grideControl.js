@@ -17,7 +17,7 @@ var createGirde = function(array) {
 				li.className = "mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3";
 			}
 			li.innerHTML = '<a href="#">' +
-				'<img class="mui-icon circular-square" src="' + map.value + '"style="background-color:'+bgColor+';"></img>' +
+				'<img class="mui-icon circular-square" src="' + map.value + '" style="background-color:'+bgColor+';"></img>' +
 				'<div class="mui-media-body">' + map.key + '</div>' +
 				'</a>';
 			li.addEventListener('tap',function(){
