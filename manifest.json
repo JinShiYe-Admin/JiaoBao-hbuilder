@@ -249,7 +249,10 @@
 			"html/tab_home.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/utils/carouselControl.js",
+					"js/utils/grideControl.js",
+					"css/utils/imgeControl.css"
 				],
 				"refer": [],
 				"priority": 0

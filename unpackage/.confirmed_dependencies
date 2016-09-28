@@ -1,142 +1,146 @@
 {
-  "index.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "js/app/index.js",
-      "html/home/tab_home.html"
-    ],
-    "refer": [
-      "html/mine/tab_mine.html",
-      "html/dynamic/tab_dynamic.html",
-      "html/interaction/tab_interaction.html",
-      "html/official/tab_official.html"
-    ]
-  },
-  "html/home/tab_home.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/app/index.js"
-    ],
-    "refer": []
-  },
-  "html/index.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "js/app/index.js",
-      "html/home/tab_home.html",
-      "html/tab_home.html"
-    ],
-    "refer": [
-      "html/mine/tab_mine.html",
-      "html/dynamic/tab_dynamic.html",
-      "html/interaction/tab_interaction.html",
-      "html/official/tab_official.html",
-      "html/tab_official.html",
-      "html/tab_mine.html",
-      "html/tab_interaction.html",
-      "html/tab_dynamic.html",
-      "html/tab_home.html"
-    ]
-  },
-  "html/official/tab_official.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "html/tab_home.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "html/tab_official.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/utils/grideControl.js",
-      "css/utils/imgeControl.css",
-      "fonts/mui.ttf"
-    ],
-    "refer": [
-      "html/official/noticelist_main.html"
-    ]
-  },
-  "html/tab_interaction.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "html/tab_dynamic.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "html/tab_mine.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "js/utils/gride.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "js/utils/grideControl.js"
-    ],
-    "refer": []
-  },
-  "html/official/noticelist_main.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "html/official/noticelist_sub.html"
-    ]
-  },
-  "html/official/noticelist_sub.html": {
-    "resources": [
-      "image/icon-unread.png",
-      "image/icon-accessory.png",
-      "css/utils/notice.css",
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "html/official/noticedetails_main.html"
-    ]
-  },
-  "html/official/noticedetails_main.html": {
-    "resources": [
-      "html/official/noticedetails_sub.html",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "html/official/noticedetails_sub.html"
-    ]
-  },
-  "html/official/noticedetails_sub.html": {
-    "resources": [
-      "image/icon-accessory.png",
-      "css/utils/notice.css"
-    ],
-    "refer": []
-  }
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/app/index.js",
+			"html/home/tab_home.html"
+		],
+		"refer": [
+			"html/mine/tab_mine.html",
+			"html/dynamic/tab_dynamic.html",
+			"html/interaction/tab_interaction.html",
+			"html/official/tab_official.html"
+		]
+	},
+	"html/home/tab_home.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/app/index.js"
+		],
+		"refer": []
+	},
+	"html/index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/app/index.js",
+			"html/home/tab_home.html",
+			"html/tab_home.html"
+		],
+		"refer": [
+			"html/mine/tab_mine.html",
+			"html/dynamic/tab_dynamic.html",
+			"html/interaction/tab_interaction.html",
+			"html/official/tab_official.html",
+			"html/tab_official.html",
+			"html/tab_mine.html",
+			"html/tab_interaction.html",
+			"html/tab_dynamic.html",
+			"html/tab_home.html"
+		]
+	},
+	"html/official/tab_official.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"html/tab_home.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/utils/carouselControl.js",
+			"js/utils/grideControl.js",
+			"css/utils/imgeControl.css"
+		],
+		"refer": []
+	},
+	"html/tab_official.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/utils/grideControl.js",
+			"css/utils/imgeControl.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"html/official/noticelist_main.html"
+		]
+	},
+	"html/tab_interaction.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"html/tab_dynamic.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"html/tab_mine.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"js/utils/gride.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/utils/grideControl.js"
+		],
+		"refer": []
+	},
+	"html/official/noticelist_main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"html/official/noticelist_sub.html"
+		],
+		"refer": [
+			"html/official/noticelist_sub.html"
+		]
+	},
+	"html/official/noticelist_sub.html": {
+		"resources": [
+			"image/icon-unread.png",
+			"image/icon-accessory.png",
+			"css/utils/notice.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/official/noticedetails_main.html"
+		]
+	},
+	"html/official/noticedetails_main.html": {
+		"resources": [
+			"html/official/noticedetails_sub.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/official/noticedetails_sub.html"
+		]
+	},
+	"html/official/noticedetails_sub.html": {
+		"resources": [
+			"image/icon-accessory.png",
+			"css/utils/notice.css"
+		],
+		"refer": []
+	}
 }
