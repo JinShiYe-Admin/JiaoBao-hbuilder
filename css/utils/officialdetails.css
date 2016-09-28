@@ -32,7 +32,6 @@
 .offical-image {
 	/*头像*/
 	position: absolute;
-	top: 20px;
 	/*绝对布局*/
 	left: 15px;
 	/*距离左边距离，绝对布局所以用left*/
