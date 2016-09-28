@@ -52,8 +52,8 @@ var addDiv=function(imgUrl,group){
  */
 var getImgArray=function(){
 	var imgArray=new Array();
-	imgArray.push("http://d26uhratvi024l.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/首页/u292.png?token=82cf791ab80eba58c459b69c95bbad80")
-	imgArray.push("http://d26uhratvi024l.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/首页/u294.png?token=ad4fb2bed5e47362402ff10a1f1a93c8")
-	imgArray.push("http://dxlfb468n8ekd.cloudfront.net/gsc/QL2YT7/c6/06/42/c60642dfee1c4b2bbbfa830327c6eeb7/images/首页/u296.png?token=b8b738b07243e670a9fd7b551287b3da")
+	imgArray.push("../image/home/u292.png")
+	imgArray.push("../image/home/u296.png")
+	imgArray.push("../image/home/u298.png")
 	return imgArray;
 }
