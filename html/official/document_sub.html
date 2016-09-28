@@ -14,31 +14,36 @@
 	<body>
 		<!--下拉刷新容器-->
 		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
-			<div class="mui-scroll" style="padding-left: 10px;padding-right: 10px;">
+			<div class="mui-scroll" style="padding-left: 5px;padding-right: 10px;">
+				<div class="mui-content-padded" style="margin: 0px 0px 0px 0px;">
+					<div class="mui-input-row mui-search mui-content-padded">
+						<input type="search" class="mui-input-clear" placeholder="请输入标题">
+
+					</div>
+
+				</div>
 				<!--数据列表-->
 				<ul class="mui-table-view">
 					<li class="mui-table-view-cell">
 						<div>
 							<div style="width: 50px;">
-							<img class="document-headimg" src="../../image/document_headimg.png" /><img class="document-redpoint" src="../../image/red_point.png" /><br/><br/><br/>
-							<font  style="text-align: center; font-size: 14px;">周宁</font>
+								<img class="document-headimg" src="../../image/document_headimg.png" /><img class="document-redpoint" src="../../image/red_point.png" /><br/><br/><br/>
+								<font style="text-align: center; font-size: 14px;">周宁</font>
 							</div>
 							<font class="document-content">领导好：由于工作需要，请帮忙给恩施客服陈秋艳建立代理商平台帐号，请加急处理，着急使用，谢谢...</font>
 							<p class="document-time">2016-10-1</p>
-
 
 						</div>
 					</li>
 					<li class="mui-table-view-cell">
 						<div>
-														<div style="width: 50px;">
-							<img class="document-headimg" src="../../image/headimg2.png" /><img class="document-redpoint" src="../../image/red_point.png" /><br/><br/><br/>
-							<font style="text-align: center;font-size: 14px;">童元文</font>
+							<div style="width: 50px;">
+								<img class="document-headimg" src="../../image/headimg2.png" /><img class="document-redpoint" src="../../image/red_point.png" /><br/><br/><br/>
+								<font style="text-align: center;font-size: 14px;">童元文</font>
 							</div>
 							<font class="document-content">新招南片数据员账号申请：姓名：李真，联系方式：17733124553，申请客服平台（serv.108800.net）账号,，可将原南片数据王兆玉账号修改为新入职人员姓名，后提供给我，谢谢，请公司协助处理。...
-</font>
+							</font>
 							<p class="document-time">2016-10-1</p>
-
 
 						</div>
 					</li>
@@ -66,23 +71,8 @@
 				setTimeout(function() {
 					var table = document.body.querySelector('.mui-table-view');
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for(var i = cells.length, len = i + 3; i < len; i++) {
-						var noticelist = '<div>\
-							<img class="notice-unread" src="../../image/icon-unread.png" />\
-							<p class="notice-title">中秋节放假安排通知' + '<font style="color: red;">新' + i + '</font>' + '</p>\
-							<font class="notice-content">中秋节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~</font>\
-							<p class="notice-time">【公司全体】</p>\
-							<br />\
-							<p class="notice-time">刚刚</p>\
-							<div>\
-								<img src="../../image/icon-accessory.png" />\
-								<a class="notice-accessory">中秋节放假安排时间通知表1</a><br />\
-							</div>\
-							<div>\
-								<img src="../../image/icon-accessory.png" />\
-								<a class="notice-accessory">中秋节放假安排时间通知表2</a><br />\
-							</div>\
-						</div>';
+					for(var i = cells.length, len = i + 3; i < len-3; i++) {
+						var noticelist ;
 						var li = document.createElement('li');
 						li.className = 'mui-table-view-cell';
 						li.innerHTML = noticelist;
@@ -101,7 +91,7 @@
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
 					var table = document.body.querySelector('.mui-table-view');
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for(var i = cells.length, len = i + 20; i < len; i++) {
+					for(var i = cells.length, len = i + 20; i < len-20; i++) {
 						var noticelist = '<div>\
 							<p class="notice-title">端午节放假安排通知' + '<font style="color: red;">更多' + i + '</font>' + '</p>\
 							<font class="notice-content">端午节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~</font>\
@@ -120,10 +110,10 @@
 			mui.plusReady(function() {
 				mui(".mui-table-view").on('tap', '.mui-table-view-cell', function() {
 					//打开详情页界面
-					mui.openWindow({
-						url: 'noticedetails_main.html'
-					});
-				})
+//					mui.openWindow({
+//						url: 'noticedetails_main.html'
+//					});
+//				})
 			});
 		</script>
 	</body>
