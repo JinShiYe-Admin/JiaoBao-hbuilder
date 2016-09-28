@@ -10,7 +10,7 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
-		<link href="../css/utils/imgeControl.css" rel="stylesheet"/>
+		<link href="../css/utils/imgeControl.css" rel="stylesheet" />
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
@@ -24,24 +24,29 @@
 		</header>
 		<div class="mui-content">
 			<ul class="mui-table-view mui-grid-view mui-grid-9">
+			</ul>
+			<button type="button" class="mui-btn mui-btn-blue mui-btn-outlined" id="officialdetails">公文详情</button>
 		</div>
 	</body>
 	<script>
 		mui.plusReady(function() {
-			var chars=["通知公告","预览公文","待批公文","发布公文","待过公文","已批公文","已毕公文","被退公文","规章制度"]
-			var imgUrls=["../image/official/u42.png",
-			"../image/official/u44.png",
-			"../image/official/u62.png",
-			"../image/official/u101.png",
-			"../image/official/u60.png",
-			"../image/official/u99.png",
-			"../image/official/u97.png",
-			"../image/official/u48.png",
-			"../image/official/u58.png"
+			var chars = ["通知公告", "预览公文", "待批公文", "发布公文", "待过公文", "已批公文", "已毕公文", "被退公文", "规章制度"]
+			var imgUrls = ["../image/official/u42.png",
+				"../image/official/u44.png",
+				"../image/official/u62.png",
+				"../image/official/u101.png",
+				"../image/official/u60.png",
+				"../image/official/u99.png",
+				"../image/official/u97.png",
+				"../image/official/u48.png",
+				"../image/official/u58.png"
 			]
-			var urls=['official/noticelist_main.html'];
-			putGrideData(createArray(chars,imgUrls,urls))
+			var urls = ['official/noticelist_main.html'];
+			putGrideData(createArray(chars, imgUrls, urls));
+			document.getElementById('officialdetails').addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'official/officialdetails_main.html'
+				});
+			})
 		})
 	</script>
-
-
