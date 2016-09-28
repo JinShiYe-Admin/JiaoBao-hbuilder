@@ -265,7 +265,8 @@
 					"image/home/u298.png",
 					null,
 					"css/app.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"image/home/u189.png"
 				],
 				"refer": [],
 				"priority": 0
