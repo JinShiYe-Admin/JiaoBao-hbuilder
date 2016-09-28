@@ -25,7 +25,6 @@
 		<div class="mui-content">
 			<ul class="mui-table-view mui-grid-view mui-grid-9">
 			</ul>
-			<button type="button" class="mui-btn mui-btn-blue mui-btn-outlined" id="officialdetails">公文详情</button>
 		</div>
 	</body>
 	<script>
@@ -41,12 +40,7 @@
 				"../image/official/u48.png",
 				"../image/official/u58.png"
 			]
-			var urls = ['official/noticelist_main.html'];
-			putGrideData(createArray(chars, imgUrls, urls));
-			document.getElementById('officialdetails').addEventListener('tap', function() {
-				mui.openWindow({
-					url: 'official/officialdetails_main.html'
-				});
-			})
+			var urls=['official/noticelist_main.html','official/documentlist.html'];
+			putGrideData(createArray(chars,imgUrls,urls))
 		})
 	</script>
