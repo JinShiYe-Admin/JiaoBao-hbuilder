@@ -29,7 +29,8 @@
 			"css/mui.min.css",
 			"js/app/index.js",
 			"html/home/tab_home.html",
-			"html/tab_home.html"
+			"html/tab_home.html",
+			"html/tab_official.html"
 		],
 		"refer": [
 			"html/mine/tab_mine.html",
@@ -66,7 +67,10 @@
 			"image/home/u54.png",
 			"image/home/u296.png",
 			"image/home/u292.png",
-			"image/home/u298.png"
+			"image/home/u298.png",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"image/home/u189.png"
 		],
 		"refer": []
 	},

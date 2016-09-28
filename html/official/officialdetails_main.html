@@ -1,11 +1,10 @@
 <!--
 	作者：444811716@qq.com
 	时间：2016-09-27
-	描述：通知公告列表页
+	描述：公文详情页
 -->
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8">
 		<title></title>
@@ -18,23 +17,22 @@
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 id="title" class="mui-title">通知公告</h1>
-			<a id="add" class="mui-icon mui-icon-plusempty mui-pull-right"></a>
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">公文详情</h1>
 		</header>
-
 		<div class="mui-content"></div>
 	</body>
 	<script src="../../js/mui.min.js"></script>
 	<script type="text/javascript">
+		//启用双击监听
 		mui.init({
-			gestureConfig: {
-				doubletap: true//启用双击监听
+			gestureConfig:{
+				doubletap:true
 			},
-			subpages: [{
-				url: 'noticelist_sub.html',
-				id: 'noticelist_sub.html',
-				styles: {
+			subpages:[{
+				url:'officialdetails_sub.html',
+				id:'officialdetails_sub.html',
+				styles:{
 					top: '45px',
 					bottom: '0px',
 				}
@@ -42,19 +40,12 @@
 		});
 
 		var contentWebview = null;
-		document.querySelector('header').addEventListener('doubletap', function() {
-			if(contentWebview == null) {
+		document.querySelector('header').addEventListener('doubletap',function () {
+			if(contentWebview==null){
 				contentWebview = plus.webview.currentWebview().children()[0];
 			}
 			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
 		});
-			document.getElementById('add').addEventListener('tap', function() {
-		//打开登录页面
-		mui.openWindow({
-			url: 'addnotice.html',
-			id: 'addnotice'
-		});
-	});
 	</script>
 
 </html>

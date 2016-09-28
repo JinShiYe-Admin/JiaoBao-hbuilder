@@ -262,7 +262,11 @@
 					"image/home/u54.png",
 					"image/home/u296.png",
 					"image/home/u292.png",
-					"image/home/u298.png"
+					"image/home/u298.png",
+					null,
+					"css/app.css",
+					"fonts/mui.ttf",
+					"image/home/u189.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -282,7 +286,8 @@
 					"image/official/u48.png",
 					"image/official/u60.png",
 					"image/official/u62.png",
-					"image/official/u42.png"
+					"image/official/u42.png",
+					null
 				],
 				"refer": [
 					"html/official/noticelist_main.html"
