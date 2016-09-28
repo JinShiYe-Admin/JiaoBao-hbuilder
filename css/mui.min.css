@@ -2815,7 +2815,7 @@ select:focus {
 	color: #999;
 	border: 0;
 	border-radius: 6px;
-	background: white
+	background: 0 0
 }
 
 .mui-search .mui-placeholder .mui-icon {
