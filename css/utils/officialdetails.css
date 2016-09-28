@@ -15,9 +15,9 @@
 	/*顶部人名*/
 	position: absolute;
 	/*绝对布局*/
-	top: 90px;
+	top: 70px;
 	/*距离顶部距离，绝对布局所以用top*/
-	left: 20px;
+	left: 10px;
 	/*距离左边距离，绝对布局所以用left*/
 	max-width: 60px;
 	/*设置最大宽度让人名换行*/
@@ -25,21 +25,22 @@
 	/*设置最小宽度让人名居中*/
 	text-align: center;
 	/*人名居中*/
-	font-size: 15px;
+	font-size: 14px;
 	/*设置字体大小*/
 }
 
 .offical-image {
 	/*头像*/
 	position: absolute;
+	top: 20px;
 	/*绝对布局*/
 	left: 15px;
 	/*距离左边距离，绝对布局所以用left*/
 	border-radius: 50%;
 	/*圆角*/
-	width: 70px;
+	width: 50px;
 	/*完整的圆形*/
-	height: 70px;
+	height: 50px;
 	/*完整的圆形*/
 }
 
@@ -75,7 +76,7 @@
 	/*相对布局*/
 	float: left;
 	/*居左*/
-	margin-left: 80px;
+	margin-left: 60px;
 	/*距离左边距离，相对布局所以用margin-left*/
 	margin-top: 10px;
 	/*距离顶部距离，相对布局所以用margin-top*/
@@ -146,16 +147,16 @@
 	/*字体大小*/
 	color: dodgerblue;
 	/*字体颜色*/
-	margin-left: 40%;
+	margin-left: 50%;
 }
 
 .offical-bottom-department {
 	/*底部部门*/
 	position: absolute;
 	/*绝对布局*/
-	top: 110px;
+	top: 90px;
 	/*距离顶部距离，绝对布局所以用top*/
-	left: 20px;
+	left: 10px;
 	/*距离左边距离，绝对布局所以用left*/
 	max-width: 60px;
 	/*设置最大宽度让人名换行*/
