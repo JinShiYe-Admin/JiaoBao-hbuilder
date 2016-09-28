@@ -65,7 +65,7 @@
 	/*居右*/
 	margin-top: 10px;
 	/*距离顶部距离，相对布局所以用margin-top*/
-	font-size: 15px;
+	font-size: 13px;
 	/*字体大小*/
 }
 
@@ -122,18 +122,8 @@
 
 .offical-arrow2 {
 	/*内部部三角形*/
-	position: absolute;
-	/*相对布局*/
-	top: 15px;
-	/*顶部距离*/
 	left: -8px;
 	/*左侧距离*/
-	width: 0;
-	/*显示正方形*/
-	height: 0;
-	/*显示正方形*/
-	border: solid 10px;
-	/*大小*/
 	border-color: transparent #FAFAFA transparent transparent;
 	/*四个三角形颜色（顶部顺时针开始）*/
 }
@@ -146,23 +136,12 @@
 	/*字体大小*/
 	color: dodgerblue;
 	/*字体颜色*/
-	margin-left: 50%;
 }
 
 .offical-bottom-department {
 	/*底部部门*/
-	position: absolute;
-	/*绝对布局*/
-	top: 90px;
+	top: 100px;
 	/*距离顶部距离，绝对布局所以用top*/
-	left: 10px;
-	/*距离左边距离，绝对布局所以用left*/
-	max-width: 60px;
-	/*设置最大宽度让人名换行*/
-	min-width: 60px;
-	/*设置最小宽度让人名居中*/
-	text-align: center;
-	/*人名居中*/
 	font-size: 15px;
 	/*设置字体大小*/
 }
@@ -183,4 +162,8 @@
 	height: 1px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.offical-bottom-image {
+	top: 45px;
 }
