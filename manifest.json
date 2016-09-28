@@ -344,7 +344,8 @@
 					"js/mui.min.js",
 					"image/icon-accessory.png",
 					"css/utils/notice.css",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/utils/noticedetails.css"
 				],
 				"refer": [
 					"html/official/noticedetails_main.html"
