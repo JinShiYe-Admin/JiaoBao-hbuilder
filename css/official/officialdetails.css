@@ -93,9 +93,9 @@
 	border: solid 1px #EEEBEB;
 	/*边框*/
 	/*设置边距*/
-	margin: 20px;
+	margin: 30px;
 	margin-top: 0px;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 .offical-bottom-reply-name {
@@ -112,6 +112,7 @@
 	/*底部回复内容*/
 	padding: 10px;
 	padding-bottom: 0px;
+	padding-right: 0px;
 	/*设置边距*/
 }
 
