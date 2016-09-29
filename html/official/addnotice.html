@@ -10,22 +10,24 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/utils/common.css" />
+
 		<style type="text/css">
 			#btn-row {
 				border-color: gray;
 				background-color: white;
 				height: 50px;
 				padding: 10px;
-				border:1px solid gainsboro;
+				border: 1px solid gainsboro;
 			}
 		</style>
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">新建通知公告</h1>
-			<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">添加</button>
+		<header class="mui-bar mui-bar-nav common-background-bar">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left common-color-white"></a>
+			<h1 class="mui-title common-color-white">新建通知公告</h1>
+			<a class="mui-icon mui-icon-checkmarkempty mui-pull-right common-color-white"></a>
 
 		</header>
 		<div class="mui-content mo-background-color">
@@ -44,7 +46,7 @@
 				<button type="button" class="mui-btn " onclick="getfile()">
 					文件
 				</button>
-				<div style="float: right; "class=" mui-checkbox mui-left">
+				<div style="float: right; " class=" mui-checkbox mui-left">
 					<label style="margin-top: 8px;">发送短信</label>
 					<input name="checkbox1" value="" type="checkbox"></div>
 			</div>
