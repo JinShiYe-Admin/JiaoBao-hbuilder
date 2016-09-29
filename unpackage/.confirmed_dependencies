@@ -71,7 +71,12 @@
 			"css/app.css",
 			"fonts/mui.ttf",
 			"image/home/u189.png",
-			"css/home/home.css"
+			"css/home/home.css",
+			"image/home/u101.png",
+			"image/home/u70.png",
+			"image/home/u99.png",
+			"image/home/u200.png",
+			"image/home/u103.png"
 		],
 		"refer": []
 	},

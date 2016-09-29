@@ -2,12 +2,25 @@
 	background-color: white;
 	margin: 16px;
 }
-.padding-left{
+.padding-top{
 	padding-top: 16px;
+}
+.padding-left{
 	padding-left: 21px;
 	color: #ACACB4;
 }
 .padding-right-12{
 	padding-right: 12px;
 }
-
+.padding{
+	padding: 21px;
+}
+.char-darkgray{
+	color: darkgray;
+}
+.img-width-33{
+	width: 32%;
+	height: auto;
+	padding-left: 21px;
+	padding-right: 21px;
+}
