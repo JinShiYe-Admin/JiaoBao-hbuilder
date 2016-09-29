@@ -81,7 +81,8 @@
 			"image/home/u74.png",
 			"image/home/u210.png",
 			"image/home/u118.png",
-			"image/home/u131.png"
+			"image/home/u131.png",
+			"css/utils/common.css"
 		],
 		"refer": []
 	},
@@ -100,7 +101,8 @@
 			"image/official/u48.png",
 			"image/official/u60.png",
 			"image/official/u62.png",
-			"image/official/u42.png"
+			"image/official/u42.png",
+			"css/utils/common.css"
 		],
 		"refer": [
 			"html/official/noticelist_main.html",

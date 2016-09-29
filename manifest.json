@@ -277,7 +277,8 @@
 					"image/home/u74.png",
 					"image/home/u210.png",
 					"image/home/u118.png",
-					"image/home/u131.png"
+					"image/home/u131.png",
+					"css/utils/common.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -298,7 +299,8 @@
 					"image/official/u60.png",
 					"image/official/u62.png",
 					"image/official/u42.png",
-					null
+					null,
+					"css/utils/common.css"
 				],
 				"refer": [
 					"html/official/noticelist_main.html",
