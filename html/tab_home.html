@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="../js/mui.min.js"></script>
 		<script src="../js/utils/carouselControl.js"></script>
 		<script src="../js/utils/grideControl.js"></script>
+		<script src="../js/home/home.js"></script>
 		<script type="text/javascript">
 			mui.init({
 
@@ -37,18 +38,6 @@
 			<div class="background-white">
 				<h3 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />心情广场</h3>
 				<ul id="mood_guard" class="mui-table-view">
-					<li class="mui-table-cell">
-						<div class="padding">
-							<h4 style="color: #F0AD4E;"><img src="../image/home/u70.png" align="middle" class="padding-right-12"/>梦的时间海</h4>
-							<p class="padding-top char-darkgray"> 今天心情不错哦，哎呦不错哦，就是不错哦，靠的不错哦，看来我的努力没有白费是的啊，人生就要这样，样式大概是这样哒，总之总之</p>
-							<div>
-								<img class="img-width-33" src="../image/home/u99.png"/>
-								<img class="img-width-33" src="../image/home/u101.png"/>
-								<img class="img-width-33" src="../image/home/u103.png"/>
-							</div>
-							<pre style="text-align:right;">发表时间：2016.09.29</pre>
-						</div>
-					</li>
 				</ul>
 			</div>
 			<div class="background-white">
@@ -71,6 +60,7 @@
 				interval: 5000
 			});
 			getHomeCircle()
+			getMoodList()
 		})
 		var getHomeCircle = function() {
 			var chars = ["待批公文", "通知公告", "校园通知", "班级通知", "家长来信", "我的信箱", "校园秀", "求知问答"];
@@ -85,6 +75,10 @@
 			]
 			var urls = []
 			putGrideData(createArray(chars, imgUrls, urls))
+		}
+		var getMoodList=function(){
+			var moodItem=document.getElementById('mood_guard')
+			createList(moodItem,createMoodList())
 		}
 	</script>
 

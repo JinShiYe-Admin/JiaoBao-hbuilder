@@ -272,7 +272,9 @@
 					"image/home/u70.png",
 					"image/home/u99.png",
 					"image/home/u200.png",
-					"image/home/u103.png"
+					"image/home/u103.png",
+					"js/home/home.js",
+					"image/home/u74.png"
 				],
 				"refer": [],
 				"priority": 0

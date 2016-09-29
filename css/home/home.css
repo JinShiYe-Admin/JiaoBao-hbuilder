@@ -5,6 +5,9 @@
 .padding-top{
 	padding-top: 16px;
 }
+.padding-top-12{
+	padding-top: 12px;
+}
 .padding-left{
 	padding-left: 21px;
 	color: #ACACB4;
@@ -13,7 +16,8 @@
 	padding-right: 12px;
 }
 .padding{
-	padding: 21px;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 .char-darkgray{
 	color: darkgray;
@@ -21,6 +25,9 @@
 .img-width-33{
 	width: 32%;
 	height: auto;
-	padding-left: 21px;
-	padding-right: 21px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.align-right{
+	text-align: right;
 }
