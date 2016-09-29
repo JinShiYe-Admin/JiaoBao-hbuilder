@@ -8,36 +8,39 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
 		<link href="../css/utils/imgeControl.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/utils/common.css" />
 		<script type="text/javascript" src="../js/mui.min.js"></script>
 		<script src="../js/utils/carouselControl.js"></script>
 		<script src="../js/utils/grideControl.js"></script>
 		<script type="text/javascript">
 			mui.init({
-				
+
 			})
 		</script>
 
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav">
-			<h1 class="mui-title">首页</h1>
+		<header class="mui-bar mui-bar-nav common-background-bar">
+			<span class="mui-icon mui-icon-bars common-color-white"></span>
+			<h1 class="mui-title common-color-white common-font-family-Bold">首页</h1>
+			<span class="mui-icon mui-icon-chatboxes mui-pull-right common-color-white"></span>
 		</header>
 		<div class="mui-content">
 			<div id="slider" class="mui-slider">
 				<div class="mui-slider-group mui-slider-loop">
-			
+
 				</div>
 				<div class="mui-slider-indicator mui-text-right">
 				</div>
 			</div>
-				<ul class="mui-table-view mui-grid-view mui-grid-9">
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
 		</div>
 	</body>
 	<script>
 		mui.plusReady(function() {
 			var titles = ["幸福是可以一起睡觉", "幸福是可以一起吃饭", "幸福是可以一起拉屎"]
-		
+
 			addStrip(getImgArray())
 			addImg(getImgArray(), titles)
 			var slider = mui("#slider");
@@ -47,7 +50,7 @@
 			getHomeCircle()
 		})
 		var getHomeCircle = function() {
-			var chars = ["待批公文","通知公告","校园通知",   "班级通知", "家长来信", "我的信箱", "校园秀","求知问答"];
+			var chars = ["待批公文", "通知公告", "校园通知", "班级通知", "家长来信", "我的信箱", "校园秀", "求知问答"];
 			var imgUrls = ["../image/home/u52.png",
 				"../image/home/u56.png",
 				"../image/home/u54.png",

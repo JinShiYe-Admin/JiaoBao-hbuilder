@@ -1,0 +1,22 @@
+/**
+ * 共同的样式
+ */
+
+.common-background-bar {
+	/*背景颜色*/
+	background: #1277C7;
+}
+
+.common-color-white {
+	/*颜色*/
+	color: white;
+}
+
+.common-font-family-Regular{
+	/*字体样式*/
+	font-family:'微软雅黑 Regular', '微软雅黑';
+}
+.common-font-family-Bold{
+	/*字体样式*/
+	font-family:'微软雅黑 Bold', '微软雅黑';
+}
