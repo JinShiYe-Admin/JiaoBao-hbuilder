@@ -1,0 +1,123 @@
+.mui-table-view:before,
+.mui-table-view:after,
+.mui-table-view-cell:before,
+.mui-table-view-cell:after {
+	height: 0px;
+	/*头部和尾部去掉横线*/
+}
+
+.offical-name {
+	text-align: center;
+	/*人名居中*/
+	font-size: 14px;
+	/*设置字体大小*/
+	font-weight: 900;
+}
+
+.offical-content {
+	/*顶部内容*/
+	float: left;
+	/*居左*/
+	margin-left: 10px;
+	/*距离左边距离*/
+	font-size: 14px;
+	/*设置字体大小*/
+}
+
+.offical-time {
+	/*顶部时间*/
+	float: right;
+	/*居右*/
+	font-size: 13px;
+	/*字体大小*/
+}
+
+.offical-arrow {
+	/*外部三角形*/
+	position: absolute;
+	/*相对布局*/
+	/*top: -165px;*/
+	/*距离顶部的距离*/
+	left: -20px;
+	/*左侧距离*/
+	border: solid 10px;
+	/*大小*/
+	border-color: transparent #EEEBEB transparent transparent;
+	/*四个三角形颜色（顶部顺时针开始）*/
+}
+
+.offical-arrow2 {
+	/*内部部三角形*/
+	left: -19px;
+	/*左侧距离*/
+	border-color: transparent #FAFAFA transparent transparent;
+	/*四个三角形颜色（顶部顺时针开始）*/
+}
+
+.offical-bottom-title {
+	/*底部的标题*/
+	text-align: center;
+	/*居中*/
+	font-size: 20px;
+	/*字体大小*/
+	color: dodgerblue;
+	/*字体颜色*/
+	margin: 10px;
+}
+
+.offical-bottom-image {
+	border-radius: 50%;
+	/*margin-left: 23%;*/
+	width: 50px;
+	/*完整的圆形*/
+	height: 50px;
+	/*完整的圆形*/
+}
+
+.offical-bottom-department {
+	text-align: center;
+	/*人名居中*/
+	font-size: 14px;
+	/*设置字体大小*/
+}
+
+.offical-reply {
+	/*底部内容*/
+	position: relative;
+	background: #FAFAFA;
+	/*设置背景*/
+	border-radius: 10px;
+	/* 圆角 */
+	padding: 10px;
+	/*内部距离*/
+	border: solid 1px #EEEBEB;
+	/*边框*/
+	/*设置边距*/
+	margin: 20px;
+	margin-top: 0px;
+	margin-left: 10px;
+}
+
+.offical-bottom-reply-name {
+	/*底部回复人*/
+	/*设置边距*/
+	margin-left: 2px;
+	margin-right: 5px;
+	font-size: 13px;
+	/*字体大小*/
+}
+
+.offical-bottom-reply-content {
+	/*底部回复内容*/
+	padding: 10px;
+	padding-bottom: 0px;
+	/*设置边距*/
+}
+
+.offical-bottom-reply-content-line {
+	/*横线*/
+	background: #AAAAAA;
+	height: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
