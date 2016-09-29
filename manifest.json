@@ -266,7 +266,8 @@
 					null,
 					"css/app.css",
 					"fonts/mui.ttf",
-					"image/home/u189.png"
+					"image/home/u189.png",
+					"css/home/home.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -314,7 +315,11 @@
 			"html/tab_mine.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"image/home/u193.png",
+					"image/document_headimg.png",
+					"css/mine/mine.css"
 				],
 				"refer": [],
 				"priority": 0
