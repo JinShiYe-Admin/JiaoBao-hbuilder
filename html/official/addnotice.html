@@ -10,7 +10,15 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="../../css/mui.min.css">
-
+		<style type="text/css">
+			#btn-row {
+				border-color: gray;
+				background-color: white;
+				height: 50px;
+				padding: 10px;
+				border:1px solid gainsboro;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -21,104 +29,34 @@
 
 		</header>
 		<div class="mui-content mo-background-color">
+			<p></p>
 			<div class="mui-input-row">
-				<p></p>
-				<input type="text" placeholder="请输入标题" id="title">
-				<textarea id='content' class="mui-input-clear question" placeholder="请添加内容"></textarea>
+				<input type="text" class="mui-input-clear" placeholder="请输入标题">
 			</div>
-			<div class="mui-content-padded">
+			<div class="mui-input-row">
+				<textarea id='content' class="mui-input-clear question" placeholder="请添加内容"></textarea>
+
+			</div>
+			<div id="btn-row">
 				<button type="button" class="mui-btn" onclick="getimg()">
 					图片
 				</button>
 				<button type="button" class="mui-btn " onclick="getfile()">
 					文件
 				</button>
-				<div class="mui-input-row mui-checkbox mui-left" style="float: right;">
-					<label>发送短信</label>
-					<input name="checkbox" type="checkbox">
-				</div>
-
+				<div style="float: right; "class=" mui-checkbox mui-left">
+					<label style="margin-top: 8px;">发送短信</label>
+					<input name="checkbox1" value="" type="checkbox"></div>
 			</div>
+
+		</div>
 
 	</body>
 	<script src="../../js/mui.min.js"></script>
+
 	<script type="text/javascript">
 		var getimg = function() {
-			if(mui.os.plus) { //返回是否在基座中运行
-				var a = [{
-					title: "拍照"
-				}, {
-					title: "从相册选取"
-				}];
-				plus.nativeUI.actionSheet({
-					title: "请选择图片位置",
-					cancel: "取消",
-					buttons: a
-				}, function(b) { /*actionSheet 按钮点击事件*/
-					switch(b.index) {
-						case 0:
 
-							break;
-						case 1:
-							getcamera();//拍照
-							break;
-						case 2:
-							getgallery();//从相册选择
-							break;
-						default:
-							break;
-					}
-				})
-			}
-
-		}
-		var getcamera = function() {//拍照
-			plus.camera.getCamera().captureImage(function(e) {
-				console.log("event:" + e);
-				var name = e.substr(e.lastIndexOf('/') + 1);
-				console.log("name:" + name);
-
-				plus.zip.compressImage({
-					src: e,
-					dst: '_doc/' + name,
-					overwrite: true,
-					quality: 50
-				}, function(zip) {
-					console.log("filesize:" + zip.size + ",totalsize:" + size);
-					if(zip.size > (10 * 1024 * 1024)) {
-						return mui.toast('文件超大,请重新选择~');
-					}
-
-				}, function(zipe) {
-					mui.toast('压缩失败！')
-				});
-
-			}, function(e) {
-			}, {});
-		}
-		var getgallery = function() {//从相册选择
-			plus.gallery.pick(function(e) {
-				console.log("event:" + e);
-				var name = e.substr(e.lastIndexOf('/') + 1);
-				console.log("name:" + name);
-
-				plus.zip.compressImage({
-					src: e,
-					dst: '_doc/' + name,
-					overwrite: true,
-					quality: 50
-				}, function(zip) {
-					console.log("filesize:" + zip.size + ",totalsize:" + size);
-					if(zip.size > (10 * 1024 * 1024)) {
-						return mui.toast('文件超大,请重新选择~');
-					}
-
-				}, function(zipe) {
-					mui.toast('压缩失败！')
-				});
-
-			}, function(e) {
-			}, {});
 		}
 		var getfile = function() {
 

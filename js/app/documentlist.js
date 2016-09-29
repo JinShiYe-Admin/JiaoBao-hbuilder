@@ -21,7 +21,7 @@
 	for(var i = 0; i < 20; i++) {
 		var dic = datasource.data[i];
 		var noticelist = '						<div>\
-							<div style="width: 50px;">\
+							<div style="float:left">\
 								<img class="document-headimg" src="'+dic.headimg+'" /><img class="document-redpoint" src="'+ dic.red+'" /><br/><br/><br/>\
 								<font style="text-align: center;font-size: 14px;">' + dic.name + '</font>\
 							</div>\
