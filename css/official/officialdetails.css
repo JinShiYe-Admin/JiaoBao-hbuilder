@@ -103,7 +103,8 @@
 	/*设置边距*/
 	margin-left: 2px;
 	margin-right: 5px;
-	font-size: 13px;
+	font-size: 14px;
+	color: #8F8F94;
 	/*字体大小*/
 }
 
@@ -116,8 +117,11 @@
 
 .offical-bottom-reply-content-line {
 	/*横线*/
-	background: #AAAAAA;
+	background: #BBBBBB;
 	height: 1px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+.mui-icon-contact{
+	color: #BBBBBB;
 }
