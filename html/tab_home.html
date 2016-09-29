@@ -1,0 +1,117 @@
+<!--/** *@author MSL *@describe 增加轮播 增加图标按钮 by An */-->
+<!--增加心情广场 by an 09.29-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/utils/imgeControl.css" rel="stylesheet" />
+<<<<<<< HEAD
+		<link href="../css/home/home.css" rel="stylesheet" />
+=======
+		<link rel="stylesheet" href="../css/utils/common.css" />
+>>>>>>> branch 'master' of https://github.com/JinShiYe/JiaoBao-hbuilder.git
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script src="../js/utils/carouselControl.js"></script>
+		<script src="../js/utils/grideControl.js"></script>
+		<script src="../js/home/home.js"></script>
+		<script type="text/javascript">
+<<<<<<< HEAD
+			mui.init()
+=======
+			mui.init({
+
+			})
+>>>>>>> branch 'master' of https://github.com/JinShiYe/JiaoBao-hbuilder.git
+		</script>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav common-background-bar">
+			<span class="mui-icon mui-icon-bars common-color-white"></span>
+			<h1 class="mui-title common-color-white common-font-family-Bold">首页</h1>
+			<span class="mui-icon mui-icon-chatboxes mui-pull-right common-color-white"></span>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/JinShiYe/JiaoBao-hbuilder.git
+				</div>
+				<div class="mui-slider-indicator mui-text-right">
+				</div>
+			</div>
+<<<<<<< HEAD
+			<div class="background-white">
+				<ul class="mui-table-view mui-grid-view mui-grid-9 "></ul>
+			</div>
+			<div class="background-white">
+				<h3 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />心情广场</h3>
+				<ul id="mood_guard" class="mui-table-view">
+				</ul>
+				<h5 class="more-words">查看更多&gt;&gt;</h5>
+			</div>
+			<div class="background-white">
+				<h3 class="padding-top padding-left">
+					<img class="padding-right-12" src="../image/home/u200.png" />
+					求知精选
+					<img src="../image/home/u210.png" />
+				</h3>
+				<div id="qiuZhi-sifted" class="sifted-border-top">
+					
+				</div>
+			</div>
+			<div class="background-white">
+				<h3 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />求知推荐</h3>
+			</div>
+	
+
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
+
+		</div>
+	</body>
+	<script>
+		mui.plusReady(function() {
+			var titles = ["幸福是可以一起睡觉", "幸福是可以一起吃饭", "幸福是可以一起拉屎"]
+
+			addStrip(getImgArray())
+			addImg(getImgArray(), titles)
+			var slider = mui("#slider");
+			slider.slider({
+				interval: 5000
+			});
+			getHomeCircle()
+			getMoodList()
+			getSiftedList();
+		})
+		var getHomeCircle = function() {
+			var chars = ["待批公文", "通知公告", "校园通知", "班级通知", "家长来信", "我的信箱", "校园秀", "求知问答"];
+			var imgUrls = ["../image/home/u52.png",
+				"../image/home/u56.png",
+				"../image/home/u54.png",
+				"../image/home/u197.png",
+				"../image/home/u193.png",
+				"../image/home/u191.png",
+				"../image/home/u195.png",
+				"../image/home/u189.png"
+			]
+			var urls = []
+			putGrideData(createArray(chars, imgUrls, urls))
+		}
+		var getMoodList=function(){
+			var moodItem=document.getElementById('mood_guard')
+			createList(moodItem,createMoodList())
+		}
+		var getSiftedList=function(){
+			var siftedItem=document.getElementById('qiuZhi-sifted');
+			createSiftedList(siftedItem,createSiftedData(6))
+		}
+	</script>
+
+</html>
