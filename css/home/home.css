@@ -22,12 +22,36 @@
 .char-darkgray{
 	color: darkgray;
 }
-.img-width-33{
+.cell-width-32{
 	width: 32%;
 	height: auto;
 	padding-left: 12px;
 	padding-right: 12px;
 }
+.cell-width-67{
+	width: 66.6666667%;
+}
 .align-right{
 	text-align: right;
 }
+.more-words{
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	
+}
+.sifted-border-top{
+	border-top-style: solid;
+	border-top-width:thin;
+	border-color: darkgray;
+}
+.sifted-border-right{
+	border-right-style: solid;
+	border-right-width:thin ;
+	border-color: darkgray;
+}
+.align-center{
+	text-align: center;
+}
+
+
