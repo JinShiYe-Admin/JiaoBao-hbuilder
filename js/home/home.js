@@ -66,6 +66,12 @@ var createMoodItem = function(headImgUrl, name, words, time, imgsArray) {
 	item.time = time;
 	return item;
 }
+/**
+ * 创建itemData
+ * @param {Object} title
+ * @param {Object} words
+ * @param {Object} imgsArray
+ */
 var createSiftedItem = function(title, words, imgsArray) {
 	var item = new Object()
 	item.title = title;
@@ -73,6 +79,10 @@ var createSiftedItem = function(title, words, imgsArray) {
 	item.imgs = imgsArray;
 	return item;
 }
+/**
+ * 模拟服务器传回的数据
+ * @param {Object} len
+ */
 var createSiftedData = function(len) {
 	var siftedList = new Array();
 	if(len >= 5) {
@@ -86,11 +96,19 @@ var createSiftedData = function(len) {
 	}
 	return siftedList
 }
-
+/**
+ * 增加单个数据
+ * @param {Object} array
+ */
 var addItem = function(array) {
 	var item = createSiftedItem('2016年9月30日(第111期)', '这期主要介绍了啥呢，我也不知道', ['../image/home/u118.png', '../image/home/u131.png']);
 	array.push(item)
 }
+/**
+ * 精选列表
+ * @param {Object} item
+ * @param {Object} siftedList
+ */
 var createSiftedList=function(item,siftedList){
 	console.log(JSON.stringify(siftedList))
 	siftedList.forEach(function(sifted,index,siftedList){
@@ -98,17 +116,17 @@ var createSiftedList=function(item,siftedList){
 		switch(index){
 			case 0:
 			console.log("0"+JSON.stringify(sifted))
-			case 1:
-			div.className="mui-table-cell align-center cell-width-33 sifted-border-top sifted-border-right"
+			div.className="mui-table-view-cell  mui-col-xs-4 mui-col-sm-4 sifted-border-top  "
 			div.innerHTML=getSiftedCommonHTML(sifted)
 			break;
+			case 1:
 			case 2:
 			case 4:
-			div.className="mui-table-cell align-center cell-width-33 sifted-border-top"
+			div.className="mui-table-view-cell  mui-col-xs-4 mui-col-sm-4 align-center sifted-border-top sifted-border-left"
 			div.innerHTML=getSiftedCommonHTML(sifted)
 			break;
 			case 3:
-			div.className="align-center cell-width-67 sifted-border-right sifted-border-top"
+			div.className="mui-table-view-cell  cell-width-67 align-center  sifted-border-top"
 			div.innerHTML=getSiftedForthHTML(sifted)
 			break;
 			default:
@@ -117,14 +135,73 @@ var createSiftedList=function(item,siftedList){
 		item.appendChild(div)
 	})
 }
+/**
+ * cell的innerHTML
+ * @param {Object} item
+ */
 var getSiftedCommonHTML=function(item){
 	return '<h4>'+item.title+'<h4></br>'
 		+'<p>'+item.words+'</p></br>'
-		+'<img src="'+item.imgs[0]+'"/>';
+		+'<img class="img-size" src="'+item.imgs[0]+'"/>';
 }
+/**
+ * cell的innerHTML
+ * @param {Object} item
+ */
 var getSiftedForthHTML=function(item){
 	return '<h4>'+item.title+'<h4></br>'
 		+'<p>'+item.words+'</p></br>'
-		+'<img src="'+item.imgs[0]+'"/>'
-		+'<img src="'+item.imgs[1]+'"/>';
+		+'<img class="img-size-half" src="'+item.imgs[0]+'"/>'
+		+'<img class="img-size-half" src="'+item.imgs[1]+'"/>';
+}
+/**
+ * 
+ * @param {Object} imgUrl
+ * @param {Object} title
+ */
+var createRecommendItemObject=function(imgUrl,title){
+	var item=new Object();
+	item.img=imgUrl;
+	item.title=title;
+	return item;
+}
+/**
+ * 
+ */
+var createRecommendDataList=function(){
+	var titles=['小学','初中','高中','家教','科普','专家','专栏','其他']
+	var imgUrls=['../image/home/u219.png','../image/home/u221.png',
+	'../image/home/u227.png','../image/home/u229.png',
+	'../image/home/u240.png','../image/home/u242.png',
+	'../image/home/u244.png','../image/home/u221.png']
+	var arrays=new Array();
+	titles.forEach(function(title,index,titles){
+		arrays.push(createRecommendItemObject(imgUrls[index],title));
+	})
+	return arrays;
+}
+/**
+ * 
+ * @param {Object} item
+ * @param {Object} array
+ */
+var createRecommendView=function(item,arrays){
+	arrays.forEach(function(arr,index,arrays){
+		var div=document.createElement('div')
+		switch(index){
+			case 0:
+			case 4:
+			div.className='mui-table-view-cell  mui-col-xs-3 mui-col-sm-3 sifted-border-top'
+			break;
+			default:
+			div.className='mui-table-view-cell  mui-col-xs-3 mui-col-sm-3 recommend-border'
+			break;
+		}
+		div.innerHTML='<a href="#">' +
+				'<img class="mui-icon recommend-img" src="' + arr.img + '"></img>' +
+				'<div class="mui-media-body">' + arr.title + '</div>' +
+				'</a>';
+		item.appendChild(div)		
+	})
+	
 }

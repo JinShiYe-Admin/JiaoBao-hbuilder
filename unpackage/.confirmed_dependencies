@@ -82,7 +82,14 @@
 			"image/home/u210.png",
 			"image/home/u118.png",
 			"image/home/u131.png",
-			"css/utils/common.css"
+			"css/utils/common.css",
+			"image/home/u221.png",
+			"image/home/u240.png",
+			"image/home/u242.png",
+			"image/home/u229.png",
+			"image/home/u219.png",
+			"image/home/u227.png",
+			"image/home/u244.png"
 		],
 		"refer": []
 	},
@@ -102,7 +109,8 @@
 			"image/official/u60.png",
 			"image/official/u62.png",
 			"image/official/u42.png",
-			"css/utils/common.css"
+			"css/utils/common.css",
+			"css/home/home.css"
 		],
 		"refer": [
 			"html/official/noticelist_main.html",
@@ -161,7 +169,8 @@
 			"css/utils/notice.css",
 			"js/mui.min.js",
 			"css/mui.min.css",
-			"css/utils/noticedetails.css"
+			"css/utils/noticedetails.css",
+			"css/official/noticedetails.css"
 		],
 		"refer": [
 			"html/official/noticedetails_main.html"
