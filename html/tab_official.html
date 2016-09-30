@@ -21,7 +21,7 @@
 			<h1 class="mui-title common-color-white common-font-family-Regular">公文</h1>
 		</header>
 		<div class="mui-content">
-			<ul class="mui-table-view mui-grid-view mui-grid-9">
+			<ul id="offcial" class="mui-table-view mui-grid-view mui-grid-9">
 			</ul>
 		</div>
 	</body>
@@ -39,7 +39,8 @@
 				"../image/official/u48.png",
 				"../image/official/u58.png"
 			]
+			var gride=document.getElementById('offcial')
 			var urls = ['official/noticelist_main.html', 'official/documentlist.html'];
-			putGrideData(createArray(chars, imgUrls, urls))
+			createGirde(gride, createArray(chars, imgUrls, urls))
 		})
 	</script>
