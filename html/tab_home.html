@@ -67,16 +67,22 @@
 	<script>
 		mui.plusReady(function() {
 			var titles = ["幸福是可以一起睡觉", "幸福是可以一起吃饭", "幸福是可以一起拉屎"]
-
+			//加黑条
 			addStrip(getImgArray())
+			//加图片
 			addImg(getImgArray(), titles)
 			var slider = mui("#slider");
+			//轮播开始
 			slider.slider({
 				interval: 5000
 			});
+			//圆圈按钮
 			getHomeCircle('circler')
+			//心情广场
 			getMoodList()
+			//求知精选
 			getSiftedList();
+			//求知推荐
 			getRecommend()
 		})
 		/**
