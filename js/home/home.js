@@ -10,7 +10,7 @@ var createList = function(item, listData) {
 			var li = document.createElement('li');
 			li.className = "mui-table-view-cell";
 			li.innerHTML = '<div>' +
-				'<h4 style="color: #F0AD4E;"><img src="' + cellData.headImg + '" align="middle" class="padding-right-12"/>' + cellData.name + '</h4>' +
+				'<b style="color: #F0AD4E;"><img src="' + cellData.headImg + '" align="middle" class="padding-right-12"/>' + cellData.name + '</b>' +
 				'<p class=" char-darkgray">' + cellData.words + '</p>' +
 				'<div>' +
 				getPicInner(cellData) +
