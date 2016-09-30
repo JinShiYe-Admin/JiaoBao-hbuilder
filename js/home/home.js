@@ -66,6 +66,12 @@ var createMoodItem = function(headImgUrl, name, words, time, imgsArray) {
 	item.time = time;
 	return item;
 }
+/**
+ * 创建itemData
+ * @param {Object} title
+ * @param {Object} words
+ * @param {Object} imgsArray
+ */
 var createSiftedItem = function(title, words, imgsArray) {
 	var item = new Object()
 	item.title = title;
@@ -73,6 +79,10 @@ var createSiftedItem = function(title, words, imgsArray) {
 	item.imgs = imgsArray;
 	return item;
 }
+/**
+ * 模拟服务器传回的数据
+ * @param {Object} len
+ */
 var createSiftedData = function(len) {
 	var siftedList = new Array();
 	if(len >= 5) {
@@ -86,11 +96,19 @@ var createSiftedData = function(len) {
 	}
 	return siftedList
 }
-
+/**
+ * 增加单个数据
+ * @param {Object} array
+ */
 var addItem = function(array) {
 	var item = createSiftedItem('2016年9月30日(第111期)', '这期主要介绍了啥呢，我也不知道', ['../image/home/u118.png', '../image/home/u131.png']);
 	array.push(item)
 }
+/**
+ * 精选列表
+ * @param {Object} item
+ * @param {Object} siftedList
+ */
 var createSiftedList=function(item,siftedList){
 	console.log(JSON.stringify(siftedList))
 	siftedList.forEach(function(sifted,index,siftedList){
@@ -117,11 +135,19 @@ var createSiftedList=function(item,siftedList){
 		item.appendChild(div)
 	})
 }
+/**
+ * cell的innerHTML
+ * @param {Object} item
+ */
 var getSiftedCommonHTML=function(item){
 	return '<h4>'+item.title+'<h4></br>'
 		+'<p>'+item.words+'</p></br>'
 		+'<img class="img-size" src="'+item.imgs[0]+'"/>';
 }
+/**
+ * cell的innerHTML
+ * @param {Object} item
+ */
 var getSiftedForthHTML=function(item){
 	return '<h4>'+item.title+'<h4></br>'
 		+'<p>'+item.words+'</p></br>'
