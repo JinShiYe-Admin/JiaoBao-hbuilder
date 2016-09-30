@@ -360,9 +360,12 @@
 					"html/official/noticelist_sub.html",
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/utils/common.css"
 				],
-				"refer": [],
+				"refer": [
+					"html/official/addnotice.html"
+				],
 				"priority": 0
 			},
 			"html/official/noticelist_sub.html": {
@@ -403,7 +406,8 @@
 					"html/official/document_sub.html",
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/utils/common.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -416,7 +420,8 @@
 					"js/mui.min.js",
 					"image/red_point.png",
 					"image/headimg2.png",
-					"image/white_point.png"
+					"image/white_point.png",
+					"css/utils/searchbar.css"
 				],
 				"refer": [
 					"html/official/officialdetails_main.html"
@@ -428,7 +433,8 @@
 					"html/official/officialdetails_sub.html",
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/utils/common.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -440,7 +446,18 @@
 					"image/icon-personal.png",
 					"image/official/u101.png",
 					"image/home/u292.png",
-					"image/document_headimg.png"
+					"image/document_headimg.png",
+					"css/official/officialdetails.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/official/addnotice.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/utils/common.css"
 				],
 				"refer": [],
 				"priority": 0
