@@ -6,7 +6,7 @@ var officialdetails = (function($) {
 	/**
 	 * 增加一条公告详情顶部数据
 	 * @param {Object} mElement 父元素
-	 * @param {Object} topData 顶部数据,一个数组[topImageUrl, topName, topContent, topTime]
+	 * @param {Object} topData 顶部数据,一个数组[topImageUrl, topName, topContent, topTime],头像，姓名，内容，时间
 	 */
 	var addTop = function(mElement, topData) {
 		var html1 = '<div class="mui-row"><div class=" mui-col-xs-2 mui-col-sm-2">';
