@@ -28,7 +28,7 @@ var getPicInner = function(cellData) {
 		if(cellData.imgs) {
 			var imgHTML = '';
 			cellData.imgs.forEach(function(img, index, imgs) {
-				imgHTML += '<img class="cell-width-32" src="' + img + '"/>'
+				imgHTML += '<img class="cell-width-33" src="' + img + '"/>'
 			})
 			return imgHTML
 		} else {
@@ -99,12 +99,12 @@ var createSiftedList=function(item,siftedList){
 			case 0:
 			console.log("0"+JSON.stringify(sifted))
 			case 1:
-			div.className="mui-table-cell align-center cell-width-32 sifted-border-right"
+			div.className="mui-table-cell align-center cell-width-33 sifted-border-top sifted-border-right"
 			div.innerHTML=getSiftedCommonHTML(sifted)
 			break;
 			case 2:
 			case 4:
-			div.className="mui-table-cell align-center cell-width-32 sifted-border-top"
+			div.className="mui-table-cell align-center cell-width-33 sifted-border-top"
 			div.innerHTML=getSiftedCommonHTML(sifted)
 			break;
 			case 3:

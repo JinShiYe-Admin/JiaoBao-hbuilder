@@ -22,14 +22,14 @@
 .char-darkgray{
 	color: darkgray;
 }
-.cell-width-32{
-	width: 32%;
+.cell-width-33{
+	width: 33.33333333333333%;
 	height: auto;
 	padding-left: 12px;
 	padding-right: 12px;
 }
 .cell-width-67{
-	width: 66.6666667%;
+	width: 66.66666666666667%;
 }
 .align-right{
 	text-align: right;
@@ -53,5 +53,6 @@
 .align-center{
 	text-align: center;
 }
+
 
 
