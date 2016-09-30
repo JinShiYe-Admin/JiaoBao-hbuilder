@@ -421,7 +421,8 @@
 					"image/red_point.png",
 					"image/headimg2.png",
 					"image/white_point.png",
-					"css/utils/searchbar.css"
+					"css/utils/searchbar.css",
+					"js/app/official/documentlist.js"
 				],
 				"refer": [
 					"html/official/officialdetails_main.html"
