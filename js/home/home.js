@@ -10,7 +10,7 @@ var createList = function(item, listData) {
 			var li = document.createElement('li');
 			li.className = "mui-table-view-cell";
 			li.innerHTML = '<div>' +
-				'<h4 style="color: #F0AD4E;"><img src="' + cellData.headImg + '" align="middle" class="padding-right-12"/>' + cellData.name + '</h4>' +
+				'<b style="color: #F0AD4E;"><img src="' + cellData.headImg + '" align="middle" class="padding-right-12"/>' + cellData.name + '</b>' +
 				'<p class=" char-darkgray">' + cellData.words + '</p>' +
 				'<div>' +
 				getPicInner(cellData) +
@@ -140,7 +140,7 @@ var createSiftedList=function(item,siftedList){
  * @param {Object} item
  */
 var getSiftedCommonHTML=function(item){
-	return '<h4>'+item.title+'<h4></br>'
+	return '<b>'+item.title+'<b></br>'
 		+'<p>'+item.words+'</p></br>'
 		+'<img class="img-size" src="'+item.imgs[0]+'"/>';
 }
@@ -149,7 +149,7 @@ var getSiftedCommonHTML=function(item){
  * @param {Object} item
  */
 var getSiftedForthHTML=function(item){
-	return '<h4>'+item.title+'<h4></br>'
+	return '<b>'+item.title+'</b></br>'
 		+'<p>'+item.words+'</p></br>'
 		+'<img class="img-size-half" src="'+item.imgs[0]+'"/>'
 		+'<img class="img-size-half" src="'+item.imgs[1]+'"/>';

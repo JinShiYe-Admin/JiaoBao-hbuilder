@@ -1,6 +1,5 @@
 .background-white{
 	background-color: white;
-	margin: 16px;
 }
 .padding-top{
 	padding-top: 16px;
@@ -9,21 +8,21 @@
 	padding-top: 12px;
 }
 .padding-left{
-	padding-left: 21px;
+	padding-left: 12px;
 	color: #ACACB4;
 }
 .padding-right-12{
-	padding-right: 12px;
+	padding-right: 8px;
 }
 .padding{
-	padding-left: 12px;
-	padding-right: 12px;
+	padding-left: 8px;
+	padding-right: 8px;
 }
 .char-darkgray{
 	color: darkgray;
 }
 .cell-width-33{
-	width: 32%;
+	width: 33.3333333333333333%;
 	height: auto;
 	padding-left: 13px;
 	padding-right: 13px;
@@ -40,8 +39,8 @@
 }
 .more-words{
 	text-align: center;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-top: 6px;
+	padding-bottom: 6px;
 	
 }
 .sifted-border-top{
@@ -62,7 +61,7 @@
 .img-size{
 	width: 100%;
 	height: auto;
-	padding: 12px;
+	padding: 6px;
 }
 .img-size-half{
 	width: 50%;

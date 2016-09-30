@@ -308,7 +308,8 @@
 					"image/official/u42.png",
 					null,
 					"css/utils/common.css",
-					"css/home/home.css"
+					"css/home/home.css",
+					"image/official/u103.png"
 				],
 				"refer": [
 					"html/official/noticelist_main.html",

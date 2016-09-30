@@ -110,7 +110,8 @@
 			"image/official/u62.png",
 			"image/official/u42.png",
 			"css/utils/common.css",
-			"css/home/home.css"
+			"css/home/home.css",
+			"image/official/u103.png"
 		],
 		"refer": [
 			"html/official/noticelist_main.html",
