@@ -5,7 +5,7 @@
 		//请参考网址http://www.html5plus.org/doc/zh_cn/io.html#plus.io.PRIVATE_DOC
 			plus.io.requestFileSystem( plus.io.PUBLIC_DOCUMENTS, function( fs ) {
 				// fs.root是根目录操作对象DirectoryEntry
-						alert( "Request file system success: " + fs.root.fullPath );
+						//alert( "Request file system success: " + fs.root.fullPath );
 
 		// 可通过fs操作PRIVATE_WWW文件系统 
 		// ......
