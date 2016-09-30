@@ -5,8 +5,8 @@
  * 创建gride
  * @param {Object} array
  */
-var createGirde = function(array) {
-		var gride = document.body.querySelector(".mui-grid-9,.mui-grid-view")
+var createGirde = function(gride,array) {
+		
 		array.forEach(function(map, index, array) {
 			console.log("字符串：" + map.key + "图标：" + map.value)
 			var li = document.createElement('li')
@@ -26,13 +26,6 @@ var createGirde = function(array) {
 			gride.appendChild(li)
 		})
 	}
-	/**
-	 * 加载数据 创建Gride
-	 * @param {Object} array
-	 */
-var putGrideData = function(array) {
-	createGirde(array);
-}
 
 /**
  * 数据 数据

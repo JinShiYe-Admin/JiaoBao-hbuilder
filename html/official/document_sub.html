@@ -1,3 +1,4 @@
+<!--公文预览界面-->
 <!DOCTYPE html>
 <html>
 
@@ -9,14 +10,10 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="../../css/mui.min.css">
 		<link rel="stylesheet" href="../../css/utils/documents.css" />
-		<style type="text/css">
-			/*更改搜索框背景色*/
-			
-			.mui-search .mui-placeholder {
-				background: white;
-			}
-		</style>
+		<link rel="stylesheet" href="../../css/utils/searchbar.css" />
+
 		<script type="text/javascript">
+		//模拟数据
 			var datasource = {
 				code: 0,
 				result: '成功',
@@ -31,13 +28,13 @@
 		<!--下拉刷新容器-->
 		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
 			<div class="mui-scroll" style="padding-left: 5px;padding-right: 10px;">
-				<div class="mui-content-padded" style="margin: 0px 0px 0px 0px;">
-					<div class="mui-input-row mui-search mui-content-padded">
-						<input type="search" class="mui-input-clear" placeholder="请输入标题">
+				<button class="searchbtn">搜索</button>
 
-					</div>
+				<div class="mui-input-row mui-search searchbar">
+					<input type="search" class="mui-input-clear" placeholder="请输入标题">
 
 				</div>
+
 				<!--数据列表-->
 				<ul class="mui-table-view">
 
@@ -69,8 +66,8 @@
 					for(var i = cells.length, len = i + 3; i < len; i++) {
 						var dic = datasource.data[i];
 						var noticelist = '						<div>\
-							<div style="width: 50px;">\
-								<img class="document-headimg" src="' + dic.headimg + '" /><img class="document-redpoint" src="' + dic.red + '" /><br/><br/><br/>\
+							<div style="float: left;">\
+								<img class="document-headimg" src="' + dic.headimg + '" /><img class="document-redpoint" src="../../image/red_point.png" /><br/><br/><br/>\
 								<font style="text-align: center;font-size: 14px;">' + dic.name + '</font>\
 							</div>\
 							<font class="document-content">' + dic.content + '\
@@ -98,7 +95,7 @@
 					for(var i = cells.length, len = i + 20; i < len; i++) {
 						var dic = datasource.data[i];
 						var noticelist = '						<div>\
-							<div style="width: 50px;">\
+							<div style="float: left;">\
 								<img class="document-headimg" src="' + dic.headimg + '" /><img class="document-redpoint" src="' + dic.red + '" /><br/><br/><br/>\
 								<font style="text-align: center;font-size: 14px;">' + dic.name + '</font>\
 							</div>\

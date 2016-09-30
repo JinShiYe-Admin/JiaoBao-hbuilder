@@ -1,4 +1,4 @@
-<!--班内发帖界面-->
+<!--新建通知公告界面-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,29 +10,104 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/utils/common.css" />
 
-
+		<style type="text/css">
+		/*图片 文件 div样式表*/
+			#btn-row {
+				border-color: gray;
+				background-color: white;
+				height: 50px;
+				padding: 10px;
+				border: 1px solid gainsboro;
+			}
+		</style>
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">新建通知公告</h1>
-			<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">添加</button>
+		<header class="mui-bar mui-bar-nav common-background-bar">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left common-color-white"></a>
+			<h1 class="mui-title common-color-white">新建通知公告</h1>
+			<a class="mui-icon mui-icon-checkmarkempty mui-pull-right common-color-white"></a>
 
 		</header>
 		<div class="mui-content mo-background-color">
+			<p></p>
 			<div class="mui-input-row">
-				<p></p>
-				<input type="text" placeholder="请输入标题" id="title">
+				<input type="text" class="mui-input-clear" placeholder="请输入标题">
+			</div>
+			<div class="mui-input-row">
 				<textarea id='content' class="mui-input-clear question" placeholder="请添加内容"></textarea>
+
+			</div>
+			<div id="btn-row">
+				<button type="button" class="mui-btn" onclick="getimg()">
+					图片
+				</button>
+				<button type="button" class="mui-btn " onclick="getfile()">
+					文件
+				</button>
+				<div style="float: right; " class=" mui-checkbox mui-left">
+					<label style="margin-top: 8px;">发送短信</label>
+					<input name="checkbox1" value="" type="checkbox"></div>
+			</div>
+			<br/>
+			<p style="font-size: 18px;">附件列表</p>
+			<div class="mui-content">
+				<ul id="list" class="mui-table-view">
+
+				</ul>
 			</div>
 
-
+		</div>
 
 	</body>
 	<script src="../../js/mui.min.js"></script>
-	
 
+	<script type="text/javascript">
+		mui.init();
+		//左滑删除按钮方法
+		(function($) {
+			$('#list').on('tap', '.mui-btn', function(event) {
+				var elem = this;
+				var li = elem.parentNode.parentNode;
+				mui.confirm('确认删除该附件？', '提示', btnArray, function(e) {
+					if(e.index == 0) {
+						li.parentNode.removeChild(li);
+					} else {
+						setTimeout(function() {
+							$.swipeoutClose(li);
+						}, 0);
+					}
+				});
+			});
+
+		})(mui);
+		var btnArray = ['确认', '取消'];
+		var getimg = function() {//点击图片方法
+			var table = document.body.querySelector('.mui-table-view');
+			var cells = document.body.querySelectorAll('.mui-table-view-cell');
+			for(var i = cells.length, len = i + 1; i < len; i++) {
+				var li = document.createElement('li');
+				li.className = 'mui-table-view-cell ';
+				li.innerHTML = '<div class="mui-slider-right mui-disabled">\<a class="mui-btn mui-btn-red">删除</a>\</div>\<div class="mui-slider-handle">' + i + '.png\</div>'
+					//下拉刷新，新纪录插到最前面；
+				table.insertBefore(li, table.firstChild);
+			}
+		}
+		var getfile = function() {//点击文件方法
+			var table = document.body.querySelector('.mui-table-view');
+			var cells = document.body.querySelectorAll('.mui-table-view-cell');
+			for(var i = cells.length, len = i + 1; i < len; i++) {
+				var li = document.createElement('li');
+				li.className = 'mui-table-view-cell ';
+				li.innerHTML = '<div class="mui-slider-right mui-disabled">\<a class="mui-btn mui-btn-red">删除</a>\</div>\<div class="mui-slider-handle">' + i + '.doc\</div>'
+					//下拉刷新，新纪录插到最前面；
+				table.insertBefore(li, table.firstChild);
+			}
+		}
+
+		}
+	</script>
 
 </html>

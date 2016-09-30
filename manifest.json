@@ -266,7 +266,26 @@
 					null,
 					"css/app.css",
 					"fonts/mui.ttf",
-					"image/home/u189.png"
+					"image/home/u189.png",
+					"css/home/home.css",
+					"image/home/u101.png",
+					"image/home/u70.png",
+					"image/home/u99.png",
+					"image/home/u200.png",
+					"image/home/u103.png",
+					"js/home/home.js",
+					"image/home/u74.png",
+					"image/home/u210.png",
+					"image/home/u118.png",
+					"image/home/u131.png",
+					"css/utils/common.css",
+					"image/home/u221.png",
+					"image/home/u240.png",
+					"image/home/u242.png",
+					"image/home/u229.png",
+					"image/home/u219.png",
+					"image/home/u227.png",
+					"image/home/u244.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -287,7 +306,9 @@
 					"image/official/u60.png",
 					"image/official/u62.png",
 					"image/official/u42.png",
-					null
+					null,
+					"css/utils/common.css",
+					"css/home/home.css"
 				],
 				"refer": [
 					"html/official/noticelist_main.html",
@@ -314,7 +335,11 @@
 			"html/tab_mine.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"image/home/u193.png",
+					"image/document_headimg.png",
+					"css/mine/mine.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -346,7 +371,8 @@
 					"image/icon-accessory.png",
 					"css/utils/notice.css",
 					"css/mui.min.css",
-					"css/utils/noticedetails.css"
+					"css/utils/noticedetails.css",
+					"css/official/noticedetails.css"
 				],
 				"refer": [
 					"html/official/noticedetails_main.html"
