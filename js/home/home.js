@@ -154,3 +154,46 @@ var getSiftedForthHTML=function(item){
 		+'<img class="img-size-half" src="'+item.imgs[0]+'"/>'
 		+'<img class="img-size-half" src="'+item.imgs[1]+'"/>';
 }
+/**
+ * 
+ * @param {Object} imgUrl
+ * @param {Object} title
+ */
+var createRecommendItemObject=function(imgUrl,title){
+	var item=new Object();
+	item.img=imgUrl;
+	item.title=title;
+	return item;
+}
+/**
+ * 
+ */
+var createRecommendDataList=function(){
+	var titles=['小学','初中','高中','家教','科普','专家','专栏','其他']
+	var imgUrls=['../image/home/u219.png','../image/home/u221.png',
+	'../image/home/u227.png','../image/home/u229.png',
+	'../image/home/u240.png','../image/home/u242.png',
+	'../image/home/u244.png','../image/home/u221.png']
+	var arrays=new Array();
+	titles.forEach(function(title,index,titles){
+		arrays.push(createRecommendItemObject(imgUrls[index],title));
+	})
+	return arrays;
+}
+/**
+ * 
+ * @param {Object} item
+ * @param {Object} array
+ */
+var createRecommendView=function(item,arrays){
+	arrays.forEach(function(arr,index,arrays){
+		var div=document.createElement('div')
+		div.className='mui-table-view-cell  mui-col-xs-3 mui-col-sm-3 recommend-border'
+		div.innerHTML='<a href="#">' +
+				'<img class="mui-icon recommend-img" src="' + arr.img + '"></img>' +
+				'<div class="mui-media-body">' + arr.title + '</div>' +
+				'</a>';
+		item.appendChild(div)		
+	})
+	
+}

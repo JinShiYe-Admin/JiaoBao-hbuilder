@@ -29,12 +29,14 @@
 			<span class="mui-icon mui-icon-chatboxes mui-pull-right common-color-white"></span>
 		</header>
 		<div class="mui-content">
+			<!--轮播控件-->
 			<div id="slider" class="mui-slider">
 				<div class="mui-slider-group mui-slider-loop">
 				</div>
 				<div class="mui-slider-indicator mui-text-right">
 				</div>
 			</div>
+			<!--圆形按钮-->
 			<div class="background-white">
 				<ul id="circler" class="mui-table-view mui-grid-view mui-grid-9 "></ul>
 			</div>
@@ -75,8 +77,12 @@
 			getHomeCircle('circler')
 			getMoodList()
 			getSiftedList();
-			getHomeCircle('qiuZhi-recommend')
+			getRecommend()
 		})
+		/**
+		 * 圆形按钮
+		 * @param {Object} id
+		 */
 		var getHomeCircle = function(id) {
 			var chars = ["待批公文", "通知公告", "校园通知", "班级通知", "家长来信", "我的信箱", "校园秀", "求知问答"];
 			var imgUrls = ["../image/home/u52.png",
@@ -92,16 +98,26 @@
 			var gride=document.getElementById(id)
 			createGirde(gride,createArray(chars, imgUrls, urls))
 		}
+		/**
+		 * 心情广场
+		 */
 		var getMoodList=function(){
 			var moodItem=document.getElementById('mood_guard')
 			createList(moodItem,createMoodList())
 		}
+		/**
+		 * 求知精选
+		 */
 		var getSiftedList=function(){
 			var siftedItem=document.getElementById('qiuZhi-sifted');
 			createSiftedList(siftedItem,createSiftedData(6))
 		}
+		/**
+		 * 求知推荐
+		 */
 		var getRecommend=function(){
 			var recommendItem=document.getElementById('qiuZhi-recommend')
+			createRecommendView(recommendItem,createRecommendDataList())
 		}
 	</script>
 

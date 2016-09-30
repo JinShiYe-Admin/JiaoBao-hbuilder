@@ -83,6 +83,15 @@
 	border-right: 0px solid #eee;
 	border-bottom: 0px solid #eee
 }
+.recommend-border{
+	border: solid;
+	border-width: thin;
+	border-color: darkgray;
+}
+.recommend-img{
+	height: 50px;
+	width: auto;
+}
 
 
 
