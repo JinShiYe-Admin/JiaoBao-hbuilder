@@ -188,7 +188,15 @@ var createRecommendDataList=function(){
 var createRecommendView=function(item,arrays){
 	arrays.forEach(function(arr,index,arrays){
 		var div=document.createElement('div')
-		div.className='mui-table-view-cell  mui-col-xs-3 mui-col-sm-3 recommend-border'
+		switch(index){
+			case 0:
+			case 4:
+			div.className='mui-table-view-cell  mui-col-xs-3 mui-col-sm-3 sifted-border-top'
+			break;
+			default:
+			div.className='mui-table-view-cell  mui-col-xs-3 mui-col-sm-3 recommend-border'
+			break;
+		}
 		div.innerHTML='<a href="#">' +
 				'<img class="mui-icon recommend-img" src="' + arr.img + '"></img>' +
 				'<div class="mui-media-body">' + arr.title + '</div>' +
