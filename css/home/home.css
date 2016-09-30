@@ -50,9 +50,9 @@
 	border-color: darkgray;
 }
 
-.sifted-border-right:before{
-	border-right-style: solid;
-	border-right-width:thin ;
+.sifted-border-left:{
+	border-left-style: solid;
+	border-left-width:thin ;
 	border-color: darkgray;
 }
 .align-center{
@@ -60,12 +60,12 @@
 }
 
 .img-size{
-	width: 60%;
+	width: 100%;
 	height: auto;
 	padding: 12px;
 }
 .img-size-half{
-	width: 30%;
+	width: 50%;
 	height: auto;
 	padding: 12px;
 }

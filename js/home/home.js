@@ -98,13 +98,13 @@ var createSiftedList=function(item,siftedList){
 		switch(index){
 			case 0:
 			console.log("0"+JSON.stringify(sifted))
-			case 1:
-			div.className="mui-table-view-cell  mui-col-xs-4 mui-col-sm-4 sifted-border-top sifted-border-right "
+			div.className="mui-table-view-cell  mui-col-xs-4 mui-col-sm-4 sifted-border-top  "
 			div.innerHTML=getSiftedCommonHTML(sifted)
 			break;
+			case 1:
 			case 2:
 			case 4:
-			div.className="mui-table-view-cell  mui-col-xs-4 mui-col-sm-4 align-center sifted-border-top "
+			div.className="mui-table-view-cell  mui-col-xs-4 mui-col-sm-4 align-center sifted-border-top sifted-border-left"
 			div.innerHTML=getSiftedCommonHTML(sifted)
 			break;
 			case 3:
