@@ -99,16 +99,16 @@ var createSiftedList=function(item,siftedList){
 			case 0:
 			console.log("0"+JSON.stringify(sifted))
 			case 1:
-			div.className="mui-table-cell align-center cell-width-33 sifted-border-top sifted-border-right"
+			div.className="mui-table-view-cell  mui-col-xs-4 mui-col-sm-4 sifted-border-top sifted-border-right "
 			div.innerHTML=getSiftedCommonHTML(sifted)
 			break;
 			case 2:
 			case 4:
-			div.className="mui-table-cell align-center cell-width-33 sifted-border-top"
+			div.className="mui-table-view-cell  mui-col-xs-4 mui-col-sm-4 align-center sifted-border-top "
 			div.innerHTML=getSiftedCommonHTML(sifted)
 			break;
 			case 3:
-			div.className="align-center cell-width-67 sifted-border-right sifted-border-top"
+			div.className="mui-table-view-cell  cell-width-67 align-center sifted-border-right sifted-border-top"
 			div.innerHTML=getSiftedForthHTML(sifted)
 			break;
 			default:
@@ -120,11 +120,11 @@ var createSiftedList=function(item,siftedList){
 var getSiftedCommonHTML=function(item){
 	return '<h4>'+item.title+'<h4></br>'
 		+'<p>'+item.words+'</p></br>'
-		+'<img src="'+item.imgs[0]+'"/>';
+		+'<img class="img-size" src="'+item.imgs[0]+'"/>';
 }
 var getSiftedForthHTML=function(item){
 	return '<h4>'+item.title+'<h4></br>'
 		+'<p>'+item.words+'</p></br>'
-		+'<img src="'+item.imgs[0]+'"/>'
-		+'<img src="'+item.imgs[1]+'"/>';
+		+'<img class="img-size-half" src="'+item.imgs[0]+'"/>'
+		+'<img class="img-size-half" src="'+item.imgs[1]+'"/>';
 }
