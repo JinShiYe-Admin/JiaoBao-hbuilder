@@ -36,7 +36,7 @@
 				</div>
 			</div>
 			<div class="background-white">
-				<ul class="mui-table-view mui-grid-view mui-grid-9 "></ul>
+				<ul id="circler" class="mui-table-view mui-grid-view mui-grid-9 "></ul>
 			</div>
 			<!--心情广场-->
 			<div class="background-white">
@@ -72,11 +72,12 @@
 			slider.slider({
 				interval: 5000
 			});
-			getHomeCircle()
+			getHomeCircle('circler')
 			getMoodList()
 			getSiftedList();
+			getHomeCircle('qiuZhi-recommend')
 		})
-		var getHomeCircle = function() {
+		var getHomeCircle = function(id) {
 			var chars = ["待批公文", "通知公告", "校园通知", "班级通知", "家长来信", "我的信箱", "校园秀", "求知问答"];
 			var imgUrls = ["../image/home/u52.png",
 				"../image/home/u56.png",
@@ -88,7 +89,8 @@
 				"../image/home/u189.png"
 			]
 			var urls = []
-			putGrideData(createArray(chars, imgUrls, urls))
+			var gride=document.getElementById(id)
+			createGirde(gride,createArray(chars, imgUrls, urls))
 		}
 		var getMoodList=function(){
 			var moodItem=document.getElementById('mood_guard')
@@ -97,6 +99,9 @@
 		var getSiftedList=function(){
 			var siftedItem=document.getElementById('qiuZhi-sifted');
 			createSiftedList(siftedItem,createSiftedData(6))
+		}
+		var getRecommend=function(){
+			var recommendItem=document.getElementById('qiuZhi-recommend')
 		}
 	</script>
 
