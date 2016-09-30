@@ -1,3 +1,4 @@
+//公告预览
 (function() {
 
 	var nameArr = new Array('王晓明', '刘若彤', '李烨', '张倩倩', '宋子轩');//名字
