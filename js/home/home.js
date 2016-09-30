@@ -126,7 +126,7 @@ var createSiftedList=function(item,siftedList){
 			div.innerHTML=getSiftedCommonHTML(sifted)
 			break;
 			case 3:
-			div.className="mui-table-view-cell  cell-width-67 align-center sifted-border-right sifted-border-top"
+			div.className="mui-table-view-cell  cell-width-67 align-center  sifted-border-top"
 			div.innerHTML=getSiftedForthHTML(sifted)
 			break;
 			default:

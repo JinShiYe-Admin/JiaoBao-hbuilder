@@ -50,8 +50,8 @@
 	border-color: darkgray;
 }
 
-.sifted-border-left:{
-	border-left-style: solid;
+.sifted-border-left{
+	border-left-style:solid;
 	border-left-width:thin ;
 	border-color: darkgray;
 }
