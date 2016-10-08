@@ -6,7 +6,7 @@
  * @param {Object} array
  */
 var createGirde = function(gride,array) {
-		
+
 		array.forEach(function(map, index, array) {
 			console.log("字符串：" + map.key + "图标：" + map.value)
 			var li = document.createElement('li')
@@ -55,6 +55,9 @@ var getRandomColor = function(){
 var openTarWindow=function(tarUrl){
 	mui.openWindow({
 		url:tarUrl,
-		id:tarUrl
+		id:tarUrl,
+		styles:{
+			top:Statusbar.barHeight()//设置距离顶部的距离
+		}
 	})
 }
