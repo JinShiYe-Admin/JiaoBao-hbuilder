@@ -1,14 +1,17 @@
-//获取状态栏高度，如果机器支持沉浸式则返回状态栏高度，不支持返回0px
+//设置顶部高度
+//如果设置了沉浸式并且机器支持沉浸式,界面就会变成全屏的
+//在index.html页面设置header，然后将之后的页面设置距离顶部的高度为状态栏高度
+//如果不支持沉浸式，设置距离顶部高度为默认的0px
 var Statusbar = (function() {
 	var barHeight = function() {
-		//判断当前是否为沉浸式状态栏模式
+		//判断当前是否为沉浸式状态栏模式，返回true或者false
 		var isImmersedStatusbar = plus.navigator.isImmersedStatusbar();
 		if(isImmersedStatusbar) {
 			//是沉浸式状态栏模式
-			return plus.navigator.getStatusbarHeight() + 'px'; // 返回系统状态栏高度
+			localStorage.setItem('$Statusbar', plus.navigator.getStatusbarHeight() + 'px'); //系统状态栏高度
 		} else {
 			//不是沉浸式状态栏模式
-			return 0 + 'px';//返回0px
+			localStorage.setItem('$Statusbar', 0 + 'px'); //设置0px
 		}
 	}
 	return {

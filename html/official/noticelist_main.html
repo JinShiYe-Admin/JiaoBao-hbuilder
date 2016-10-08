@@ -15,7 +15,6 @@
 		<link rel="stylesheet" href="../../css/mui.min.css">
 		<link rel="stylesheet" href="../../css/utils/common.css" />
 		<script src="../../js/mui.min.js"></script>
-		<script type="text/javascript" src="../../js/utils/Statusbar.js"></script>
 	</head>
 
 	<body>
@@ -56,7 +55,7 @@
 					url: 'addnotice.html',
 					id: 'addnotice',
 					styles: {
-						top: Statusbar.barHeight()//设置距离顶部的距离
+						top: localStorage.getItem('$Statusbar')//设置距离顶部的距离
 					}
 				});
 			})

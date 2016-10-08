@@ -57,7 +57,7 @@ var openTarWindow=function(tarUrl){
 		url:tarUrl,
 		id:tarUrl,
 		styles:{
-			top:Statusbar.barHeight()//设置距离顶部的距离
+			top:localStorage.getItem('$Statusbar')//设置距离顶部的距离
 		}
 	})
 }
