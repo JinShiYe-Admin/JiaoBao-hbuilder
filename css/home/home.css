@@ -1,74 +1,126 @@
+/**
+ * 背景色 白色
+ */
 .background-white{
 	background-color: white;
-	margin: 16px;
 }
+/**
+ * 上边距16
+ */
 .padding-top{
 	padding-top: 16px;
 }
+/**
+ * 上边距12
+ */
 .padding-top-12{
 	padding-top: 12px;
 }
+/**
+ * 左边距
+ */
 .padding-left{
-	padding-left: 21px;
+	padding-left: 12px;
 	color: #ACACB4;
 }
+/**
+ * 边距
+ */
 .padding-right-12{
-	padding-right: 12px;
+	padding-right: 8px;
 }
+/**
+ * 边距
+ */
 .padding{
-	padding-left: 12px;
-	padding-right: 12px;
+	padding-left: 8px;
+	padding-right: 8px;
 }
+/*
+ * 字体颜色
+ * 深灰
+ */
 .char-darkgray{
 	color: darkgray;
 }
+/**
+ * cell占比1/3
+ */
 .cell-width-33{
-	width: 32%;
+	width: 33.3333333333333333%;
 	height: auto;
 	padding-left: 13px;
 	padding-right: 13px;
 	
 }
+/**
+ * cell占比2/3
+ */
 .cell-width-67{
 	width: 66.66666666666667%;
 	height: auto;
 	padding-left: 12px;
 	padding-right: 12px;
 }
+/**
+ * 文字居右
+ */
 .align-right{
 	text-align: right;
 }
+/**
+ * 心情广场 
+ * 更多 样式
+ */
 .more-words{
 	text-align: center;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-top: 6px;
+	padding-bottom: 6px;
 	
 }
+/**
+ * 上边框样式
+ */
 .sifted-border-top{
 	border-top-style: solid;
 	border-top-width:thin;
 	border-color: darkgray;
 }
-
+/**
+ * 左边框样式
+ */
 .sifted-border-left{
 	border-left-style:solid;
 	border-left-width:thin ;
 	border-color: darkgray;
 }
+/**
+ * 文字样式居中
+ */
 .align-center{
 	text-align: center;
 }
-
+/**
+ * 求知精选
+ * 图片大小
+ */
 .img-size{
 	width: 100%;
 	height: auto;
-	padding: 12px;
+	padding: 6px;
 }
+/**
+ * 求知精选
+ * 第四cell图片大小
+ */
 .img-size-half{
 	width: 50%;
 	height: auto;
 	padding: 12px;
 }
+/**
+ * 样式重写 背景色设为白色
+ */
 .mui-grid-view.mui-grid-9 {
 	margin: 0;
 	padding: 0;
@@ -76,6 +128,10 @@
 	border-left: 0px solid #eee;
 	background-color: white
 }
+/*
+ * 样式重写
+ * 去掉分割线
+ */
 .mui-grid-view.mui-grid-9 .mui-table-view-cell {
 	margin: 0;
 	padding: 11px 15px;
@@ -83,11 +139,15 @@
 	border-right: 0px solid #eee;
 	border-bottom: 0px solid #eee
 }
+/**
+ * 求知推荐 外边框
+ */
 .recommend-border{
 	border: solid;
 	border-width: thin;
 	border-color: darkgray;
 }
+/*求知推荐 图片大小*/
 .recommend-img{
 	height: 50px;
 	width: auto;

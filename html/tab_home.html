@@ -12,6 +12,7 @@
 		<link href="../css/home/home.css" rel="stylesheet" />
 		<link rel="stylesheet" href="../css/utils/common.css" />
 		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/utils/Statusbar.js" ></script>
 		<script src="../js/utils/carouselControl.js"></script>
 		<script src="../js/utils/grideControl.js"></script>
 		<script src="../js/home/home.js"></script>
@@ -42,41 +43,47 @@
 			</div>
 			<!--心情广场-->
 			<div class="background-white">
-				<h3 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />心情广场</h3>
+				<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />心情广场</h4>
 				<ul id="mood_guard" class="mui-table-view">
 				</ul>
 				<h5 class="more-words">查看更多&gt;&gt;</h5>
 			</div>
 			<!--求知精选-->
 			<div class="background-white">
-				<h3 class="padding-top padding-left">
+				<h4 class="padding-top padding-left">
 					<img class="padding-right-12" src="../image/home/u200.png" />
 					求知精选
 					<img src="../image/home/u210.png" />
-				</h3>
+				</h4>
 				<ul id="qiuZhi-sifted" class="mui-table-view mui-grid-view mui-grid-9"></ul>
 			</div>
 			<!--求知推荐-->
 			<div class="background-white">
-				<h3 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />求知推荐</h3>
+				<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />求知推荐</h4>
 				<ul id="qiuZhi-recommend" class="mui-table-view mui-grid-view mui-grid-9 "></ul>
 			</div>
-				
+
 		</div>
 	</body>
 	<script>
 		mui.plusReady(function() {
 			var titles = ["幸福是可以一起睡觉", "幸福是可以一起吃饭", "幸福是可以一起拉屎"]
-
+			//加黑条
 			addStrip(getImgArray())
+			//加图片
 			addImg(getImgArray(), titles)
 			var slider = mui("#slider");
+			//轮播开始
 			slider.slider({
 				interval: 5000
 			});
+			//圆圈按钮
 			getHomeCircle('circler')
+			//心情广场
 			getMoodList()
+			//求知精选
 			getSiftedList();
+			//求知推荐
 			getRecommend()
 		})
 		/**

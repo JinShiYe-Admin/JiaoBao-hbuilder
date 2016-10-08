@@ -2,6 +2,7 @@
  * @anthor an
  */
 /**
+ * 创建心情广场界面
  * @param {Object} item 绑定的父控件
  * @param {Object} listData 数据
  */
@@ -10,7 +11,7 @@ var createList = function(item, listData) {
 			var li = document.createElement('li');
 			li.className = "mui-table-view-cell";
 			li.innerHTML = '<div>' +
-				'<h4 style="color: #F0AD4E;"><img src="' + cellData.headImg + '" align="middle" class="padding-right-12"/>' + cellData.name + '</h4>' +
+				'<b style="color: #F0AD4E;"><img src="' + cellData.headImg + '" align="middle" class="padding-right-12"/>' + cellData.name + '</b>' +
 				'<p class=" char-darkgray">' + cellData.words + '</p>' +
 				'<div>' +
 				getPicInner(cellData) +
@@ -50,7 +51,7 @@ var createMoodList = function() {
 		return moodList;
 	}
 	/**
-	 * 创建object
+	 * 创建心情广场model
 	 * @param {Object} headImgUrl 头像地址
 	 * @param {Object} name 名字
 	 * @param {Object} words 说了啥
@@ -67,7 +68,7 @@ var createMoodItem = function(headImgUrl, name, words, time, imgsArray) {
 	return item;
 }
 /**
- * 创建itemData
+ * 创建求知精选 model
  * @param {Object} title
  * @param {Object} words
  * @param {Object} imgsArray
@@ -140,7 +141,7 @@ var createSiftedList=function(item,siftedList){
  * @param {Object} item
  */
 var getSiftedCommonHTML=function(item){
-	return '<h4>'+item.title+'<h4></br>'
+	return '<b>'+item.title+'<b></br>'
 		+'<p>'+item.words+'</p></br>'
 		+'<img class="img-size" src="'+item.imgs[0]+'"/>';
 }
@@ -149,7 +150,7 @@ var getSiftedCommonHTML=function(item){
  * @param {Object} item
  */
 var getSiftedForthHTML=function(item){
-	return '<h4>'+item.title+'<h4></br>'
+	return '<b>'+item.title+'</b></br>'
 		+'<p>'+item.words+'</p></br>'
 		+'<img class="img-size-half" src="'+item.imgs[0]+'"/>'
 		+'<img class="img-size-half" src="'+item.imgs[1]+'"/>';
@@ -166,7 +167,7 @@ var createRecommendItemObject=function(imgUrl,title){
 	return item;
 }
 /**
- * 
+ * 创建求知推荐Data
  */
 var createRecommendDataList=function(){
 	var titles=['小学','初中','高中','家教','科普','专家','专栏','其他']
@@ -181,8 +182,8 @@ var createRecommendDataList=function(){
 	return arrays;
 }
 /**
- * 
- * @param {Object} item
+ * 创建求知推荐界面
+ * @param {Object} item 
  * @param {Object} array
  */
 var createRecommendView=function(item,arrays){

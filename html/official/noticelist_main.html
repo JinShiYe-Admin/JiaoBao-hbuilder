@@ -14,6 +14,8 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="../../css/mui.min.css">
 		<link rel="stylesheet" href="../../css/utils/common.css" />
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/utils/Statusbar.js"></script>
 	</head>
 
 	<body>
@@ -25,11 +27,11 @@
 
 		<div class="mui-content"></div>
 	</body>
-	<script src="../../js/mui.min.js"></script>
+
 	<script type="text/javascript">
 		mui.init({
 			gestureConfig: {
-				doubletap: true//启用双击监听
+				doubletap: true //启用双击监听
 			},
 			subpages: [{
 				url: 'noticelist_sub.html',
@@ -40,21 +42,25 @@
 				}
 			}]
 		});
-
-		var contentWebview = null;
-		document.querySelector('header').addEventListener('doubletap', function() {
-			if(contentWebview == null) {
-				contentWebview = plus.webview.currentWebview().children()[0];
-			}
-			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
-		});
+		mui.plusReady(function() {
+			var contentWebview = null;
+			document.querySelector('header').addEventListener('doubletap', function() {
+				if(contentWebview == null) {
+					contentWebview = plus.webview.currentWebview().children()[0];
+				}
+				contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+			});
 			document.getElementById('add').addEventListener('tap', function() {
-		//打开登录页面
-		mui.openWindow({
-			url: 'addnotice.html',
-			id: 'addnotice'
+				//打开登录页面
+				mui.openWindow({
+					url: 'addnotice.html',
+					id: 'addnotice',
+					styles: {
+						top: Statusbar.barHeight()//设置距离顶部的距离
+					}
+				});
+			})
 		});
-	});
 	</script>
 
 </html>

@@ -110,7 +110,8 @@
 			"image/official/u62.png",
 			"image/official/u42.png",
 			"css/utils/common.css",
-			"css/home/home.css"
+			"css/home/home.css",
+			"image/official/u103.png"
 		],
 		"refer": [
 			"html/official/noticelist_main.html",
@@ -156,10 +157,12 @@
 			"js/mui.min.js",
 			"fonts/mui.ttf",
 			"css/mui.min.css",
-			"html/official/noticelist_sub.html"
+			"html/official/noticelist_sub.html",
+			"css/utils/common.css"
 		],
 		"refer": [
-			"html/official/noticelist_sub.html"
+			"html/official/noticelist_sub.html",
+			"html/official/addnotice.html"
 		]
 	},
 	"html/official/noticelist_sub.html": {
@@ -199,7 +202,8 @@
 			"html/official/document_sub.html",
 			"js/mui.min.js",
 			"fonts/mui.ttf",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"css/utils/common.css"
 		],
 		"refer": [
 			"html/official/document_sub.html"
@@ -213,7 +217,9 @@
 			"js/mui.min.js",
 			"image/red_point.png",
 			"image/headimg2.png",
-			"image/white_point.png"
+			"image/white_point.png",
+			"css/utils/searchbar.css",
+			"js/app/official/documentlist.js"
 		],
 		"refer": [
 			"html/official/officialdetails_main.html"
@@ -224,7 +230,8 @@
 			"html/official/officialdetails_sub.html",
 			"js/mui.min.js",
 			"fonts/mui.ttf",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"css/utils/common.css"
 		],
 		"refer": [
 			"html/official/officialdetails_sub.html"
@@ -237,7 +244,16 @@
 			"image/icon-personal.png",
 			"image/official/u101.png",
 			"image/home/u292.png",
-			"image/document_headimg.png"
+			"image/document_headimg.png",
+			"css/official/officialdetails.css"
+		]
+	},
+	"html/official/addnotice.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css"
 		]
 	}
 }
