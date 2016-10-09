@@ -52,16 +52,6 @@
 	/*距离顶部*/
 	margin-bottom: 10px;
 	/*距离底部*/
-	overflow: hidden;
-	/*设置多于3行省略号*/
-	text-overflow: ellipsis;
-	/*设置多于3行省略号*/
-	display: -webkit-box;
-	/*设置多于3行省略号*/
-	-webkit-line-clamp: 3;
-	/*设置多于3行省略号*/
-	-webkit-box-orient: vertical;
-	/*设置多于3行省略号*/
 }
 
 .notice-unread {
