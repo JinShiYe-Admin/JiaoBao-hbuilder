@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<!--引入共同的样式，自定义-->
+		<link rel="stylesheet" href="../css/utils/common.css" />
+		<!--引入九宫格的布局样式-->
+		<link rel="stylesheet" href="../css/utils/imgeControl.css" />
+		<!--引入九宫格调用方法-->
+		<script type="text/javascript" src="../js/utils/grideControl.js" ></script>
+	</head>
+
+	<body>
+		<!--加入tabar-->
+		<header class="mui-bar mui-bar-nav common-background-bar">
+			<h1 class="mui-title common-color-white common-font-family-Regular">互动</h1>
+		</header>
+
+		<!--加入九宫格-->
+		<div class="mui-content">
+			  <img src="../image/interaction/u24.png" style="width: 100%;height: auto;"/>
+			<ul id="interaction" class="mui-table-view mui-grid-view mui-grid-9">
+			</ul>
+
+		</div>
+	</body>
+	
+	<!--给九宫格插入默认数据-->
+	<script>
+		mui.init();
+		mui.plusReady(function(){
+			var chars = ["校园通知", "学校通知", "年级通知", "班级通知", "个性表现", "家长来信", "学校信箱"]
+			var imgUrls = ["../image/official/u42.png",
+				"../image/official/u44.png",
+				"../image/official/u62.png",
+				"../image/official/u101.png",
+				"../image/official/u60.png",
+				"../image/official/u99.png",
+				"../image/official/u97.png"
+			]
+			var gride=document.getElementById('interaction')
+			var urls = ['official/noticelist_main.html', 'official/documentlist.html'];
+			createGirde(gride, createArray(chars, imgUrls, urls))
+		});
+	</script>
+
+</html>
