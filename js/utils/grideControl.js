@@ -18,7 +18,7 @@ var createGirde = function(gride,array) {
 			}
 			li.innerHTML = '<a href="#">' +
 				'<img class="mui-icon circular-square" src="' + map.value + '" style="background-color:'+bgColor+';"></img>' +
-				'<div class="mui-media-body">' + map.key + '</div>' +
+				'<div class="mui-media-body" style="font-size:12px;">' + map.key + '</div>' +
 				'</a>';
 			li.addEventListener('tap',function(){
 				openTarWindow(map.tarUrl)
