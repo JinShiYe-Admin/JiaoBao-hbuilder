@@ -226,7 +226,8 @@
 					"html/home/tab_home.html",
 					"html/official/tab_official.html",
 					"html/tab_home.html",
-					"html/tab_official.html"
+					"html/tab_official.html",
+					"css/utils/common.css"
 				],
 				"refer": [
 					"html/mine/tab_mine.html",
@@ -320,7 +321,8 @@
 			"html/tab_interaction.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"image/interaction/u24.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -388,7 +390,8 @@
 					"html/official/noticedetails_sub.html",
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/utils/common.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -396,7 +399,8 @@
 			"html/official/noticedetails_sub.html": {
 				"resources": [
 					"image/icon-accessory.png",
-					"css/utils/notice.css"
+					"css/utils/notice.css",
+					"css/official/noticedetails.css"
 				],
 				"refer": [],
 				"priority": 0
