@@ -28,7 +28,7 @@ var createGirde = function(gride,array) {
 			//子控件的innerHTML
 			li.innerHTML = '<a href="#">' +
 				'<img class="mui-icon circular-square" src="' + map.value + '" style="background-color:'+bgColor+';"></img>' +
-				'<div class="mui-media-body" style="font-size:12px;">' + map.key + '</div>' +
+				'<h6 class="mui-media-body">' + map.key + '</h6>' +
 				'</a>';
 			/**
 			 * 子控件加载点击监听事件
