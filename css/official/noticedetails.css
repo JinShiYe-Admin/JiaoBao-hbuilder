@@ -23,6 +23,13 @@
 	/*头部和尾部*/
 }
 
+.mui-scroll {
+	padding-left: 10px;
+	/*距离左边距离*/
+	padding-right: 10px;
+	/*距离右边距离*/
+}
+
 .notice-title {
 	/*通知的标题*/
 	text-align: center;
@@ -31,6 +38,8 @@
 	/*字体大小*/
 	color: dodgerblue;
 	/*字体颜色*/
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .notice-content {
@@ -66,17 +75,22 @@
 }
 
 .notice-time {
-	/*时间*/
-	float: right;
+	text-align: right;
 	/*居右*/
-	
 }
 
-.notice-accessory {
+{
 	/*附件*/
+	/*text-decoration: underline;*/
+	/*字体有下划线*/
+}
+
+.notice-accessory a {
 	text-decoration: underline;
 	/*字体有下划线*/
 }
-a{
+
+a {
 	font-size: 15px;
+	/*字体大小*/
 }
