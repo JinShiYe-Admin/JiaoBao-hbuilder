@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="../../css/utils/searchbar.css" />
 
 		<script type="text/javascript">
-		//模拟数据
+			//模拟数据
 			var datasource = {
 				code: 0,
 				result: '成功',
@@ -115,7 +115,11 @@
 				mui(".mui-table-view").on('tap', '.mui-table-view-cell', function() {
 					//打开详情页界面
 					mui.openWindow({
-						url: 'officialdetails_main.html'
+						url: 'officialdetails_main.html',
+						id: 'officialdetails_main.html',
+						styles: {
+							top: localStorage.getItem('$Statusbar') //设置距离顶部的距离
+						}
 					});
 				})
 			});

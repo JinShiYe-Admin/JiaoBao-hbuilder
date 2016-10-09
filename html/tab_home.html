@@ -8,15 +8,19 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
+		<!--图片转换圆形-->
 		<link href="../css/utils/imgeControl.css" rel="stylesheet" />
+		<!--本页用css-->
 		<link href="../css/home/home.css" rel="stylesheet" />
+		<!--通用css-->
 		<link rel="stylesheet" href="../css/utils/common.css" />
 		<script type="text/javascript" src="../js/mui.min.js"></script>
 		<script src="../js/utils/carouselControl.js"></script>
+		<!--通用方法-->
 		<script src="../js/utils/grideControl.js"></script>
+		<!--本页用js-->
 		<script src="../js/home/home.js"></script>
 		<script type="text/javascript">
-			mui.init()
 
 		</script>
 
@@ -77,20 +81,23 @@
 				interval: 5000
 			});
 			//圆圈按钮
-			getHomeCircle('circler')
+			getHomeCircle('circler');
 			//心情广场
-			getMoodList()
+			getMoodList();
 			//求知精选
 			getSiftedList();
 			//求知推荐
-			getRecommend()
+			getRecommend();
 		})
 		/**
-		 * 圆形按钮
-		 * @param {Object} id
+		 * 九宫格
+		 *  圆形按钮
+		 * @param {Object} id 父控件id
 		 */
 		var getHomeCircle = function(id) {
+			//九宫格底部标题数组
 			var chars = ["待批公文", "通知公告", "校园通知", "班级通知", "家长来信", "我的信箱", "校园秀", "求知问答"];
+			//九宫格图片地址数组
 			var imgUrls = ["../image/home/u52.png",
 				"../image/home/u56.png",
 				"../image/home/u54.png",
@@ -99,31 +106,32 @@
 				"../image/home/u191.png",
 				"../image/home/u195.png",
 				"../image/home/u189.png"
-			]
-			var urls = []
-			var gride=document.getElementById(id)
-			createGirde(gride,createArray(chars, imgUrls, urls))
+			];
+			//点击跳转的html地址数组
+			var urls = [];
+			var gride=document.getElementById(id);//九宫格父控件
+			createGirde(gride,createArray(chars, imgUrls, urls));//创建九宫格
 		}
 		/**
 		 * 心情广场
 		 */
 		var getMoodList=function(){
-			var moodItem=document.getElementById('mood_guard')
-			createList(moodItem,createMoodList())
+			var moodItem=document.getElementById('mood_guard');//心情广场父控件
+			createList(moodItem,createMoodList());//心情广场列表
 		}
 		/**
 		 * 求知精选
 		 */
 		var getSiftedList=function(){
-			var siftedItem=document.getElementById('qiuZhi-sifted');
-			createSiftedList(siftedItem,createSiftedData(6))
+			var siftedItem=document.getElementById('qiuZhi-sifted');//求知精选父控件
+			createSiftedList(siftedItem,createSiftedData(6));//创建精选数据列表
 		}
 		/**
 		 * 求知推荐
 		 */
 		var getRecommend=function(){
-			var recommendItem=document.getElementById('qiuZhi-recommend')
-			createRecommendView(recommendItem,createRecommendDataList())
+			var recommendItem=document.getElementById('qiuZhi-recommend');//父控件
+			createRecommendView(recommendItem,createRecommendDataList());//创建推荐列表
 		}
 	</script>
 

@@ -15,29 +15,41 @@
 		<link rel="stylesheet" href="../../css/mui.min.css">
 		<link rel="stylesheet" href="../../css/official/noticedetails.css" />
 		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/app/official/noticelist.js"></script>
 	</head>
 
 	<body>
 		<!--下拉刷新容器-->
 		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
-			<div class="mui-scroll" style="padding-left: 10px;padding-right: 10px;">
+			<div class="mui-scroll">
 				<!--数据列表-->
 				<ul class="mui-table-view">
 					<li class="mui-table-view-cell">
 						<div>
 							<img class="notice-unread" src="../../image/icon-unread.png" />
-							<p class="notice-title">中秋节放假安排通知</p>
-							<font class="notice-content">中秋节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~</font>
-							<p class="notice-time">【公司全体】</p>
-							<br />
-							<p class="notice-time">刚刚</p>
-							<div>
+							<p class="notice-title">
+								中秋节放假安排通知中秋节放假安排通知中秋节放假安排通知中秋节放假安排通知
+							</p>
+							<font class="notice-content">
+								中秋节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~
+							</font>
+							<p class="notice-time">
+								【公司全体公司全体公司全体公司全体公司全体】
+							</p>
+							<p class="notice-time">
+								2016-9-27 11:47
+							</p>
+							<div class="notice-accessory">
 								<img src="../../image/icon-accessory.png" />
-								<a class="notice-accessory">中秋节放假安排时间通知表1</a><br />
-							</div>
-							<div>
+								<a>
+									中秋节放假安排时间通知表1中秋节放假安排时间通知表1
+								</a>
+								<br />
 								<img src="../../image/icon-accessory.png" />
-								<a class="notice-accessory">中秋节放假安排时间通知表2</a><br />
+								<a>
+									中秋节放假安排时间通知表2
+								</a>
+								<br />
 							</div>
 						</div>
 					</li>
@@ -46,8 +58,8 @@
 							<p class="notice-title">端午节放假安排通知</p>
 							<font class="notice-content">端午节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~</font>
 							<p class="notice-time">【公司全体】</p>
-							<br />
 							<p class="notice-time">2016-9-27 11:47</p>
+
 						</div>
 					</li>
 				</ul>
@@ -73,70 +85,87 @@
 			function pulldownRefresh() {
 				setTimeout(function() {
 					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for(var i = cells.length, len = i + 3; i < len; i++) {
-						var noticelist = '<div>\
-							<img class="notice-unread" src="../../image/icon-unread.png" />\
-							<p class="notice-title">中秋节放假安排通知' + '<font style="color: red;">新' + i + '</font>' + '</p>\
-							<font class="notice-content">中秋节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~</font>\
-							<p class="notice-time">【公司全体】</p>\
-							<br />\
-							<p class="notice-time">刚刚</p>\
-							<div>\
-								<img src="../../image/icon-accessory.png" />\
-								<a class="notice-accessory">中秋节放假安排时间通知表1</a><br />\
-							</div>\
-							<div>\
-								<img src="../../image/icon-accessory.png" />\
-								<a class="notice-accessory">中秋节放假安排时间通知表2</a><br />\
-							</div>\
-						</div>';
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell';
-						li.innerHTML = noticelist;
-						//下拉刷新，新纪录插到最前面；
-						table.insertBefore(li, table.firstChild);
-					}
+					table.innerHTML = '';
+
+					var add1 = addData1(); //返回一条底部数据
+					var add2 = addData2(); //返回一条底部数据
+
+					noticelist.addItem(table, add1[0], add1[1]);
+					noticelist.addItem(table, add2[0], add2[1]);
 					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 				}, 1500);
 			}
-			var count = 0;
 			/**
 			 * 上拉加载具体业务实现
 			 */
 			function pullupRefresh() {
 				setTimeout(function() {
-					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh(); //参数为true代表没有更多数据了。
 					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for(var i = cells.length, len = i + 20; i < len; i++) {
-						var noticelist = '<div>\
-							<p class="notice-title">端午节放假安排通知' + '<font style="color: red;">更多' + i + '</font>' + '</p>\
-							<font class="notice-content">端午节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~</font>\
-							<p class="notice-time">【公司全体】</p>\
-							<br />\
-							<p class="notice-time">2016-9-27 11:47</p>\
-						</div>';
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell';
-						li.innerHTML = noticelist;
-						table.appendChild(li);
-					}
+					var add1 = addData1(); //返回一条底部数据
+					var add2 = addData2(); //返回一条底部数据
+
+					noticelist.addItem(table, add1[0], add1[1]);
+					noticelist.addItem(table, add2[0], add2[1]);
+
 				}, 1500);
 			}
 
 			mui.plusReady(function() {
+
 				mui(".mui-table-view").on('tap', '.mui-table-view-cell', function() {
 					//打开详情页界面
 					mui.openWindow({
 						url: 'noticedetails_main.html',
 						id: 'noticedetails_main.html',
 						styles: {
-							top: localStorage.getItem('$Statusbar')//设置距离顶部的距离
+							top: localStorage.getItem('$Statusbar') //设置距离顶部的距离
 						}
 					});
-				})
+				});
 			});
+
+			/**
+			 * 返回一条数据
+			 */
+			function addData1() {
+				var unread = 1;
+				var title = '中秋节放假安排通知';
+				var content = '中秋节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~';
+				var staff = '公司全体';
+				var time = '2016-10-9 11:24';
+				var data = [unread, title, content, staff, time];
+
+				var accessory1 = '中秋节放假安排时间通知表1';
+				var accessory2 = '中秋节放假安排时间通知表2';
+				var accessory3 = '中秋节放假安排时间通知表3';
+				var accessory = [];
+				accessory.push(accessory1);
+				accessory.push(accessory2);
+				accessory.push(accessory3);
+
+				return [data, accessory];
+			}
+
+			/**
+			 * 返回一条数据
+			 */
+			function addData2() {
+				var unread = 0;
+				var title = '端午节放假安排通知';
+				var content = '端午节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~';
+				var staff = '公司全体';
+				var time = '2016-10-9 11:24';
+				var data = [unread, title, content, staff, time];
+
+				var accessory1 = '端午节放假安排时间通知表1';
+				var accessory2 = '端午节放假安排时间通知表2';
+				var accessory = [];
+				accessory.push(accessory1);
+				accessory.push(accessory2);
+
+				return [data, accessory];
+			}
 		</script>
 	</body>
 

@@ -1730,7 +1730,7 @@ input[type=submit]:enabled:active {
 }
 
 .mui-card-header.mui-card-media .mui-media-body {
-	font-size: 14px;
+	
 	font-weight: 500;
 	line-height: 17px;
 	margin-bottom: 0;
@@ -1739,7 +1739,7 @@ input[type=submit]:enabled:active {
 }
 
 .mui-card-header.mui-card-media .mui-media-body p {
-	font-size: 13px;
+	
 	margin-bottom: 0
 }
 
@@ -2287,7 +2287,7 @@ input[type=submit]:enabled:active {
 }
 
 .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
-	font-size: 15px;
+	
 	line-height: 15px;
 	display: block;
 	width: 100%;

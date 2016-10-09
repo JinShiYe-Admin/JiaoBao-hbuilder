@@ -15,7 +15,7 @@
 		<!--引入九宫格的布局样式-->
 		<link rel="stylesheet" href="../css/utils/imgeControl.css" />
 		<!--引入九宫格调用方法-->
-		<script type="text/javascript" src="../js/utils/grideControl.js"></script>
+		<script type="text/javascript" src="../js/utils/grideControl.js" ></script>
 	</head>
 
 	<body>
@@ -23,27 +23,21 @@
 		<header class="mui-bar mui-bar-nav common-background-bar">
 			<h1 class="mui-title common-color-white common-font-family-Regular">互动</h1>
 		</header>
-		<!--将整体都放入scrollview中-->
-		<div class="mui-scroll-wrapper" style="margin-top: 45px;">
-			<div class="mui-scroll">
-				<!--加入九宫格-->
-				<div class="mui-content">
-					<img src="../image/official/u103.png" style="width: 100%; height: auto;" />
-					<ul id="interaction" class="mui-table-view mui-grid-view mui-grid-9">
-					</ul>
-				</div>
-			</div>
+
+		<!--加入九宫格-->
+		<div class="mui-content">
+			  <img src="../image/interaction/u24.png" style="width: 100%;height: auto;"/>
+			<ul id="interaction" class="mui-table-view mui-grid-view mui-grid-9">
+			</ul>
+
 		</div>
 	</body>
-
+	
 	<!--给九宫格插入默认数据-->
 	<script>
 		mui.init();
-		mui('.mui-scroll-wrapper').scroll({
-				indicators: true, //是否显示滚动条
-			});
-		mui.plusReady(function() {
-			var chars = ["校园通知", "学校通知", "年级通知", "班级通知", "个性表现", "家长来信", "学校信箱"];
+		mui.plusReady(function(){
+			var chars = ["校园通知", "学校通知", "年级通知", "班级通知", "个性表现", "家长来信", "学校信箱"]
 			var imgUrls = ["../image/official/u42.png",
 				"../image/official/u44.png",
 				"../image/official/u62.png",
@@ -51,10 +45,10 @@
 				"../image/official/u60.png",
 				"../image/official/u99.png",
 				"../image/official/u97.png"
-			];
-			var gride = document.getElementById('interaction');
+			]
+			var gride=document.getElementById('interaction')
 			var urls = ['official/noticelist_main.html', 'official/documentlist.html'];
-			createGirde(gride, createArray(chars, imgUrls, urls));
+			createGirde(gride, createArray(chars, imgUrls, urls))
 		});
 	</script>
 
