@@ -14,6 +14,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="../../css/mui.min.css">
 		<link rel="stylesheet" href="../../css/official/noticedetails.css" />
+		<script src="../../js/mui.min.js"></script>
 	</head>
 
 	<body>
@@ -52,7 +53,7 @@
 				</ul>
 			</div>
 		</div>
-		<script src="../../js/mui.min.js"></script>
+
 		<script>
 			mui.init({
 				pullRefresh: {
@@ -128,7 +129,11 @@
 				mui(".mui-table-view").on('tap', '.mui-table-view-cell', function() {
 					//打开详情页界面
 					mui.openWindow({
-						url: 'noticedetails_main.html'
+						url: 'noticedetails_main.html',
+						id: 'noticedetails_main.html',
+						styles: {
+							top: localStorage.getItem('$Statusbar')//设置距离顶部的距离
+						}
 					});
 				})
 			});
