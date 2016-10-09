@@ -42,9 +42,14 @@ h6{font-size:1.6rem}
     html{font-size:82.5% !important;}
 }
 /**更大设备*/
-@media only screen and (min-width:435px) and (max-width:800px) {
-    html{font-size:100% !important;}
+@media only screen and (min-width:436px)  {
+    html{font-size:92% !important;}
 }
+/**更大设备*/
+/*@media only screen and (min-width:757px) and (max-width:1000px) {
+    html{font-size:100% !important;}
+}*/
+
 
 
 

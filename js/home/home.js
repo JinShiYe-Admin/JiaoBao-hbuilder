@@ -235,7 +235,7 @@ var createRecommendView=function(item,arrays){
 		//设置innerHTML
 		div.innerHTML='<a href="#">' +
 				'<img class="mui-icon recommend-img" src="' + arr.img + '"></img>' +
-				'<div class="mui-media-body">' + arr.title + '</div>' +
+				'<small class="mui-media-body">' + arr.title + '</small>' +
 				'</a>';
 		//加载子元素
 		item.appendChild(div)		
