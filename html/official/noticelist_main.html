@@ -37,7 +37,7 @@
 				id: 'noticelist_sub.html',
 				styles: {
 					top: '45px',
-					bottom: '0px',
+					bottom: localStorage.getItem('$Statusbar'),
 				}
 			}]
 		});
@@ -55,7 +55,7 @@
 					url: 'addnotice.html',
 					id: 'addnotice',
 					styles: {
-						top: localStorage.getItem('$Statusbar')//设置距离顶部的距离
+						top: localStorage.getItem('$Statusbar') //设置距离顶部的距离
 					}
 				});
 			})
