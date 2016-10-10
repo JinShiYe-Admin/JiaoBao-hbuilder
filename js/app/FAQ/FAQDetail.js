@@ -49,7 +49,6 @@ var createFAQAnswerData=function(answerNo){
 	var likeNos=[1,2,5,4,96]
 	//循环获取cell,加载进数组
 	for(i=0;i<answerNo;i++){
-		console.log(imgUrls[i%2])
 		var cell=createFAQAnswerlItem(imgUrls[i%2],names[i%5],times[i%5],wordsArr[i%5],comNos[i%5],likeNos[i%5])
 		data.push(cell);
 	}
@@ -63,7 +62,7 @@ var createFAQAnswerData=function(answerNo){
  */
 var createFAQAnswerList=function(item,data){
 	data.forEach(function(cell,index,data){
-		console.log(JSON.stringify(cell))
+//		console.log(JSON.stringify(cell))
 		var li =document.createElement('li');
 		li.className='mui-table-view-cell';
 		li.innerHTML=createFAQAnswerInner(cell);
@@ -78,7 +77,7 @@ var createFAQAnswerInner=function(cell){
 	return  '<div>'
 		     	+'<img src="'+cell.imgUrl+'" class="mui-pull-left"/>'
 		     	+'<div style="padding-top: 12px;">'
-		     	+'<p>'+cell.name+'</p>'
+		     	+'<b>'+cell.name+'</b>'
 		     	+'<p>'+cell.time+'</p>'
 		     	+'</div>'
 		     +'</div><br />'
