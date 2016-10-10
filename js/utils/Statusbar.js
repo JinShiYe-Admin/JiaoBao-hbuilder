@@ -9,9 +9,11 @@ var Statusbar = (function() {
 		if(isImmersedStatusbar) {
 			//是沉浸式状态栏模式
 			localStorage.setItem('$Statusbar', plus.navigator.getStatusbarHeight() + 'px'); //系统状态栏高度
+			localStorage.setItem('StatusHeightNo',plus.navigator.getStatusbarHeight());//数值
 		} else {
 			//不是沉浸式状态栏模式
 			localStorage.setItem('$Statusbar', 0 + 'px'); //设置0px
+			localStorage.setItem('StatusHeightNo',0);//数值
 		}
 	}
 	return {
