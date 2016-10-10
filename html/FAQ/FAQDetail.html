@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/iconfont/iconfont.css" rel="stylesheet" />
+		<link href="../../css/utils/common.css"  rel="stylesheet"/>
+	
+	</head>
+
+	<body>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav common-background-bar">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left common-color-white"></a>
+		    <h1 class="mui-title common-color-white common-font-family-Bold">问答</h1>
+		    <div class="mui-pull-right">
+			   	<a class="mui-icon mui-icon-star  common-color-white" style="padding-right: 20px;"></a>
+			    <a class="mui-icon iconfont icon-fenxiang common-color-white"></a>
+		    </div>
+		    
+		 
+		</header>
+		
+		
+		<script type="text/javascript">
+		mui.init({
+			gestureConfig: {
+				doubletap: true//启用双击监听
+			},
+			subpages: [{
+				url: 'FAQDetail_sub.html',
+				id: 'FAQDetails_sub.html',
+				styles: {
+					top: '45px',
+					bottom: localStorage.getItem('$Statusbar'),
+				}
+			}]
+		});
+
+		var contentWebview = null;
+		document.querySelector('header').addEventListener('doubletap', function() {
+			if(contentWebview == null) {
+				contentWebview = plus.webview.currentWebview().children()[0];
+			}
+			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+		});
+	</script>
+	</body>
+
+</html>
