@@ -303,5 +303,15 @@
     "refer": [
       "html/FAQ/FAQDetail_sub.html"
     ]
+  },
+  "html/FAQ/FAQDetail_sub.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/utils/common.css",
+      "image/FAQ/u46.png"
+    ],
+    "refer": []
   }
 }
