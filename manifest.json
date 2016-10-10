@@ -319,7 +319,9 @@
 				],
 				"refer": [
 					"html/official/noticelist_main.html",
-					"html/official/documentlist.html"
+					"html/official/documentlist.html",
+					"html/official/waitingdocuments_main.html",
+					"html/FAQ/FAQDetail.html"
 				],
 				"priority": 0
 			},
@@ -336,7 +338,8 @@
 					"image/official/u42.png",
 					"image/official/u60.png",
 					"image/official/u62.png",
-					"css/utils/common.css"
+					"css/utils/common.css",
+					"image/interaction/u24.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -475,6 +478,34 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
+					"css/utils/common.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/official/waitingdocuments_sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"html/official/document_sub.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/official/waitingdocuments_main.html": {
+				"resources": [
+					"html/official/waitingdocuments_sub.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/FAQ/FAQDetail.html": {
+				"resources": [
+					"css/iconfont/iconfont.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"html/FAQ/FAQDetail_sub.html",
 					"css/utils/common.css"
 				],
 				"refer": [],
