@@ -347,7 +347,18 @@
 			"html/tab_dynamic.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"image/dynamic/dynamic0.png",
+					"css/dynamic/dynamic.css",
+					"js/app/dynamic/dynamic.js",
+					"image/dynamic/dynamic2.png",
+					"image/dynamic/dynamic3.jpeg",
+					"image/dynamic/dynamic1.png",
+					"image/home/u70.png",
+					"image/home/u99.png",
+					"image/home/u74.png",
+					"image/home/u101.png",
+					"image/home/u103.png"
 				],
 				"refer": [],
 				"priority": 0
