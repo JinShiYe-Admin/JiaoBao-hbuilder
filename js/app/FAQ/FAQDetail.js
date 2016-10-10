@@ -10,7 +10,7 @@
 var createFAQAnswerlItem=function(imgUrl,name,time,words,comNo,likeNo){
 	var item=new Object();
 	item.imgUrl=imgUrl;
-	item.aname=name;
+	item.name=name;
 	item.time=time;
 	item.words=words;
 	item.comNo=comNo;
