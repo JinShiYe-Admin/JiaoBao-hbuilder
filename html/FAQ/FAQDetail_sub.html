@@ -41,27 +41,51 @@
 				<button type="button" class="mui-btn mui-btn-primary" style="width: 30%;margin: 5px;margin-left: 3.3333333%;">我来回答</button>
 			</div>
 		</footer>
-		<script>
-			mui.init({
-				pullRefresh: {
-					container: '#refreshContainer',
-					down: {
-//						callback: pulldownRefresh
-					},
-					up: {
-						contentrefresh: '正在加载...',
-//						callback: pullupRefresh
-					}
-				}
-			});
-		</script>
 	</body>
 	
 	<script>
-	
+		mui.init({
+				pullRefresh: {
+					container: '#refreshContainer',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var item = document.getElementById('FAQAnswerList')
+					console.log(item.id)
+					while(item.firstChild!=null) {
+						item.removeChild(item.firstChild)
+					}
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					createFAQAnswerList(item,createFAQAnswerData(5))
+					mui('#refreshContainer').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 10);
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#refreshContainer').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					var item = document.getElementById('FAQAnswerList')
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					createFAQAnswerList(item,createFAQAnswerData(10))
+					
+				}, 1500);
+			}
 		mui.plusReady(
 			function(){
-				mui('#refreshContainer').scroll()
 				var item=document.getElementById('FAQAnswerList')
 				createFAQAnswerList(item,createFAQAnswerData(15))
 			}
