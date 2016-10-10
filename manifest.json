@@ -519,7 +519,9 @@
 					"css/utils/common.css",
 					"image/FAQ/u46.png",
 					"css/iconfont/iconfont.css",
-					"fonts/iconfont.ttf"
+					"fonts/iconfont.ttf",
+					"js/app/FAQ/FAQDetail.js",
+					"image/FAQ/u50.png"
 				],
 				"refer": [],
 				"priority": 0

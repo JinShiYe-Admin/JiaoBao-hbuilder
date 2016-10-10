@@ -9,57 +9,30 @@
 		<link href="../../css/utils/common.css" rel="stylesheet" />
 		<link href="../../css/iconfont/iconfont.css" rel="stylesheet" />
 		<script src="../../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init()
-		</script>
+		<script src="../../js/app/FAQ/FAQDetail.js"></script>
 	</head>
 
 	<body>
 		<!--下拉刷新容器-->
 		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
 		  <div class="mui-scroll">
-		  	<!--问题-->
-		  	<div >
-		  		<div style="text-align: center;padding: 10px;background-color: gray;">
-		  		<h4 class="common-color-white">#职业规划#</h4>
-		  		<h6 class="common-color-white">对自己没有规划怎么办？每一份工作都坚持不到半年,怎么才能坚持下去</h6>
+		  	<div id="">
+		  		<!--问题-->
+			  	<div >
+			  		<div style="text-align: center;padding: 10px;background-color: gray;">
+			  		<h4 class="common-color-white">#职业规划#</h4>
+			  		<h6 class="common-color-white">对自己没有规划怎么办？每一份工作都坚持不到半年,怎么才能坚持下去</h6>
+			  	</div>
+			  	<div class="background-white" style="height: 44px;padding: 7px;">
+			  		<h6 class="mui-pull-left"><span class="mui-icon mui-icon-chatboxes"></span>5条回答</h6>
+			  		<h6 id="hotOrNew" class="mui-pull-right"><span style="color: blue;">最热</span>/最新</h6>
+			  	</div>
+			    <!--数据列表-->
+			    <ul id="FAQAnswerList" class="mui-table-view mui-table-view-chevron">
+			    
+			    </ul>
 		  	</div>
-		  	<div class="background-white" style="height: 44px;padding: 7px;">
-		  		<h6 class="mui-pull-left"><span class="mui-icon mui-icon-chatboxes"></span>5条回答</h6>
-		  		<h6 id="hotOrNew" class="mui-pull-right"><span style="color: blue;">最热</span>/最新</h6>
-		  		
-		  	</div>
-		  	</div>
-		    <!--数据列表-->
-		    <ul class="mui-table-view mui-table-view-chevron">
-		      <ul class="mui-table-view">
-		              <li class="mui-table-view-cell">
-		                 <div>
-		                 	<img src="../../image/FAQ/u46.png" class="mui-pull-left"/>
-		                 	<div style="padding-top: 12px;">
-		                 	<p>UC网友</p>
-		                 	<p>08-22</p>
-		                 	</div>
-		                 </div><br />
-		                 <p>在《我本管理》理论中提到一个著名的观点：任何一个问题的出现，都要从自身找原因、找方法、找思路,'+
-							'才能熊根本上解决问题.你提出的问题也是一样的。为什么每一份都没有坚持到半年？你要认真分析、反思，找出问题的'+
-							'症结，然后我们再来讨论下一步的计划，如何才能坚持下去。谢谢。</p>
-						<div><br />
-						<p class="mui-pull-right"><span class="mui-icon  iconfont icon-liaotian common-color-darkgray"></span>6<span class="mui-icon iconfont icon-zanzan common-color-darkgray"></span>  </p>
-						</div>
-		              </li>
-		              <li class="mui-table-view-cell">
-		                  <a class="mui-navigate-right">
-		                       Item 2
-		                  </a>
-		              </li>
-		              <li class="mui-table-view-cell">
-		                  <a class="mui-navigate-right">
-		                       Item 3
-		                  </a>
-		              </li>
-		          </ul>
-		    </ul>
+		  	
 		  </div>
 		</div>
 		<footer>
@@ -68,5 +41,31 @@
 				<button type="button" class="mui-btn mui-btn-primary" style="width: 30%;margin: 5px;margin-left: 3.3333333%;">我来回答</button>
 			</div>
 		</footer>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#refreshContainer',
+					down: {
+//						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+//						callback: pullupRefresh
+					}
+				}
+			});
+		</script>
 	</body>
+	
+	<script>
+	
+		mui.plusReady(
+			function(){
+				mui('#refreshContainer').scroll()
+				var item=document.getElementById('FAQAnswerList')
+				createFAQAnswerList(item,createFAQAnswerData(15))
+			}
+		
+		)
+	</script>
 </html>
