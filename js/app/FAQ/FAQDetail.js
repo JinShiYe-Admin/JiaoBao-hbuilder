@@ -78,7 +78,7 @@ var createFAQAnswerInner=function(cell){
 	return  '<div>'
 		     	+'<img src="'+cell.imgUrl+'" class="mui-pull-left"/>'
 		     	+'<div style="padding-top: 12px;">'
-		     	+'<p>'+cell.name+'</p>'
+		     	+'<b>'+cell.name+'</b>'
 		     	+'<p>'+cell.time+'</p>'
 		     	+'</div>'
 		     +'</div><br />'
