@@ -1,0 +1,113 @@
+.box{
+	width:50px; text-align:center; font-size:16px;
+}
+/**
+ * 背景色 白色
+ */
+.background-white{
+	background-color: white;
+}
+/**
+ * 上边距16
+ */
+.padding-top{
+	padding-top: 16px;
+}
+/**
+
+/**
+ * 左边距
+ */
+.padding-left{
+	padding-left: 12px;
+	color: #ACACB4;
+}
+/**
+ * 边距
+ */
+.padding-right-12{
+	padding-right: 8px;
+}
+
+/*
+ * 内容
+
+ */
+.content{
+	color: black;
+		overflow: hidden;
+	/*设置多于3行省略号*/
+	text-overflow: ellipsis;
+	/*设置多于3行省略号*/
+	display: -webkit-box;
+	/*设置多于3行省略号*/
+	-webkit-line-clamp: 3;
+	/*设置多于3行省略号*/
+	-webkit-box-orient: vertical;
+	/*设置多于3行省略号*/
+	
+}
+
+
+/**
+ * cell占比1/3
+ */
+.cell-width-33{
+	width: 33.3333333333333333%;
+	height: auto;
+	padding-left: 13px;
+	padding-right: 13px;
+	
+}
+/**
+ * cell占比2/3
+ */
+.cell-width-67{
+	width: 66.66666666666667%;
+	height: auto;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+/**
+ * 文字居右
+ */
+.align-right{
+	text-align: right;
+}
+/**
+ * 心情广场 
+ * 更多 样式
+ */
+.more-words{
+	text-align: center;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	
+}
+/**
+ * 上边框样式
+ */
+.sifted-border-top{
+	border-top-style: solid;
+	border-top-width:thin;
+	border-color: darkgray;
+}
+/**
+ * 左边框样式
+ */
+.sifted-border-left{
+	border-left-style:solid;
+	border-left-width:thin ;
+	border-color: darkgray;
+}
+/**
+ * 文字样式居中
+ */
+.align-center{
+	text-align: center;
+}
+
+
+
+
+
