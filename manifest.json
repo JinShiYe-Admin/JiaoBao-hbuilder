@@ -517,7 +517,9 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"css/utils/common.css",
-					"image/FAQ/u46.png"
+					"image/FAQ/u46.png",
+					"css/iconfont/iconfont.css",
+					"fonts/iconfont.ttf"
 				],
 				"refer": [],
 				"priority": 0
