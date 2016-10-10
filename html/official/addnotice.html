@@ -8,34 +8,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
 		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--引入共同的样式，自定义-->
 		<link rel="stylesheet" href="../../css/utils/common.css" />
-
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/app/official/addnotice.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
-		/*图片 文件 div样式表*/
+			/*图片 文件 div样式表*/
 			#btn-row {
+				/*边框颜色*/
 				border-color: gray;
+				/*背景色*/
 				background-color: white;
+				/*高度*/
 				height: 50px;
+				/*上下左右距离*/
 				padding: 10px;
+				/*边框样式*/
 				border: 1px solid gainsboro;
 			}
 		</style>
 	</head>
 
 	<body>
+		<!--加入tabar-->
 		<header class="mui-bar mui-bar-nav common-background-bar">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left common-color-white"></a>
 			<h1 class="mui-title common-color-white">新建通知公告</h1>
+			<!--对号按钮-->
 			<a class="mui-icon mui-icon-checkmarkempty mui-pull-right common-color-white"></a>
-
 		</header>
 		<div class="mui-content mo-background-color">
 			<p></p>
+			<!--输入框-->
 			<div class="mui-input-row">
 				<input type="text" class="mui-input-clear" placeholder="请输入标题">
 			</div>
+			<!--可换行输入框-->
 			<div class="mui-input-row">
 				<textarea id='content' class="mui-input-clear question" placeholder="请添加内容"></textarea>
 
@@ -47,6 +56,7 @@
 				<button type="button" class="mui-btn " onclick="getfile()">
 					文件
 				</button>
+				<!--发送短信-->
 				<div style="float: right; " class=" mui-checkbox mui-left">
 					<label style="margin-top: 8px;">发送短信</label>
 					<input name="checkbox1" value="" type="checkbox"></div>
@@ -62,52 +72,6 @@
 		</div>
 
 	</body>
-	<script src="../../js/mui.min.js"></script>
 
-	<script type="text/javascript">
-		mui.init();
-		//左滑删除按钮方法
-		(function($) {
-			$('#list').on('tap', '.mui-btn', function(event) {
-				var elem = this;
-				var li = elem.parentNode.parentNode;
-				mui.confirm('确认删除该附件？', '提示', btnArray, function(e) {
-					if(e.index == 0) {
-						li.parentNode.removeChild(li);
-					} else {
-						setTimeout(function() {
-							$.swipeoutClose(li);
-						}, 0);
-					}
-				});
-			});
-
-		})(mui);
-		var btnArray = ['确认', '取消'];
-		var getimg = function() {//点击图片方法
-			var table = document.body.querySelector('.mui-table-view');
-			var cells = document.body.querySelectorAll('.mui-table-view-cell');
-			for(var i = cells.length, len = i + 1; i < len; i++) {
-				var li = document.createElement('li');
-				li.className = 'mui-table-view-cell ';
-				li.innerHTML = '<div class="mui-slider-right mui-disabled">\<a class="mui-btn mui-btn-red">删除</a>\</div>\<div class="mui-slider-handle">' + i + '.png\</div>'
-					//下拉刷新，新纪录插到最前面；
-				table.insertBefore(li, table.firstChild);
-			}
-		}
-		var getfile = function() {//点击文件方法
-			var table = document.body.querySelector('.mui-table-view');
-			var cells = document.body.querySelectorAll('.mui-table-view-cell');
-			for(var i = cells.length, len = i + 1; i < len; i++) {
-				var li = document.createElement('li');
-				li.className = 'mui-table-view-cell ';
-				li.innerHTML = '<div class="mui-slider-right mui-disabled">\<a class="mui-btn mui-btn-red">删除</a>\</div>\<div class="mui-slider-handle">' + i + '.doc\</div>'
-					//下拉刷新，新纪录插到最前面；
-				table.insertBefore(li, table.firstChild);
-			}
-		}
-
-		}
-	</script>
 
 </html>

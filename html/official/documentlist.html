@@ -10,11 +10,13 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="../../css/mui.min.css">
-				<link rel="stylesheet" href="../../css/utils/common.css" />
+		<!--引入共同的样式，自定义-->
+		<link rel="stylesheet" href="../../css/utils/common.css" />
 
 	</head>
 
 	<body>
+		<!--加入tabar-->
 		<header class="mui-bar mui-bar-nav common-background-bar">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left common-color-white"></a>
 			<h1 id="title" class="mui-title common-color-white">预览公文</h1>
@@ -27,18 +29,18 @@
 	<script type="text/javascript">
 		mui.init({
 			gestureConfig: {
-				doubletap: true//启用双击监听
+				doubletap: true //启用双击监听
 			},
 			subpages: [{
 				url: 'document_sub.html',
 				id: 'document_sub.html',
 				styles: {
-					top: '45px',
-					bottom: localStorage.getItem('$Statusbar'),
+					top: '45px', //设置距离顶部的距离
+					bottom: localStorage.getItem('$Statusbar'), //设置距离底部的距离
 				}
 			}]
 		});
-
+		//双击状态栏滚动到顶部
 		var contentWebview = null;
 		document.querySelector('header').addEventListener('doubletap', function() {
 			if(contentWebview == null) {
