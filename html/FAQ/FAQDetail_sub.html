@@ -8,8 +8,10 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link href="../../css/utils/common.css" rel="stylesheet" />
 		<link href="../../css/iconfont/iconfont.css" rel="stylesheet" />
+		<link href="../../css/utils/textarea.css"></link>
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/app/FAQ/FAQDetail.js"></script>
+		<script src="../../js/utils/textarea.js"></script>
 	</head>
 
 	<body>
@@ -37,10 +39,16 @@
 		</div>
 		<footer>
 			<div class="mui-bar mui-bar-tab">
-				<input type="text" name="input" id="input" value="请输入内容" style="width: 60%;margin-top: 10px; margin-left: 3.33333333%;" /> 
-				<button type="button" class="mui-btn mui-btn-primary" style="width: 30%;margin: 5px;margin-left: 3.3333333%;">我来回答</button>
+				<textarea id="textarea" placeholder="回复内容" style="height: 44px; width: 60%;margin-top: 10px; margin-left: 3.33333333%;"></textarea> 
+				<button type="button" class="mui-btn mui-btn-primary" style="width: 30%;margin: 5px;margin-left: 3.3333333%;position: absolute;bottom: 12px;">我来回答</button>
 			</div>
 		</footer>
+		<script> 
+		//目标dom
+        var text = document.getElementById("textarea");
+        //自适应的调用
+        autoTextarea(text,0,120);// 调用
+    </script>
 	</body>
 	
 	<script>
@@ -63,9 +71,11 @@
 				setTimeout(function() {
 					var item = document.getElementById('FAQAnswerList')
 					console.log(item.id)
+					//清除所有数据
 					while(item.firstChild!=null) {
 						item.removeChild(item.firstChild)
 					}
+					//加载新控件
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
 					createFAQAnswerList(item,createFAQAnswerData(5))
 					mui('#refreshContainer').pullRefresh().endPulldownToRefresh(); //refresh completed
@@ -86,7 +96,9 @@
 			}
 		mui.plusReady(
 			function(){
+				//获取需绑定控件
 				var item=document.getElementById('FAQAnswerList')
+				//创建列表
 				createFAQAnswerList(item,createFAQAnswerData(15))
 			}
 		

@@ -521,7 +521,8 @@
 					"css/iconfont/iconfont.css",
 					"fonts/iconfont.ttf",
 					"js/app/FAQ/FAQDetail.js",
-					"image/FAQ/u50.png"
+					"image/FAQ/u50.png",
+					"js/utils/textarea.js"
 				],
 				"refer": [],
 				"priority": 0
