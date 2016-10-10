@@ -370,7 +370,14 @@
 					"fonts/mui.ttf",
 					"image/home/u193.png",
 					"image/document_headimg.png",
-					"css/mine/mine.css"
+					"css/mine/mine.css",
+					"image/mine/icon_photoalbum.png",
+					"image/home/u99.png",
+					"image/mine/icon_setting.png",
+					"image/mine/icon_address.png",
+					"image/mine/icon_collect.png",
+					"css/utils/common.css",
+					"image/mine/icon_editinfo.png"
 				],
 				"refer": [],
 				"priority": 0
