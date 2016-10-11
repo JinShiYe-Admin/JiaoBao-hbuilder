@@ -595,9 +595,32 @@
 					"image/FAQ/u38.png",
 					null,
 					"css/FAQ/FAQDetail.css",
-					"css/FAQ/qiuZhi_FAQ.css"
+					"css/FAQ/qiuZhi_FAQ.css",
+					"html/FAQ/qiuZhi_FAQ_sub.html",
+					"js/utils/events.js"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"html/FAQ/qiuZhi_FAQ_sub.html": {
+				"resources": [
+					"css/FAQ/qiuZhi_FAQ.css",
+					"image/FAQ/u36.png",
+					"image/FAQ/u34.png",
+					"image/FAQ/u38.png",
+					"js/utils/grideControl.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/app/FAQ/qiuZhi_FAQ.js",
+					"image/FAQ/faq2.png",
+					"image/FAQ/faq3.png",
+					"image/FAQ/faq0.png",
+					"js/utils/events.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"html/FAQ/FAQDetail.html"
+				],
 				"priority": 0
 			}
 		},

@@ -85,7 +85,6 @@
 						item.removeChild(item.firstChild)
 					}
 					//加载新控件
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
 					createFAQAnswerList(item,createFAQAnswerData(5))
 					mui('#refreshContainer').pullRefresh().endPulldownToRefresh(); //refresh completed
 				}, 10);
