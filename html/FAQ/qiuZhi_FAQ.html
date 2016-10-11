@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/utils/common.css" rel="stylesheet" />
+		<link href="../../css/iconfont/iconfont.css" rel="stylesheet" />
+		<link href="../../css/FAQ/qiuZhi_FAQ.css" rel="stylesheet"/>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script src="../../js/utils/grideControl.js"></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">求知问答</h1>
+		    <a class="mui-icon iconfont icon-liaotian mui-pull-right"></a>
+		</header>
+		<div class="mui-content">
+			<div>
+			    <ul id="qiuZhi_gride" class="mui-table-view mui-grid-view mui-grid-9">
+			    </ul>
+		    </div>
+		    
+		</div>
+	</body>
+	<script>
+		mui.plusReady(function(){
+			var qiuZhi_gride=document.getElementById('qiuZhi_gride');
+			createFAQGride(qiuZhi_gride);
+		})
+		var createFAQGride=function(item){
+			var describes=['推荐','我的提问','我的回答'];
+			var imgUrls=['../../image/FAQ/u34.png','../../image/FAQ/u36.png','../../image/FAQ/u38.png']
+			var urls=[];
+		createGirde(item,createArray(describes,imgUrls,urls));
+		}
+	</script>
+</html>

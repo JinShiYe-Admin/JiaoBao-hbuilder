@@ -231,7 +231,8 @@
 					"html/tab_home.html",
 					"html/tab_official.html",
 					"js/utils/Statusbar.js",
-					"css/utils/common.css"
+					"css/utils/common.css",
+					null
 				],
 				"refer": [
 					"html/mine/tab_mine.html",
@@ -293,7 +294,9 @@
 					"image/home/u244.png",
 					"js/utils/Statusbar.js"
 				],
-				"refer": [],
+				"refer": [
+					"html/FAQ/qiuZhi_FAQ.html"
+				],
 				"priority": 0
 			},
 			"html/tab_official.html": {
@@ -386,7 +389,8 @@
 					"image/mine/icon_address.png",
 					"image/mine/icon_collect.png",
 					"css/utils/common.css",
-					"image/mine/icon_editinfo.png"
+					"image/mine/icon_editinfo.png",
+					null
 				],
 				"refer": [],
 				"priority": 0
@@ -506,7 +510,8 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"css/utils/common.css"
+					"css/utils/common.css",
+					"js/app/official/addnotice.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -571,6 +576,26 @@
 					"css/mui.min.css",
 					"js/app/official/addnotice.js",
 					"css/utils/common.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/FAQ/qiuZhi_FAQ.html": {
+				"resources": [
+					"js/utils/grideControl.js",
+					"css/iconfont/iconfont.css",
+					"js/mui.min.js",
+					"image/FAQ/u36.png",
+					"fonts/mui.ttf",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"image/FAQ/u34.png",
+					"css/utils/common.css",
+					"image/FAQ/u38.png",
+					null,
+					"css/FAQ/FAQDetail.css",
+					"css/FAQ/qiuZhi_FAQ.css"
 				],
 				"refer": [],
 				"priority": 0

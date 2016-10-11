@@ -10,5 +10,6 @@
   -webkit-text-stroke-width: 0.2px;
 }
 .icon-fenxiang:before { content: "\e600"; }
-.icon-liaotian:before { content: "\e601"; }
 .icon-zanzan:before { content: "\e602"; }
+.icon-liaotian:before { content: "\e603"; }
+.icon-liaotian1:before { content: "\e601"; }
