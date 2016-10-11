@@ -321,7 +321,8 @@
 					"html/official/noticelist_main.html",
 					"html/official/documentlist.html",
 					"html/official/waitingdocuments_main.html",
-					"html/FAQ/FAQDetail.html"
+					"html/FAQ/FAQDetail.html",
+					"html/official/newofficial.html"
 				],
 				"priority": 0
 			},
@@ -341,7 +342,9 @@
 					"css/utils/common.css",
 					"image/interaction/u24.png"
 				],
-				"refer": [],
+				"refer": [
+					"html/official/documentlist.html"
+				],
 				"priority": 0
 			},
 			"html/tab_dynamic.html": {
@@ -557,6 +560,17 @@
 					"css/utils/imgeControl.css",
 					"css/utils/textarea.css",
 					"css/FAQ/FAQDetail.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/official/newofficial.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/app/official/addnotice.js",
+					"css/utils/common.css"
 				],
 				"refer": [],
 				"priority": 0
