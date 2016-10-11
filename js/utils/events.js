@@ -44,6 +44,12 @@ var initSubPage=function(subPage){
 			contentWebview.evalJS("mui('#refreshContainer').pullRefresh().scrollTo(0,0,100)");
 		});
 }
+/**
+ * 加载刷新方法
+ * @param {Object} id 更新的父控件
+ * @param {Object} fresh 重新加载数据的方法
+ * @param {Object} addMore 加载更多数据的方法
+ */
 var initRefresh=function(id,fresh,addMore){
 		mui.init({
 				pullRefresh: {
