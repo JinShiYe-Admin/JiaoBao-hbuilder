@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/FAQ/qiuZhi_FAQ.css" rel="stylesheet"/>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/utils/grideControl.js"></script>
+		<script src="../../js/app/FAQ/qiuZhi_FAQ.js"></script>
+		<script src="../../js/utils/events.js"></script>
+	</head>
+
+	<body> 
+		<div class="mui-content">
+			
+			<!--下拉刷新容器-->
+			<div id="refreshContainer" class="mui-scroll-wrapper">
+			  <div class="mui-scroll">
+			  	<ul id="qiuZhi_gride" class="mui-table-view mui-grid-view mui-grid-9">
+				</ul>
+			    <!--数据列表-->
+			    <ul id="qiuZhi_list" class="mui-table-view mui-table-view-chevron">
+			    </ul>
+			  </div>
+			</div>
+		</div>
+	</body>
+	<script>
+		/**
+		 * 加载刷新
+		 */
+		initRefresh('qiuZhi_list',
+		//刷新的数据
+		function(){
+			createQiuZhiFAQList('qiuZhi_list',createFAQData(5));
+		},
+		//加载的数据
+		function(){
+			createQiuZhiFAQList('qiuZhi_list',createFAQData(10));
+		})
+	</script>
+	<script>
+		mui.plusReady(function(){
+			//前三个各图标
+			var qiuZhi_gride=document.getElementById('qiuZhi_gride');
+			//创建前三个图标
+			createFAQGride(qiuZhi_gride);
+			//首次进入的list
+			createQiuZhiFAQList('qiuZhi_list',createFAQData(10));
+		})
+		/*
+		 * 创建gride
+		 */
+		var createFAQGride=function(item){
+			var describes=['推荐','我的提问','我的回答'];
+			var imgUrls=['../../image/FAQ/u34.png','../../image/FAQ/u36.png','../../image/FAQ/u38.png']
+			var urls=[];
+		createGirde(item,createArray(describes,imgUrls,urls));
+		}
+	</script>
+</html>

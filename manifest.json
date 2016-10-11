@@ -231,7 +231,8 @@
 					"html/tab_home.html",
 					"html/tab_official.html",
 					"js/utils/Statusbar.js",
-					"css/utils/common.css"
+					"css/utils/common.css",
+					null
 				],
 				"refer": [
 					"html/mine/tab_mine.html",
@@ -293,7 +294,9 @@
 					"image/home/u244.png",
 					"js/utils/Statusbar.js"
 				],
-				"refer": [],
+				"refer": [
+					"html/FAQ/qiuZhi_FAQ.html"
+				],
 				"priority": 0
 			},
 			"html/tab_official.html": {
@@ -321,7 +324,8 @@
 					"html/official/noticelist_main.html",
 					"html/official/documentlist.html",
 					"html/official/waitingdocuments_main.html",
-					"html/FAQ/FAQDetail.html"
+					"html/FAQ/FAQDetail.html",
+					"html/official/newofficial.html"
 				],
 				"priority": 0
 			},
@@ -341,7 +345,9 @@
 					"css/utils/common.css",
 					"image/interaction/u24.png"
 				],
-				"refer": [],
+				"refer": [
+					"html/official/documentlist.html"
+				],
 				"priority": 0
 			},
 			"html/tab_dynamic.html": {
@@ -383,7 +389,8 @@
 					"image/mine/icon_address.png",
 					"image/mine/icon_collect.png",
 					"css/utils/common.css",
-					"image/mine/icon_editinfo.png"
+					"image/mine/icon_editinfo.png",
+					null
 				],
 				"refer": [],
 				"priority": 0
@@ -503,7 +510,8 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"css/utils/common.css"
+					"css/utils/common.css",
+					"js/app/official/addnotice.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -559,6 +567,60 @@
 					"css/FAQ/FAQDetail.css"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"html/official/newofficial.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/app/official/addnotice.js",
+					"css/utils/common.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/FAQ/qiuZhi_FAQ.html": {
+				"resources": [
+					"js/utils/grideControl.js",
+					"css/iconfont/iconfont.css",
+					"js/mui.min.js",
+					"image/FAQ/u36.png",
+					"fonts/mui.ttf",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"image/FAQ/u34.png",
+					"css/utils/common.css",
+					"image/FAQ/u38.png",
+					null,
+					"css/FAQ/FAQDetail.css",
+					"css/FAQ/qiuZhi_FAQ.css",
+					"html/FAQ/qiuZhi_FAQ_sub.html",
+					"js/utils/events.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/FAQ/qiuZhi_FAQ_sub.html": {
+				"resources": [
+					"css/FAQ/qiuZhi_FAQ.css",
+					"image/FAQ/u36.png",
+					"image/FAQ/u34.png",
+					"image/FAQ/u38.png",
+					"js/utils/grideControl.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/app/FAQ/qiuZhi_FAQ.js",
+					"image/FAQ/faq2.png",
+					"image/FAQ/faq3.png",
+					"image/FAQ/faq0.png",
+					"js/utils/events.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"html/FAQ/FAQDetail.html"
+				],
 				"priority": 0
 			}
 		},

@@ -1,0 +1,12 @@
+/**圆形*/
+.circular-square{
+    border-radius:50%;
+    width: 40%;
+    height: auto;
+}
+/**
+ * 背景色
+ */
+.background-white{
+	background-color: white;
+}
