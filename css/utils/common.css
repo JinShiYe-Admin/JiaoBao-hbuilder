@@ -34,6 +34,10 @@ header:last-of-type{
 header a{
 	color: white;
 }
+/*标题为白色*/
+h1:last-of-type{
+	color: white;
+}
 
 /*字体font-size：62.5%*/
 html{font-size: 62.5%;}
