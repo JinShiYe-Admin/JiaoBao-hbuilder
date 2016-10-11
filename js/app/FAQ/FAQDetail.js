@@ -87,3 +87,41 @@ var createFAQAnswerInner=function(cell){
 			+cell.comNo+'<span class="mui-icon iconfont icon-zanzan common-color-darkgray"></span>'+cell.likeNo+ ' </p>'
 			+'</div>'
 }
+/**
+ * 分享
+ * @param {Object} shareIcon 分享图标
+ */
+var share=function(shareIcon){
+			//图标加载监听
+			shareIcon.addEventListener('tap',function(){
+				var targetWeb=plus.webview.getWebviewById('FAQDetail_sub.html');
+				plus.share.getServices(
+					//成功回调
+					function(s){
+//						console.log(JSON.stringify(s))
+						//向子页面传值
+						mui.fire(targetWeb,'share',{
+							shares:s
+						})
+					},
+					//失败回调
+					function(e){
+						console.log(e.message)
+						
+					}
+				)
+			})
+		}
+/**
+ * 为分享增加图标
+ * @param {Object} shares 分享
+ */
+var addSharesData=function(shares){
+	var imgs=["../../image/thirdParty/sina_weibo.png",
+	"../../image/thirdParty/QQ_space.png",
+	"../../image/thirdParty/QQ.png",
+	"../../image/thirdParty/WeChat.png"];
+	shares.forEach(function(each,index,shares){
+		each.imgUrl=imgs[index%imgs.length]
+	})
+}

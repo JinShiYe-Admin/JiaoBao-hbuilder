@@ -101,7 +101,7 @@
         },
         "NativeObj":{
         	"description": "原生对象"
-        }
+        },"Share":{}
 	},
 	"plus": {
 		"splashscreen": {
@@ -358,7 +358,13 @@
 					"image/home/u99.png",
 					"image/home/u74.png",
 					"image/home/u101.png",
-					"image/home/u103.png"
+					"image/home/u103.png",
+					"css/home/home.css",
+					"css/utils/imgeControl.css",
+					"image/home/u200.png",
+					"js/utils/carouselControl.js",
+					"css/utils/common.css",
+					"js/utils/grideControl.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -414,7 +420,8 @@
 					"css/mui.min.css",
 					"css/utils/noticedetails.css",
 					"css/official/noticedetails.css",
-					"js/utils/Statusbar.js"
+					"js/utils/Statusbar.js",
+					"js/app/official/noticelist.js"
 				],
 				"refer": [
 					"html/official/noticedetails_main.html"
@@ -524,7 +531,8 @@
 					"css/mui.min.css",
 					"fonts/iconfont.ttf",
 					"html/FAQ/FAQDetail_sub.html",
-					"css/utils/common.css"
+					"css/utils/common.css",
+					"js/app/FAQ/FAQDetail.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -540,7 +548,15 @@
 					"fonts/iconfont.ttf",
 					"js/app/FAQ/FAQDetail.js",
 					"image/FAQ/u50.png",
-					"js/utils/textarea.js"
+					"js/utils/textarea.js",
+					"image/thirdParty/QQ.png",
+					"js/utils/grideControl.js",
+					"image/thirdParty/WeChat.png",
+					"image/thirdParty/QQ_space.png",
+					"image/thirdParty/sina_weibo.png",
+					"css/utils/imgeControl.css",
+					"css/utils/textarea.css",
+					"css/FAQ/FAQDetail.css"
 				],
 				"refer": [],
 				"priority": 0
