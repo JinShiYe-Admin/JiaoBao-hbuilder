@@ -17,7 +17,7 @@ var createGirde = function(gride,array) {
 			 * @param {Object} array 数组
 			 */
 			function(map, index, array) {
-			console.log("字符串：" + map.key + "图标：" + map.value);
+			console.log("字符串：" + map.key + "，图标：" + map.value);
 			var li = document.createElement('li');//子元素
 			var bgColor=getRandomColor();//获取背景色
 			if(array.length<=3){//数组小于等于3，每行3个图标
@@ -34,7 +34,7 @@ var createGirde = function(gride,array) {
 			 * 子控件加载点击监听事件
 			 */
 			li.addEventListener('tap',function(){
-				openTarWindow(map.tarUrl)
+				openTarWindow(map.tarUrl,map,index,array);
 			})
 			//父控件加载子控件
 			gride.appendChild(li)
@@ -70,12 +70,18 @@ var getRandomColor = function(){
 /**
  * 打开新页面
  */
-var openTarWindow=function(tarUrl){
+var openTarWindow=function(tarUrl,map, index, array){
 	mui.openWindow({
 		url:tarUrl,
 		id:tarUrl,
 		styles:{
 			top:localStorage.getItem('$Statusbar')//设置距离顶部的距离
+		},
+		extras:{//界面传值
+			name0:map.key,
+			name1:map.value,
+			index:index
 		}
-	})
+	});
+	console.log('打开新界面：'+index);
 }

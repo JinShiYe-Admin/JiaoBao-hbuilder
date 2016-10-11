@@ -10,7 +10,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="../../css/mui.min.css">
-				<link rel="stylesheet" href="../../css/utils/common.css" />
+		<link rel="stylesheet" href="../../css/utils/common.css" />
 
 	</head>
 
@@ -25,18 +25,47 @@
 	</body>
 	<script src="../../js/mui.min.js"></script>
 	<script type="text/javascript">
+		var pageIndex = 0;//跳转到此界面的索引，用于子界面是否显示控件，1通知，0信箱
 		mui.init({
 			gestureConfig: {
-				doubletap: true//启用双击监听
+				doubletap: true //启用双击监听
 			},
 			subpages: [{
 				url: 'document_sub.html',
 				id: 'document_sub.html',
 				styles: {
 					top: '45px',
-					bottom: localStorage.getItem('$Statusbar'),
+					bottom: '0px',
 				}
 			}]
+		});
+		//获取传到此界面的参数
+		mui.plusReady(function() {
+			//通过控件，找到对应的值
+			var self = plus.webview.currentWebview();
+			var name0 = self.name0;
+			var name1 = self.name1;
+			var index = self.index;
+			console.log('传过来的。。后000值为：'+index);
+			if (index<5) {
+				pageIndex = 1;
+			} else{
+				pageIndex = 0;
+			}
+			console.log('传过来的。。后值为：'+pageIndex);
+			//存到本地
+			var users = JSON.parse(localStorage.getItem('$noticeIndex') || '[]');
+			console.log('quan局变量为：'+users);
+			if (users==9) {
+				
+			}else{
+				localStorage.setItem('$noticeIndex',pageIndex);
+			}
+			
+			//找到导航条
+			var navTitle = document.getElementById("title");
+			//修改标题名称
+			navTitle.innerHTML = name0;
 		});
 
 		var contentWebview = null;

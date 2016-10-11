@@ -48,6 +48,13 @@ mui.plusReady(function() {
 		if(targetTab == activeTab) {
 			return;
 		}
+		console.log('索引为：'+targetTab);
+		if (targetTab=='tab_interaction.html') {
+			localStorage.setItem('$noticeIndex',0);
+		} else{
+			//存到本地，用于界面显示判断
+			localStorage.setItem('$noticeIndex',9);
+		}
 		//显示目标选项卡
 		plus.webview.show(targetTab);
 		//隐藏当前选项卡

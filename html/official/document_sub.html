@@ -55,30 +55,13 @@
 					}
 				}
 			});
+
 			/**
 			 * 下拉刷新具体业务实现
 			 */
 			function pulldownRefresh() {
 				setTimeout(function() {
-					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for(var i = cells.length, len = i + 3; i < len; i++) {
-						var dic = datasource.data[i];
-						var noticelist = '						<div>\
-							<div style="float: left;">\
-								<img class="document-headimg" src="' + dic.headimg + '" /><img class="document-redpoint" src="../../image/red_point.png" /><br/><br/><br/>\
-								<font style="text-align: center;font-size: 14px;">' + dic.name + '</font>\
-							</div>\
-							<font class="document-content">' + dic.content + '\
-							</font>\
-							<p class="document-time">' + dic.time + '</p>\
-						</div>';
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell';
-						li.innerHTML = noticelist;
-						//下拉刷新，新纪录插到最前面；
-						table.insertBefore(li, table.firstChild);
-					}
+					cellAddData(0);
 					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 				}, 1500);
 			}
@@ -89,24 +72,7 @@
 			function pullupRefresh() {
 				setTimeout(function() {
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
-					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for(var i = cells.length, len = i + 20; i < len; i++) {
-						var dic = datasource.data[i];
-						var noticelist = '						<div>\
-							<div style="float: left;">\
-								<img class="document-headimg" src="' + dic.headimg + '" /><img class="document-redpoint" src="' + dic.red + '" /><br/><br/><br/>\
-								<font style="text-align: center;font-size: 14px;">' + dic.name + '</font>\
-							</div>\
-							<font class="document-content">' + dic.content + '\
-							</font>\
-							<p class="document-time">' + dic.time + '</p>\
-						</div>';
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell';
-						li.innerHTML = noticelist;
-						table.appendChild(li);
-					}
+					cellAddData(1);
 				}, 1500);
 			}
 
@@ -123,6 +89,49 @@
 					});
 				})
 			});
+			
+			//加载的数据格式
+			var users = JSON.parse(localStorage.getItem('$noticeIndex') || '[]');//找到当前是显示什么数据类型，1为通知，0为普通
+			function cellAddData (refOrDown) {
+				var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for(var i = cells.length, len = i + 3; i < len; i++) {
+						var dic = datasource.data[i];
+						var noticelist ;
+						if (users==1) {
+							noticelist = '						<div>\
+							<div style="float: left;">\
+								<img class="document-headimg" src="' + dic.headimg + '" /><img class="document-redpoint" src="../../image/red_point.png" /><br/><br/><br/>\
+								<font style="text-align: center;font-size: 14px;">' + dic.name + '</font>\
+							</div>\
+							<font class="document-content">' + dic.title + '\
+							</font>\
+							<font class="document-content">' + dic.content + '\
+							</font>\
+							<p class="document-time">' + dic.time + '</p>\
+						</div>';
+						} else{
+							noticelist = '						<div>\
+							<div style="float: left;">\
+								<img class="document-headimg" src="' + dic.headimg + '" /><img class="document-redpoint" src="../../image/red_point.png" /><br/><br/><br/>\
+								<font style="text-align: center;font-size: 14px;">' + dic.name + '</font>\
+							</div>\
+							<font class="document-content">' + dic.content + '\
+							</font>\
+							<p class="document-time">' + dic.time + '</p>\
+						</div>';
+						}
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = noticelist;
+						if (refOrDown==0) {
+							//下拉刷新，新纪录插到最前面；
+							table.insertBefore(li, table.firstChild);
+						} else{
+							table.appendChild(li);
+						}
+					}
+			}
 		</script>
 		<script src="../../js/app/official/documentlist.js" type="text/javascript" charset="utf-8"></script>
 
