@@ -17,7 +17,6 @@ var createGirde = function(gride,array) {
 			 * @param {Object} array 数组
 			 */
 			function(map, index, array) {
-			console.log("字符串：" + map.key + "图标：" + map.value);
 			var li = document.createElement('li');//子元素
 			var bgColor=getRandomColor();//获取背景色
 			if(array.length<=3){//数组小于等于3，每行3个图标
@@ -27,8 +26,10 @@ var createGirde = function(gride,array) {
 			}
 			//子控件的innerHTML
 			li.innerHTML = '<a href="#">' +
-				'<img class="mui-icon circular-square" src="' + map.value + '" style="background-color:'+bgColor+';"></img>' +
-				'<small class="mui-media-body">' + map.key + '</small>' +
+				'<img class="mui-icon circular-square" src="' + map.imgUrl 
+				+'" style="background-color:'+bgColor
+				+';"></img>' +
+				'<small class="mui-media-body">' + map.description + '</small>' +
 				'</a>';
 			/**
 			 * 子控件加载点击监听事件
@@ -52,8 +53,8 @@ var createArray = function(chars, imgUrls,urls) {
 	//遍历
 	for(i = 0; i < chars.length; i++) {
 		var value = {
-			key: chars[i],
-			value: imgUrls[i],
+			description: chars[i],
+			imgUrl:imgUrls[i],
 			tarUrl:urls[i]
 		}
 		array.push(value)

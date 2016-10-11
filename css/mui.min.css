@@ -3081,7 +3081,7 @@ select:focus {
 }
 
 .mui-popover.mui-popover-action .mui-table-view {
-	margin: 8px;
+	/*margin: 8px;*/
 	text-align: center;
 	color: #007aff;
 	border-radius: 4px
