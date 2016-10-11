@@ -13,7 +13,10 @@ var jumpPage=function(item,targetHTML){
 			},
 			waiting:{
 				title:'正在加载...'
-			}
+			},
+			styles: {
+					top: localStorage.getItem('$Statusbar'),
+				}
 		})
 	})
 }
@@ -44,11 +47,12 @@ var initSubPage=function(subPage){
 			contentWebview.evalJS("mui('#refreshContainer').pullRefresh().scrollTo(0,0,100)");
 		});
 }
+
 /**
- * 加载刷新方法
- * @param {Object} id 更新的父控件
- * @param {Object} fresh 重新加载数据的方法
- * @param {Object} addMore 加载更多数据的方法
+ * 刷新
+ * @param {Object} id 刷新的list控件
+ * @param {Object} fresh 下拉刷新加载数据的方法
+ * @param {Object} addMore 上拉刷新加载数据的方法
  */
 var initRefresh=function(id,fresh,addMore){
 		mui.init({
@@ -87,6 +91,7 @@ var initRefresh=function(id,fresh,addMore){
 					mui('#refreshContainer').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
 					var item = document.getElementById(id)
 					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					//加载更多数据
 					addMore();
 				}, 1500);
 			}
