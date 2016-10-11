@@ -319,7 +319,9 @@
 				],
 				"refer": [
 					"html/official/noticelist_main.html",
-					"html/official/documentlist.html"
+					"html/official/documentlist.html",
+					"html/official/waitingdocuments_main.html",
+					"html/FAQ/FAQDetail.html"
 				],
 				"priority": 0
 			},
@@ -336,7 +338,8 @@
 					"image/official/u42.png",
 					"image/official/u60.png",
 					"image/official/u62.png",
-					"css/utils/common.css"
+					"css/utils/common.css",
+					"image/interaction/u24.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -344,7 +347,18 @@
 			"html/tab_dynamic.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"image/dynamic/dynamic0.png",
+					"css/dynamic/dynamic.css",
+					"js/app/dynamic/dynamic.js",
+					"image/dynamic/dynamic2.png",
+					"image/dynamic/dynamic3.jpeg",
+					"image/dynamic/dynamic1.png",
+					"image/home/u70.png",
+					"image/home/u99.png",
+					"image/home/u74.png",
+					"image/home/u101.png",
+					"image/home/u103.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -356,7 +370,14 @@
 					"fonts/mui.ttf",
 					"image/home/u193.png",
 					"image/document_headimg.png",
-					"css/mine/mine.css"
+					"css/mine/mine.css",
+					"image/mine/icon_photoalbum.png",
+					"image/home/u99.png",
+					"image/mine/icon_setting.png",
+					"image/mine/icon_address.png",
+					"image/mine/icon_collect.png",
+					"css/utils/common.css",
+					"image/mine/icon_editinfo.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -476,6 +497,50 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"css/utils/common.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/official/waitingdocuments_sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"html/official/document_sub.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/official/waitingdocuments_main.html": {
+				"resources": [
+					"html/official/waitingdocuments_sub.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/FAQ/FAQDetail.html": {
+				"resources": [
+					"css/iconfont/iconfont.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"html/FAQ/FAQDetail_sub.html",
+					"css/utils/common.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/FAQ/FAQDetail_sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/utils/common.css",
+					"image/FAQ/u46.png",
+					"css/iconfont/iconfont.css",
+					"fonts/iconfont.ttf",
+					"js/app/FAQ/FAQDetail.js",
+					"image/FAQ/u50.png",
+					"js/utils/textarea.js"
 				],
 				"refer": [],
 				"priority": 0

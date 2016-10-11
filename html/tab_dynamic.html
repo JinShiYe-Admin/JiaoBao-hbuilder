@@ -1,3 +1,6 @@
+<!--/**
+ *@author SYM
+ */-->
 <!doctype html>
 <html>
 
@@ -6,16 +9,73 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
+		<!--引入九宫格的布局样式-->
+		<link href="../css/utils/imgeControl.css" rel="stylesheet" />
+		<!--引入共同的样式，自定义-->
+		<link rel="stylesheet" href="../css/utils/common.css" />
+		<!--用于九宫格背景色样式-->
+		<link rel="stylesheet" type="text/css" href="../css/home/home.css"/>
+		<!--本页布局样式-->
+		<link href="../css/dynamic/dynamic.css" rel="stylesheet" />
 		<script src="../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init()
-		</script>
+		<!--轮播图js-->
+		<script src="../js/utils/carouselControl.js"></script>
+		<!--最新学校动态调用方法-->
+		<script src="../js/app/dynamic/dynamic.js"></script>
+		<!--引入九宫格调用方法-->
+		<script src="../js/utils/grideControl.js"></script>
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav">
-			<h1 class="mui-title">动态</h1>
+		<!--加入tabar-->
+		<header class="mui-bar mui-bar-nav common-background-bar">
+			<h1 class="mui-title common-color-white common-font-family-Regular">动态</h1>
 		</header>
-	</body>
+		<!--加入九宫格-->
+		<div class="mui-content background-white ">
+			<img src="../image/dynamic/dynamic3.jpeg" style="width: 100%; height: 180px;" />
+			<ul id="offcial" class="mui-table-view mui-grid-view mui-grid-9 ">
+			</ul>
+			<!--最新学校动态-->
+			<div class="">
+				<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />最新学校动态</h4>
+				<ul id="mood_guard" class="mui-table-view">
+				</ul>
+				<h5 class="more-words">查看更多&gt;&gt;</h5>
+			</div>
+			<!--最新班级动态-->
+			<div class="background-white">
+				<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />最新班级动态</h4>
+				<ul id="mood_guard" class="mui-table-view">
+				</ul>
+				<h5 class="more-words">查看更多&gt;&gt;</h5>
+			</div>
 
-</html>
+		</div>
+
+	</body>
+	<script>
+		mui.init();
+		mui.plusReady(function() {
+				//给九宫格插入默认数据
+				var chars = ["学校动态", "班级动态", "校园秀"]
+				var imgUrls = ["../image/dynamic/dynamic0.png",
+					"../image/dynamic/dynamic1.png",
+					"../image/dynamic/dynamic2.png",
+
+				]
+				var gride = document.getElementById('offcial')
+				var urls = [];
+				createGirde(gride, createArray(chars, imgUrls, urls))
+					//最新学校动态
+				getMoodList()
+
+			})
+			/**
+			 * 最新学校动态
+			 */
+		var getMoodList = function() {
+			var moodItem = document.getElementById('mood_guard')
+			createList(moodItem, createMoodList())
+		}
+	</script>

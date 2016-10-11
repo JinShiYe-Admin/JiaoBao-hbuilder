@@ -10,11 +10,13 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--引入共同的样式，自定义-->
 		<link rel="stylesheet" href="../../css/utils/common.css" />
 
 	</head>
 
 	<body>
+		<!--加入tabar-->
 		<header class="mui-bar mui-bar-nav common-background-bar">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left common-color-white"></a>
 			<h1 id="title" class="mui-title common-color-white">预览公文</h1>
@@ -25,7 +27,7 @@
 	</body>
 	<script src="../../js/mui.min.js"></script>
 	<script type="text/javascript">
-		var pageIndex = 0;//跳转到此界面的索引，用于子界面是否显示控件，1通知，0信箱
+		var pageIndex = 0; //跳转到此界面的索引，用于子界面是否显示控件，1通知，0信箱
 		mui.init({
 			gestureConfig: {
 				doubletap: true //启用双击监听
@@ -34,8 +36,8 @@
 				url: 'document_sub.html',
 				id: 'document_sub.html',
 				styles: {
-					top: '45px',
-					bottom: '0px',
+					top: '45px', //设置距离顶部的距离
+					bottom: localStorage.getItem('$Statusbar'), //设置距离底部的距离
 				}
 			}]
 		});
@@ -46,28 +48,29 @@
 			var name0 = self.name0;
 			var name1 = self.name1;
 			var index = self.index;
-			console.log('传过来的。。后000值为：'+index);
-			if (index<5) {
+			console.log('传过来的。。后000值为：' + index);
+			if(index < 5) {
 				pageIndex = 1;
-			} else{
+			} else {
 				pageIndex = 0;
 			}
-			console.log('传过来的。。后值为：'+pageIndex);
-			//存到本地
+			console.log('传过来的。。后值为：' + pageIndex);
+			//存到本地，先获取值
 			var users = JSON.parse(localStorage.getItem('$noticeIndex') || '[]');
-			console.log('quan局变量为：'+users);
-			if (users==9) {
-				
-			}else{
-				localStorage.setItem('$noticeIndex',pageIndex);
+			console.log('quan局变量为：' + users);
+			if(users == 9) {
+
+			} else {
+				localStorage.setItem('$noticeIndex', pageIndex);//修改全局变量值
 			}
-			
+
 			//找到导航条
 			var navTitle = document.getElementById("title");
 			//修改标题名称
 			navTitle.innerHTML = name0;
 		});
 
+		//双击状态栏滚动到顶部
 		var contentWebview = null;
 		document.querySelector('header').addEventListener('doubletap', function() {
 			if(contentWebview == null) {
