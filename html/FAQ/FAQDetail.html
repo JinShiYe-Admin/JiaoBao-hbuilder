@@ -23,7 +23,7 @@
 		    	<!--星星点灯-->
 			   	<a class="mui-icon mui-icon-star  common-color-white" style="padding-right: 20px;"></a>
 			   	<!--分享-->
-			    <a class="mui-icon iconfont icon-fenxiang common-color-white"></a>
+			    <a id="share" class="mui-icon iconfont icon-fenxiang common-color-white"></a>
 		    </div>
 		    
 		 
@@ -50,6 +50,21 @@
 			}
 			contentWebview.evalJS("mui('#refreshContainer').pullRefresh().scrollTo(0,0,100)");
 		});
+	</script>
+	<script>
+		mui.plusReady(function(){
+			var share=document.getElementById('share');
+			share.addEventListener('tap',function(){
+				plus.share.getServices(
+					function(s){
+						console.log(JSON.stringify(s))
+					},
+					function(e){
+						console.log(e.message)
+					}
+				)
+			})
+		})
 	</script>
 	</body>
 
