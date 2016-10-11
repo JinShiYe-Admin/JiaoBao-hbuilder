@@ -1,4 +1,4 @@
-<!--新建通知公告界面-->
+<!--发布公文界面-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +14,7 @@
 		<script src="../../js/mui.min.js"></script>
 		<style type="text/css">
 			/*图片 文件 div样式表*/
+			
 			#btn-row {
 				/*边框颜色*/
 				border-color: gray;
@@ -33,45 +34,57 @@
 		<!--加入tabar-->
 		<header class="mui-bar mui-bar-nav common-background-bar">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left common-color-white"></a>
-			<h1 class="mui-title common-color-white">新建通知公告</h1>
+			<h1 class="mui-title common-color-white">发布公文</h1>
 			<!--对号按钮-->
 			<a class="mui-icon mui-icon-checkmarkempty mui-pull-right common-color-white"></a>
 		</header>
 		<div class="mui-content mo-background-color">
-			<p></p>
-			<!--输入框-->
-			<div class="mui-input-row">
-				<input type="text" class="mui-input-clear" placeholder="请输入标题">
-			</div>
-			<!--可换行输入框-->
-			<div class="mui-input-row">
-				<textarea id='content' class="mui-input-clear question" placeholder="请添加内容"></textarea>
+			<br/>
+<form >
+	类型：
+<input type="radio" name="radiobutton" value="radiobutton" checked> 通知
+<input type="radio" name="radiobutton" value="radiobutton"> 工作流
+<input type="radio" name="radiobutton" value="radiobutton"> 讨论型
+<br/><br/>
+</form>
+		<!--输入框-->
+		<div class="mui-input-row"  >
+			<input type="text" class="mui-input-clear" placeholder="请输入标题">
+		</div>
+		<!--可换行输入框-->
+		<div class="mui-input-row">
+			<textarea id='content' class="mui-input-clear question" placeholder="请添加内容"></textarea>
 
-			</div>
+		</div>
 			<div id="btn-row">
-				<button type="button" class="mui-btn" onclick="getimg()">
-					图片
-				</button>
+
 				<button type="button" class="mui-btn " onclick="getfile()">
-					文件
+					添加附件
 				</button>
 				<!--发送短信-->
 				<div style="float: right; " class=" mui-checkbox mui-left">
 					<label style="margin-top: 8px;">发送短信</label>
 					<input name="checkbox1" value="" type="checkbox"></div>
 			</div>
-			<br/>
-			<p style="font-size: 18px;">附件列表</p>
-			<div class="mui-content">
-				<ul id="list" class="mui-table-view">
+		<br/>
+		<p style="font-size: 18px;">附件列表</p>
+		<div class="mui-content">
+			<ul id="list" class="mui-table-view">
 
-				</ul>
-			</div>
+			</ul>
+			<br />
+					<p style="font-size: 18px;">发送给</p>
+
+		</div>
+				<div class="mui-content">
+			<ul id="memberlist" class="mui-table-view">
+
+			</ul>
+		</div>
 
 		</div>
 		<script src="../../js/app/official/addnotice.js" type="text/javascript" charset="utf-8"></script>
 
 	</body>
-
 
 </html>

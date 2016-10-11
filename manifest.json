@@ -568,5 +568,6 @@
 				"css/mui.css"
 			]
 		}
-	}
+	},
+	"unpackage":[]
 }
