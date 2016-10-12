@@ -21,7 +21,6 @@
 		<!--本页用js-->
 		<script src="../js/home/home.js"></script>
 		<script type="text/javascript">
-
 		</script>
 
 	</head>
@@ -32,106 +31,112 @@
 			<h1 class="mui-title common-color-white common-font-family-Bold">首页</h1>
 			<span class="mui-icon mui-icon-chatboxes mui-pull-right common-color-white"></span>
 		</header>
-		<div class="mui-content">
-			<!--轮播控件-->
-			<div id="slider" class="mui-slider">
-				<div class="mui-slider-group mui-slider-loop">
-				</div>
-				<div class="mui-slider-indicator mui-text-right">
-				</div>
-			</div>
-			<!--圆形按钮-->
-			<div class="background-white">
-				<ul id="circler" class="mui-table-view mui-grid-view mui-grid-9 "></ul>
-			</div>
-			<!--心情广场-->
-			<div class="background-white">
-				<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />心情广场</h4>
-				<ul id="mood_guard" class="mui-table-view">
-				</ul>
-				<h5 class="more-words">查看更多&gt;&gt;</h5>
-			</div>
-			<!--求知精选-->
-			<div class="background-white">
-				<h4 class="padding-top padding-left">
+		<div class="mui-scroll-wrapper" style="margin-top: 45px;">
+			<div class="mui-scroll">
+				<div class="mui-content">
+					<!--轮播控件-->
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+						</div>
+						<div class="mui-slider-indicator mui-text-right">
+						</div>
+					</div>
+					<!--圆形按钮-->
+					<div class="background-white">
+						<ul id="circler" class="mui-table-view mui-grid-view mui-grid-9 "></ul>
+					</div>
+					<!--心情广场-->
+					<div class="background-white">
+						<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />心情广场</h4>
+						<ul id="mood_guard" class="mui-table-view">
+						</ul>
+						<h5 class="more-words">查看更多&gt;&gt;</h5>
+					</div>
+					<!--求知精选-->
+					<div class="background-white">
+						<h4 class="padding-top padding-left">
 					<img class="padding-right-12" src="../image/home/u200.png" />
 					求知精选
 					<img src="../image/home/u210.png" />
 				</h4>
-				<ul id="qiuZhi-sifted" class="mui-table-view mui-grid-view mui-grid-9"></ul>
+						<ul id="qiuZhi-sifted" class="mui-table-view mui-grid-view mui-grid-9"></ul>
+					</div>
+					<!--求知推荐-->
+					<div class="background-white">
+						<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />求知推荐</h4>
+						<ul id="qiuZhi-recommend" class="mui-table-view mui-grid-view mui-grid-9 "></ul>
+					</div>
+				</div>
 			</div>
-			<!--求知推荐-->
-			<div class="background-white">
-				<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />求知推荐</h4>
-				<ul id="qiuZhi-recommend" class="mui-table-view mui-grid-view mui-grid-9 "></ul>
-			</div>
-
 		</div>
 	</body>
 	<script>
+		mui('.mui-scroll-wrapper').scroll({
+			indicators: true, //是否显示滚动条
+		});
 		mui.plusReady(function() {
-			var titles = ["幸福是可以一起睡觉", "幸福是可以一起吃饭", "幸福是可以一起拉屎"]
-			//加黑条
-			addStrip(getImgArray())
-			//加图片
-			addImg(getImgArray(), titles)
-			var slider = mui("#slider");
-			//轮播开始
-			slider.slider({
-				interval: 5000
-			});
-			//圆圈按钮
-			getHomeCircle('circler');
-			//心情广场
-			getMoodList();
-			//求知精选
-			getSiftedList();
-			//求知推荐
-			getRecommend();
-		})
-		/**
-		 * 九宫格
-		 *  圆形按钮
-		 * @param {Object} id 父控件id
-		 */
+				var titles = ["幸福是可以一起睡觉", "幸福是可以一起吃饭", "幸福是可以一起拉屎"]
+					//加黑条
+				addStrip(getImgArray())
+					//加图片
+				addImg(getImgArray(), titles)
+				var slider = mui("#slider");
+				//轮播开始
+				slider.slider({
+					interval: 5000
+				});
+				//圆圈按钮
+				getHomeCircle('circler');
+				//心情广场
+				getMoodList();
+				//求知精选
+				getSiftedList();
+				//求知推荐
+				getRecommend();
+			})
+			/**
+			 * 九宫格
+			 *  圆形按钮
+			 * @param {Object} id 父控件id
+			 */
 		var getHomeCircle = function(id) {
-			//九宫格底部标题数组
-			var chars = ["待批公文", "通知公告", "校园通知", "班级通知", "家长来信", "我的信箱", "校园秀", "求知问答"];
-			//九宫格图片地址数组
-			var imgUrls = ["../image/home/u52.png",
-				"../image/home/u56.png",
-				"../image/home/u54.png",
-				"../image/home/u197.png",
-				"../image/home/u193.png",
-				"../image/home/u191.png",
-				"../image/home/u195.png",
-				"../image/home/u189.png"
-			];
-			//点击跳转的html地址数组
-			var urls = [,,,,,,,'FAQ/qiuZhi_FAQ.html'];
-			var gride=document.getElementById(id);//九宫格父控件
-			createGirde(gride,createArray(chars, imgUrls, urls));//创建九宫格
-		}
-		/**
-		 * 心情广场
-		 */
-		var getMoodList=function(){
-			var moodItem=document.getElementById('mood_guard');//心情广场父控件
-			createList(moodItem,createMoodList());//心情广场列表
-		}
-		/**
-		 * 求知精选
-		 */
-		var getSiftedList=function(){
-			var siftedItem=document.getElementById('qiuZhi-sifted');//求知精选父控件
-			createSiftedList(siftedItem,createSiftedData(6));//创建精选数据列表
-		}
-		/**
-		 * 求知推荐
-		 */
-		var getRecommend=function(){
-			var recommendItem=document.getElementById('qiuZhi-recommend');//父控件
-			createRecommendView(recommendItem,createRecommendDataList());//创建推荐列表
+				//九宫格底部标题数组
+				var chars = ["待批公文", "通知公告", "校园通知", "班级通知", "家长来信", "我的信箱", "校园秀", "求知问答"];
+				//九宫格图片地址数组
+				var imgUrls = ["../image/home/u52.png",
+					"../image/home/u56.png",
+					"../image/home/u54.png",
+					"../image/home/u197.png",
+					"../image/home/u193.png",
+					"../image/home/u191.png",
+					"../image/home/u195.png",
+					"../image/home/u189.png"
+				];
+				//点击跳转的html地址数组
+				var urls = [, , , , , , , 'FAQ/qiuZhi_FAQ.html'];
+				var gride = document.getElementById(id); //九宫格父控件
+				createGirde(gride, createArray(chars, imgUrls, urls)); //创建九宫格
+			}
+			/**
+			 * 心情广场
+			 */
+		var getMoodList = function() {
+				var moodItem = document.getElementById('mood_guard'); //心情广场父控件
+				createList(moodItem, createMoodList()); //心情广场列表
+			}
+			/**
+			 * 求知精选
+			 */
+		var getSiftedList = function() {
+				var siftedItem = document.getElementById('qiuZhi-sifted'); //求知精选父控件
+				createSiftedList(siftedItem, createSiftedData(6)); //创建精选数据列表
+			}
+			/**
+			 * 求知推荐
+			 */
+		var getRecommend = function() {
+			var recommendItem = document.getElementById('qiuZhi-recommend'); //父控件
+			createRecommendView(recommendItem, createRecommendDataList()); //创建推荐列表
 		}
 	</script>
 
