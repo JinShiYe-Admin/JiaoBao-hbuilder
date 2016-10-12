@@ -2,7 +2,7 @@
  * @anthor an
  */
 var qiuZhi_FAQ=(function($){
-	/**
+/**
  * 
  * @param {Object} gride 九宫格父控件
  * @param {Object} array 元素数组，包括图标和标题
@@ -86,6 +86,11 @@ var createGride = function(gride,array) {
 		console.log(JSON.stringify(data));
 		return data;
 	}
+	/**
+	 * 创建求知问答列表
+	 * @param {Object} itemId 父控件
+	 * @param {Object} data 数据
+	 */
 	var createQiuZhiFAQList=function(itemId,data){
 		var item=document.getElementById(itemId);
 		data.forEach(function(cell,index,data){
@@ -96,6 +101,10 @@ var createGride = function(gride,array) {
 			item.appendChild(li);
 		})
 	}
+	/**
+	 * 子选项
+	 * @param {Object} cell
+	 */
 	var createQiuZhiLiInner=function(cell){
 		var img=null;
 		if(cell.imgUrl!=null){
