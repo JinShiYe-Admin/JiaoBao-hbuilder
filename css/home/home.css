@@ -17,6 +17,12 @@
 	padding-top: 12px;
 }
 /**
+ * 上边距6
+ */
+.padding-top-6{
+	padding-top: 6px;
+}
+/**
  * 左边距
  */
 .padding-left{
@@ -107,7 +113,6 @@
 .img-size{
 	width: 100%;
 	height: auto;
-	padding: 6px;
 }
 /**
  * 求知精选
