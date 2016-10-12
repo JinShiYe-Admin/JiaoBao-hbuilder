@@ -99,7 +99,7 @@ var createGride = function(gride,array) {
 	var createQiuZhiLiInner=function(cell){
 		var img=null;
 		if(cell.imgUrl!=null){
-			img='<img class="mui-pull-right" src="'+cell.imgUrl+'">'
+			img='<img class="mui-pull-right img-width25" src="'+cell.imgUrl+'">'
 		}else{
 			img='';
 		}

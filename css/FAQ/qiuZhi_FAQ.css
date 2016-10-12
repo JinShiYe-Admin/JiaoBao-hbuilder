@@ -10,3 +10,10 @@
 .background-white{
 	background-color: white;
 }
+/**
+ * 图片宽度占屏幕宽度的25%
+ */
+.img-width25{
+	width: 25%;
+	height: auto;
+}
