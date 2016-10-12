@@ -8,9 +8,8 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link href="../../css/FAQ/qiuZhi_FAQ.css" rel="stylesheet"/>
 		<script src="../../js/mui.min.js"></script>
-		<script src="../../js/utils/grideControl.js"></script>
-		<script src="../../js/app/FAQ/qiuZhi_FAQ.js"></script>
 		<script src="../../js/utils/events.js"></script>
+		<script src="../../js/app/FAQ/qiuZhi_FAQ.js"></script>
 	</head>
 
 	<body> 
@@ -29,17 +28,17 @@
 		</div>
 	</body>
 	<script>
-		/**
+		/*
 		 * 加载刷新
 		 */
-		initRefresh('qiuZhi_list',
+		events.initRefresh('qiuZhi_list',
 		//刷新的数据
 		function(){
-			createQiuZhiFAQList('qiuZhi_list',createFAQData(5));
+			qiuZhi_FAQ.createQiuZhiFAQList('qiuZhi_list',qiuZhi_FAQ.createFAQData(5));
 		},
 		//加载的数据
 		function(){
-			createQiuZhiFAQList('qiuZhi_list',createFAQData(10));
+			qiuZhi_FAQ.createQiuZhiFAQList('qiuZhi_list',qiuZhi_FAQ.createFAQData(10));
 		})
 	</script>
 	<script>
@@ -49,7 +48,7 @@
 			//创建前三个图标
 			createFAQGride(qiuZhi_gride);
 			//首次进入的list
-			createQiuZhiFAQList('qiuZhi_list',createFAQData(10));
+			qiuZhi_FAQ.createQiuZhiFAQList('qiuZhi_list',qiuZhi_FAQ.createFAQData(10));
 		})
 		/*
 		 * 创建gride
@@ -58,7 +57,7 @@
 			var describes=['推荐','我的提问','我的回答'];
 			var imgUrls=['../../image/FAQ/u34.png','../../image/FAQ/u36.png','../../image/FAQ/u38.png']
 			var urls=[,'myFAQ.html','myFAQ.html'];
-		createGirde(item,createArray(describes,imgUrls,urls));
+		qiuZhi_FAQ.createGride(item,qiuZhi_FAQ.createArray(describes,imgUrls,urls));
 		}
 	</script>
 </html>

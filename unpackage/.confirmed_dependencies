@@ -388,7 +388,8 @@
 			"js/utils/events.js"
 		],
 		"refer": [
-			"html/FAQ/qiuZhi_FAQ_sub.html"
+			"html/FAQ/qiuZhi_FAQ_sub.html",
+			"html/FAQ/myFAQ.html"
 		]
 	},
 	"html/FAQ/qiuZhi_FAQ_sub.html": {
@@ -408,7 +409,8 @@
 			"fonts/mui.ttf"
 		],
 		"refer": [
-			"html/FAQ/FAQDetail.html"
+			"html/FAQ/FAQDetail.html",
+			"html/FAQ/myFAQ.html"
 		]
 	},
 	"html/FAQ/myFAQ.html": {

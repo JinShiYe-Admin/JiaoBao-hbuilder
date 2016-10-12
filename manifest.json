@@ -599,7 +599,9 @@
 					"html/FAQ/qiuZhi_FAQ_sub.html",
 					"js/utils/events.js"
 				],
-				"refer": [],
+				"refer": [
+					"html/FAQ/myFAQ.html"
+				],
 				"priority": 0
 			},
 			"html/FAQ/qiuZhi_FAQ_sub.html": {
@@ -619,7 +621,8 @@
 					"fonts/mui.ttf"
 				],
 				"refer": [
-					"html/FAQ/FAQDetail.html"
+					"html/FAQ/FAQDetail.html",
+					"html/FAQ/myFAQ.html"
 				],
 				"priority": 0
 			},

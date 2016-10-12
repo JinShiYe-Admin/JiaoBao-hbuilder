@@ -8,16 +8,31 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link href="../../css/utils/common.css" rel="stylesheet" />
 		<script src="../../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init()
+		<script>
+			mui.init();
 		</script>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		    <h1 class="mui-title">我的回答</h1>
+		    <h1 id="title" class="mui-title">我的</h1>
 		</header>
 	</body>
+	<script>
+		mui.plusReady(function(){
+			addEvent()
+		})
+		function addEvent(){
+			window.addEventListener('sendData',function(event){
+			  //获得事件参数
+			  var data = event.detail.data;
+			  console.log(data);
+			  //根据id向服务器请求新闻详情
+			 document.getElementById('title').innerHTML=data;
+			});
+		}
+		
+	</script>
 
 </html>
