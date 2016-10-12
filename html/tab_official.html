@@ -2,7 +2,7 @@
  *@author MSL
  *@describe 添加gride by An 9.27
  */-->
- <!--上图片-->
+<!--上图片-->
 <!doctype html>
 <html>
 
@@ -22,14 +22,22 @@
 		<header class="mui-bar mui-bar-nav common-background-bar">
 			<h1 class="mui-title common-color-white common-font-family-Regular">公文</h1>
 		</header>
-		<div class="mui-content">
-			<img src="../image/official/u103.png" style="width: 100%; height: auto;"/>
-			<ul id="offcial" class="mui-table-view mui-grid-view mui-grid-9">
-			</ul>
+		<!--弹簧效果-->
+		<div class="mui-scroll-wrapper" style="margin-top: 45px;">
+			<div class="mui-scroll">
+				<div class="mui-content">
+					<img src="../image/official/u103.png" style="width: 100%; height: auto;" />
+					<ul id="offcial" class="mui-table-view mui-grid-view mui-grid-9">
+					</ul>
+				</div>
+			</div>
 		</div>
 	</body>
 	<script>
 		mui.init();
+		mui('.mui-scroll-wrapper').scroll({
+			indicators: true, //是否显示滚动条
+		});
 		mui.plusReady(function() {
 			var chars = ["通知公告", "预览公文", "待批公文", "发布公文", "待过公文", "已批公文", "已毕公文", "被退公文", "规章制度"];
 			var imgUrls = ["../image/official/u42.png",
@@ -42,8 +50,8 @@
 				"../image/official/u48.png",
 				"../image/official/u58.png"
 			];
-			var gride=document.getElementById('offcial');
-			var urls = ['official/noticelist_main.html', 'official/documentlist.html','official/waitingdocuments_main.html','official/newofficial.html','FAQ/FAQDetail.html'];
+			var gride = document.getElementById('offcial');
+			var urls = ['official/noticelist_main.html', 'official/documentlist.html', 'official/waitingdocuments_main.html', 'official/newofficial.html', 'FAQ/FAQDetail.html'];
 			createGirde(gride, createArray(chars, imgUrls, urls));
 		})
 	</script>
