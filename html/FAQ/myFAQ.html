@@ -8,9 +8,8 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link href="../../css/utils/common.css" rel="stylesheet" />
 		<script src="../../js/mui.min.js"></script>
-		<script>
-			mui.init();
-		</script>
+		<script src="../../js/utils/events.js"></script>
+	
 	</head>
 
 	<body>
@@ -20,6 +19,7 @@
 		</header>
 	</body>
 	<script>
+	 events.initSubPage('myFAQ_sub.html');
 		mui.plusReady(function(){
 			addEvent()
 		})
@@ -30,6 +30,9 @@
 			  console.log(data);
 			  //根据id向服务器请求新闻详情
 			 document.getElementById('title').innerHTML=data;
+			var targetWeb=plus.webview.getWebviewById('myFAQ_sub.html');
+			mui.fire(targetWeb,'data',{data:data});
+			
 			});
 		}
 		

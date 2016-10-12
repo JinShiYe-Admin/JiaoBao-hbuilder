@@ -631,7 +631,22 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"css/utils/common.css"
+					"css/utils/common.css",
+					"html/FAQ/myFAQ_sub.html",
+					"js/utils/events.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/FAQ/myFAQ_sub.html": {
+				"resources": [
+					"js/app/FAQ/myFAQ.js",
+					"css/FAQ/myFAQ.css",
+					"js/mui.min.js",
+					"js/utils/events.js",
+					"css/mui.min.css",
+					null,
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0

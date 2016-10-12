@@ -142,6 +142,7 @@ var events=(function($){
 		 openNewWindow(tarPage)
 		});  
 	}
+	
 	return {
 		jumpPage: jumpPage, //跳转页面
 		openNewWindow: openNewWindow,//打开新页面
