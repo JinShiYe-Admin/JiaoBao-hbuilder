@@ -80,7 +80,7 @@ h6{font-size:1.6rem}
 }*/
 /*2倍宽度*/
 .p2Height{
-	height: 3.6rem;
+	height: 4.8rem;
 	overflow : hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
