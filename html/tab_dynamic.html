@@ -14,7 +14,7 @@
 		<!--引入共同的样式，自定义-->
 		<link rel="stylesheet" href="../css/utils/common.css" />
 		<!--用于九宫格背景色样式-->
-		<link rel="stylesheet" type="text/css" href="../css/home/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/home/home.css" />
 		<!--本页布局样式-->
 		<link href="../css/dynamic/dynamic.css" rel="stylesheet" />
 		<script src="../js/mui.min.js"></script>
@@ -32,37 +32,37 @@
 			<h1 class="mui-title common-color-white common-font-family-Regular">动态</h1>
 		</header>
 		<!--加入九宫格-->
-				<div class="mui-scroll-wrapper" style="margin-top: 45px;">
+		<div class="mui-scroll-wrapper" style="margin-top: 45px;">
 			<div class="mui-scroll">
-		<div class="mui-content background-white ">
-			<img src="../image/dynamic/dynamic3.jpeg" style="width: 100%; height: 180px;" />
-			<ul id="offcial" class="mui-table-view mui-grid-view mui-grid-9 ">
-			</ul>
-			<!--最新学校动态-->
-			<div class="">
-				<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />最新学校动态</h4>
-				<ul id="mood_guard" class="mui-table-view">
-				</ul>
-				<h5 class="more-words">查看更多&gt;&gt;</h5>
-			</div>
-			<!--最新班级动态-->
-			<div class="background-white">
-				<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />最新班级动态</h4>
-				<ul id="mood_guard" class="mui-table-view">
-				</ul>
-				<h5 class="more-words">查看更多&gt;&gt;</h5>
-			</div>
-
-		</div>
+				<div class="mui-content background-white ">
+					<img src="../image/dynamic/dynamic3.jpeg" style="width: 100%; height: 180px;" />
+					<ul id="offcial" class="mui-table-view mui-grid-view mui-grid-9 ">
+					</ul>
+					<!--最新学校动态-->
+					<div class="">
+						<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />最新学校动态</h4>
+						<ul id="mood_guard" class="mui-table-view">
+						</ul>
+						<h5 class="more-words">查看更多&gt;&gt;</h5>
 					</div>
+					<!--最新班级动态-->
+					<div class="background-white">
+						<h4 class="padding-top padding-left"><img class="padding-right-12" src="../image/home/u200.png" />最新班级动态</h4>
+						<ul id="mood_guard" class="mui-table-view">
+						</ul>
+						<h5 class="more-words">查看更多&gt;&gt;</h5>
+					</div>
+
+				</div>
+			</div>
 		</div>
 
 	</body>
 	<script>
 		mui.init({
-			swipeBack:true//启用右滑关闭功能
+			swipeBack: true //启用右滑关闭功能
 		});
-				mui('.mui-scroll-wrapper').scroll({
+		mui('.mui-scroll-wrapper').scroll({
 			indicators: true, //是否显示滚动条
 		});
 		mui.plusReady(function() {
@@ -74,7 +74,7 @@
 
 				]
 				var gride = document.getElementById('offcial')
-				var urls = ['dynamic/schooldynamic_main.html','dynamic/classdynamic_main.html','dynamic/schoolshow_main.html'];
+				var urls = ['dynamic/schooldynamic_main.html', 'dynamic/classdynamic_main.html', 'dynamic/schoolshow_main.html'];
 				createGirde(gride, createArray(chars, imgUrls, urls))
 					//最新学校动态
 				getMoodList()
