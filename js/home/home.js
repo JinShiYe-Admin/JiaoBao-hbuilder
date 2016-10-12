@@ -22,7 +22,7 @@ var createList = function(item, listData) {
 			li.innerHTML = '<div>' +
 				'<b style="color: #F0AD4E;"><img src="' + cellData.headImg + '" align="middle" class="padding-right-12"/>' + cellData.name + '</b>' +
 				'<p class=" char-darkgray">' + cellData.words + '</p>' +
-				'<div>' +
+				'<div style="padding-top:8px;padding-bottom:8px;">' +
 				//获取图片的innerHTML
 				getPicInner(cellData) +
 				'</div>' +
@@ -158,8 +158,8 @@ var createSiftedList=function(item,siftedList){
  * @param {Object} item 子元素
  */
 var getSiftedCommonHTML=function(item){
-	return '<p class="p1Height"><b>'+item.title+'</b></p></br>'
-		+'<p class="p2Height">'+item.words+'</p></br>'
+	return '<p class="p1Height"><b>'+item.title+'</b></p>'
+		+'<p class="p2Height padding-top-6">'+item.words+'</p>'
 		+'<img class="img-size" src="'+item.imgs[0]+'"/>';
 }
 /**
@@ -167,8 +167,8 @@ var getSiftedCommonHTML=function(item){
  * @param {Object} item 第四个子元素
  */
 var getSiftedForthHTML=function(item){
-	return '<p class="p1Height"><b >'+item.title+'</b></p></br>'
-		+'<p class="p2Height">'+item.words+'</p></br>'
+	return '<p class="p1Height"><b >'+item.title+'</b></p>'
+		+'<p class="p2Height padding-top-6">'+item.words+'</p>'
 		+'<img class="img-size-half" src="'+item.imgs[0]+'"/>'
 		+'<img class="img-size-half" src="'+item.imgs[1]+'"/>';
 }
