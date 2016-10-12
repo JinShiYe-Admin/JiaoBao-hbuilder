@@ -95,6 +95,9 @@ h6{font-size:1.6rem}
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+.background-white{
+	background-color: white;
+}
 /*body>div>div>div :last-of-type{
 	background-color: white;
 }*/
