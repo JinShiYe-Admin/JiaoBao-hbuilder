@@ -414,7 +414,9 @@
 					null
 				],
 				"refer": [
-					"html/dynamic/schooldynamic_main.html"
+					"html/dynamic/schooldynamic_main.html",
+					"html/dynamic/classdynamic_main.html",
+					"html/dynamic/schoolshow_main.html"
 				],
 				"priority": 0
 			},
@@ -723,7 +725,30 @@
 					"image/home/u101.png",
 					"js/app/dynamic/dynamiclistitem.js",
 					"image/dynamic/icon_forward.png",
-					"image/dynamic/icon_Level39.png"
+					"image/dynamic/icon_Level39.png",
+					"js/mui.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/classdynamic_main.html": {
+				"resources": [
+					"js/mui.min.js",
+					"html/dynamic/dynamiclist_sub.html",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/utils/common.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/schoolshow_main.html": {
+				"resources": [
+					"js/mui.min.js",
+					"html/dynamic/dynamiclist_sub.html",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/utils/common.css"
 				],
 				"refer": [],
 				"priority": 0
