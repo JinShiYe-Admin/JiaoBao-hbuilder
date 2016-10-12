@@ -1,446 +1,478 @@
 {
-  "index.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "js/app/index.js",
-      "html/home/tab_home.html"
-    ],
-    "refer": [
-      "html/mine/tab_mine.html",
-      "html/dynamic/tab_dynamic.html",
-      "html/interaction/tab_interaction.html",
-      "html/official/tab_official.html"
-    ]
-  },
-  "html/home/tab_home.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/app/index.js"
-    ],
-    "refer": []
-  },
-  "html/index.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "js/app/index.js",
-      "html/home/tab_home.html",
-      "html/tab_home.html",
-      "html/tab_official.html",
-      "js/utils/Statusbar.js",
-      "css/utils/common.css"
-    ],
-    "refer": [
-      "html/mine/tab_mine.html",
-      "html/dynamic/tab_dynamic.html",
-      "html/interaction/tab_interaction.html",
-      "html/official/tab_official.html",
-      "html/tab_official.html",
-      "html/tab_mine.html",
-      "html/tab_interaction.html",
-      "html/tab_dynamic.html",
-      "html/tab_home.html"
-    ]
-  },
-  "html/official/tab_official.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "html/tab_home.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/utils/carouselControl.js",
-      "js/utils/grideControl.js",
-      "css/utils/imgeControl.css",
-      "image/home/u56.png",
-      "image/home/u197.png",
-      "image/home/u191.png",
-      "image/home/u52.png",
-      "image/home/u193.png",
-      "image/home/u195.png",
-      "image/home/u54.png",
-      "image/home/u296.png",
-      "image/home/u292.png",
-      "image/home/u298.png",
-      "css/app.css",
-      "fonts/mui.ttf",
-      "image/home/u189.png",
-      "css/home/home.css",
-      "image/home/u101.png",
-      "image/home/u70.png",
-      "image/home/u99.png",
-      "image/home/u200.png",
-      "image/home/u103.png",
-      "js/home/home.js",
-      "image/home/u74.png",
-      "image/home/u210.png",
-      "image/home/u118.png",
-      "image/home/u131.png",
-      "css/utils/common.css",
-      "image/home/u221.png",
-      "image/home/u240.png",
-      "image/home/u242.png",
-      "image/home/u229.png",
-      "image/home/u219.png",
-      "image/home/u227.png",
-      "image/home/u244.png"
-    ],
-    "refer": [
-      "html/FAQ/qiuZhi_FAQ.html"
-    ]
-  },
-  "html/tab_official.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/utils/grideControl.js",
-      "css/utils/imgeControl.css",
-      "fonts/mui.ttf",
-      "image/official/u101.png",
-      "image/official/u44.png",
-      "image/official/u58.png",
-      "image/official/u99.png",
-      "image/official/u97.png",
-      "image/official/u48.png",
-      "image/official/u60.png",
-      "image/official/u62.png",
-      "image/official/u42.png",
-      "css/utils/common.css",
-      "css/home/home.css",
-      "image/official/u103.png"
-    ],
-    "refer": [
-      "html/official/noticelist_main.html",
-      "html/official/documentlist.html",
-      "html/official/waitingdocuments_main.html",
-      "html/FAQ/FAQDetail.html",
-      "html/official/newofficial.html"
-    ]
-  },
-  "html/tab_interaction.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/utils/grideControl.js",
-      "image/official/u101.png",
-      "image/official/u44.png",
-      "image/official/u99.png",
-      "css/utils/imgeControl.css",
-      "image/official/u97.png",
-      "image/official/u42.png",
-      "image/official/u60.png",
-      "image/official/u62.png",
-      "css/utils/common.css",
-      "image/interaction/u24.png"
-    ],
-    "refer": [
-      "html/official/documentlist.html"
-    ]
-  },
-  "html/tab_dynamic.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "image/dynamic/dynamic0.png",
-      "css/dynamic/dynamic.css",
-      "js/app/dynamic/dynamic.js",
-      "image/dynamic/dynamic2.png",
-      "image/dynamic/dynamic3.jpeg",
-      "image/dynamic/dynamic1.png",
-      "image/home/u70.png",
-      "image/home/u99.png",
-      "image/home/u74.png",
-      "image/home/u101.png",
-      "image/home/u103.png",
-      "css/home/home.css",
-      "css/utils/imgeControl.css",
-      "image/home/u200.png",
-      "js/utils/carouselControl.js",
-      "css/utils/common.css",
-      "js/utils/grideControl.js"
-    ],
-    "refer": []
-  },
-  "html/tab_mine.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "image/home/u193.png",
-      "image/document_headimg.png",
-      "css/mine/mine.css",
-      "image/mine/icon_photoalbum.png",
-      "image/home/u99.png",
-      "image/mine/icon_setting.png",
-      "image/mine/icon_address.png",
-      "image/mine/icon_collect.png",
-      "css/utils/common.css",
-      "image/mine/icon_editinfo.png"
-    ],
-    "refer": []
-  },
-  "js/utils/gride.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "js/utils/grideControl.js"
-    ],
-    "refer": []
-  },
-  "html/official/noticelist_main.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "html/official/noticelist_sub.html",
-      "css/utils/common.css"
-    ],
-    "refer": [
-      "html/official/noticelist_sub.html",
-      "html/official/addnotice.html"
-    ]
-  },
-  "html/official/noticelist_sub.html": {
-    "resources": [
-      "image/icon-unread.png",
-      "image/icon-accessory.png",
-      "css/utils/notice.css",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "css/utils/noticedetails.css",
-      "css/official/noticedetails.css",
-      "js/app/official/noticelist.js"
-    ],
-    "refer": [
-      "html/official/noticedetails_main.html"
-    ]
-  },
-  "html/official/noticedetails_main.html": {
-    "resources": [
-      "html/official/noticedetails_sub.html",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "html/official/noticedetails_sub.html"
-    ]
-  },
-  "html/official/noticedetails_sub.html": {
-    "resources": [
-      "image/icon-accessory.png",
-      "css/utils/notice.css"
-    ],
-    "refer": []
-  },
-  "html/official/documentlist.html": {
-    "resources": [
-      "html/official/document_sub.html",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/utils/common.css"
-    ],
-    "refer": [
-      "html/official/document_sub.html"
-    ]
-  },
-  "html/official/document_sub.html": {
-    "resources": [
-      "js/app/documentlist.js",
-      "css/utils/documents.css",
-      "image/document_headimg.png",
-      "js/mui.min.js",
-      "image/red_point.png",
-      "image/headimg2.png",
-      "image/white_point.png",
-      "css/utils/searchbar.css",
-      "js/app/official/documentlist.js"
-    ],
-    "refer": [
-      "html/official/officialdetails_main.html"
-    ]
-  },
-  "html/official/officialdetails_main.html": {
-    "resources": [
-      "html/official/officialdetails_sub.html",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/utils/common.css"
-    ],
-    "refer": [
-      "html/official/officialdetails_sub.html"
-    ]
-  },
-  "html/official/officialdetails_sub.html": {
-    "resources": [
-      "css/utils/officialdetails.css",
-      "js/app/official/officialdetails.js",
-      "image/icon-personal.png",
-      "image/official/u101.png",
-      "image/home/u292.png",
-      "image/document_headimg.png",
-      "css/official/officialdetails.css"
-    ],
-    "refer": []
-  },
-  "html/official/addnotice.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/utils/common.css",
-      "js/app/official/addnotice.js"
-    ],
-    "refer": []
-  },
-  "html/official/waitingdocuments_sub.html": {
-    "resources": [
-      "js/mui.min.js",
-      "html/official/document_sub.html"
-    ],
-    "refer": [
-      "html/official/document_sub.html"
-    ]
-  },
-  "html/official/waitingdocuments_main.html": {
-    "resources": [
-      "html/official/waitingdocuments_sub.html",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/utils/common.css"
-    ],
-    "refer": [
-      "html/official/waitingdocuments_sub.html"
-    ]
-  },
-  "html/FAQ/FAQDetail.html": {
-    "resources": [
-      "css/iconfont/iconfont.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "fonts/iconfont.ttf",
-      "html/FAQ/FAQDetail_sub.html",
-      "css/utils/common.css",
-      "js/app/FAQ/FAQDetail.js"
-    ],
-    "refer": [
-      "html/FAQ/FAQDetail_sub.html"
-    ]
-  },
-  "html/FAQ/FAQDetail_sub.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/utils/common.css",
-      "image/FAQ/u46.png",
-      "css/iconfont/iconfont.css",
-      "fonts/iconfont.ttf",
-      "js/app/FAQ/FAQDetail.js",
-      "image/FAQ/u50.png",
-      "js/utils/textarea.js",
-      "image/thirdParty/QQ.png",
-      "js/utils/grideControl.js",
-      "image/thirdParty/WeChat.png",
-      "image/thirdParty/QQ_space.png",
-      "image/thirdParty/sina_weibo.png",
-      "css/utils/imgeControl.css",
-      "css/utils/textarea.css",
-      "css/FAQ/FAQDetail.css"
-    ],
-    "refer": []
-  },
-  "html/official/newofficial.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "js/app/official/addnotice.js",
-      "css/utils/common.css"
-    ],
-    "refer": []
-  },
-  "html/FAQ/qiuZhi_FAQ.html": {
-    "resources": [
-      "js/utils/grideControl.js",
-      "css/iconfont/iconfont.css",
-      "js/mui.min.js",
-      "image/FAQ/u36.png",
-      "fonts/mui.ttf",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "fonts/iconfont.ttf",
-      "image/FAQ/u34.png",
-      "css/utils/common.css",
-      "image/FAQ/u38.png",
-      "css/FAQ/FAQDetail.css",
-      "css/FAQ/qiuZhi_FAQ.css",
-      "html/FAQ/qiuZhi_FAQ_sub.html",
-      "js/utils/events.js"
-    ],
-    "refer": [
-      "html/FAQ/qiuZhi_FAQ_sub.html",
-      "html/FAQ/myFAQ.html"
-    ]
-  },
-  "html/FAQ/qiuZhi_FAQ_sub.html": {
-    "resources": [
-      "css/FAQ/qiuZhi_FAQ.css",
-      "image/FAQ/u36.png",
-      "image/FAQ/u34.png",
-      "image/FAQ/u38.png",
-      "js/utils/grideControl.js",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/app/FAQ/qiuZhi_FAQ.js",
-      "image/FAQ/faq2.png",
-      "image/FAQ/faq3.png",
-      "image/FAQ/faq0.png",
-      "js/utils/events.js",
-      "fonts/mui.ttf",
-      "css/utils/common.css",
-      "css/home/home.css"
-    ],
-    "refer": [
-      "html/FAQ/FAQDetail.html",
-      "html/FAQ/myFAQ.html"
-    ]
-  },
-  "html/FAQ/myFAQ.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/utils/common.css",
-      "html/FAQ/myFAQ_sub.html",
-      "js/utils/events.js"
-    ],
-    "refer": [
-      "html/FAQ/myFAQ_sub.html"
-    ]
-  },
-  "html/FAQ/myFAQ_sub.html": {
-    "resources": [
-      "js/app/FAQ/myFAQ.js",
-      "css/FAQ/myFAQ.css",
-      "js/mui.min.js",
-      "js/utils/events.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/utils/common.css"
-    ]
-  }
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/app/index.js",
+			"html/home/tab_home.html"
+		],
+		"refer": [
+			"html/mine/tab_mine.html",
+			"html/dynamic/tab_dynamic.html",
+			"html/interaction/tab_interaction.html",
+			"html/official/tab_official.html"
+		]
+	},
+	"html/home/tab_home.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/app/index.js"
+		],
+		"refer": []
+	},
+	"html/index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/app/index.js",
+			"html/home/tab_home.html",
+			"html/tab_home.html",
+			"html/tab_official.html",
+			"js/utils/Statusbar.js",
+			"css/utils/common.css"
+		],
+		"refer": [
+			"html/mine/tab_mine.html",
+			"html/dynamic/tab_dynamic.html",
+			"html/interaction/tab_interaction.html",
+			"html/official/tab_official.html",
+			"html/tab_official.html",
+			"html/tab_mine.html",
+			"html/tab_interaction.html",
+			"html/tab_dynamic.html",
+			"html/tab_home.html"
+		]
+	},
+	"html/official/tab_official.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"html/tab_home.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/utils/carouselControl.js",
+			"js/utils/grideControl.js",
+			"css/utils/imgeControl.css",
+			"image/home/u56.png",
+			"image/home/u197.png",
+			"image/home/u191.png",
+			"image/home/u52.png",
+			"image/home/u193.png",
+			"image/home/u195.png",
+			"image/home/u54.png",
+			"image/home/u296.png",
+			"image/home/u292.png",
+			"image/home/u298.png",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"image/home/u189.png",
+			"css/home/home.css",
+			"image/home/u101.png",
+			"image/home/u70.png",
+			"image/home/u99.png",
+			"image/home/u200.png",
+			"image/home/u103.png",
+			"js/home/home.js",
+			"image/home/u74.png",
+			"image/home/u210.png",
+			"image/home/u118.png",
+			"image/home/u131.png",
+			"css/utils/common.css",
+			"image/home/u221.png",
+			"image/home/u240.png",
+			"image/home/u242.png",
+			"image/home/u229.png",
+			"image/home/u219.png",
+			"image/home/u227.png",
+			"image/home/u244.png"
+		],
+		"refer": [
+			"html/FAQ/qiuZhi_FAQ.html"
+		]
+	},
+	"html/tab_official.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/utils/grideControl.js",
+			"css/utils/imgeControl.css",
+			"fonts/mui.ttf",
+			"image/official/u101.png",
+			"image/official/u44.png",
+			"image/official/u58.png",
+			"image/official/u99.png",
+			"image/official/u97.png",
+			"image/official/u48.png",
+			"image/official/u60.png",
+			"image/official/u62.png",
+			"image/official/u42.png",
+			"css/utils/common.css",
+			"css/home/home.css",
+			"image/official/u103.png"
+		],
+		"refer": [
+			"html/official/noticelist_main.html",
+			"html/official/documentlist.html",
+			"html/official/waitingdocuments_main.html",
+			"html/FAQ/FAQDetail.html",
+			"html/official/newofficial.html"
+		]
+	},
+	"html/tab_interaction.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/utils/grideControl.js",
+			"image/official/u101.png",
+			"image/official/u44.png",
+			"image/official/u99.png",
+			"css/utils/imgeControl.css",
+			"image/official/u97.png",
+			"image/official/u42.png",
+			"image/official/u60.png",
+			"image/official/u62.png",
+			"css/utils/common.css",
+			"image/interaction/u24.png",
+			"image/interaction/u96.png",
+			"image/interaction/u40.png",
+			"image/interaction/u64.png",
+			"image/interaction/u62.png",
+			"image/interaction/u60.png",
+			"image/interaction/u94.png",
+			"image/interaction/u42.png"
+		],
+		"refer": [
+			"html/official/documentlist.html"
+		]
+	},
+	"html/tab_dynamic.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"image/dynamic/dynamic0.png",
+			"css/dynamic/dynamic.css",
+			"js/app/dynamic/dynamic.js",
+			"image/dynamic/dynamic2.png",
+			"image/dynamic/dynamic3.jpeg",
+			"image/dynamic/dynamic1.png",
+			"image/home/u70.png",
+			"image/home/u99.png",
+			"image/home/u74.png",
+			"image/home/u101.png",
+			"image/home/u103.png",
+			"css/home/home.css",
+			"css/utils/imgeControl.css",
+			"image/home/u200.png",
+			"js/utils/carouselControl.js",
+			"css/utils/common.css",
+			"js/utils/grideControl.js"
+		],
+		"refer": [
+			"html/dynamic/schooldynamic_main.html"
+		]
+	},
+	"html/tab_mine.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"image/home/u193.png",
+			"image/document_headimg.png",
+			"css/mine/mine.css",
+			"image/mine/icon_photoalbum.png",
+			"image/home/u99.png",
+			"image/mine/icon_setting.png",
+			"image/mine/icon_address.png",
+			"image/mine/icon_collect.png",
+			"css/utils/common.css",
+			"image/mine/icon_editinfo.png"
+		],
+		"refer": []
+	},
+	"js/utils/gride.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/utils/grideControl.js"
+		],
+		"refer": []
+	},
+	"html/official/noticelist_main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"html/official/noticelist_sub.html",
+			"css/utils/common.css"
+		],
+		"refer": [
+			"html/official/noticelist_sub.html",
+			"html/official/addnotice.html"
+		]
+	},
+	"html/official/noticelist_sub.html": {
+		"resources": [
+			"image/icon-unread.png",
+			"image/icon-accessory.png",
+			"css/utils/notice.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/utils/noticedetails.css",
+			"css/official/noticedetails.css",
+			"js/app/official/noticelist.js"
+		],
+		"refer": [
+			"html/official/noticedetails_main.html"
+		]
+	},
+	"html/official/noticedetails_main.html": {
+		"resources": [
+			"html/official/noticedetails_sub.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/official/noticedetails_sub.html"
+		]
+	},
+	"html/official/noticedetails_sub.html": {
+		"resources": [
+			"image/icon-accessory.png",
+			"css/utils/notice.css"
+		],
+		"refer": []
+	},
+	"html/official/documentlist.html": {
+		"resources": [
+			"html/official/document_sub.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css"
+		],
+		"refer": [
+			"html/official/document_sub.html"
+		]
+	},
+	"html/official/document_sub.html": {
+		"resources": [
+			"js/app/documentlist.js",
+			"css/utils/documents.css",
+			"image/document_headimg.png",
+			"js/mui.min.js",
+			"image/red_point.png",
+			"image/headimg2.png",
+			"image/white_point.png",
+			"css/utils/searchbar.css",
+			"js/app/official/documentlist.js"
+		],
+		"refer": [
+			"html/official/officialdetails_main.html"
+		]
+	},
+	"html/official/officialdetails_main.html": {
+		"resources": [
+			"html/official/officialdetails_sub.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css"
+		],
+		"refer": [
+			"html/official/officialdetails_sub.html"
+		]
+	},
+	"html/official/officialdetails_sub.html": {
+		"resources": [
+			"css/utils/officialdetails.css",
+			"js/app/official/officialdetails.js",
+			"image/icon-personal.png",
+			"image/official/u101.png",
+			"image/home/u292.png",
+			"image/document_headimg.png",
+			"css/official/officialdetails.css"
+		],
+		"refer": []
+	},
+	"html/official/addnotice.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css",
+			"js/app/official/addnotice.js"
+		],
+		"refer": []
+	},
+	"html/official/waitingdocuments_sub.html": {
+		"resources": [
+			"js/mui.min.js",
+			"html/official/document_sub.html"
+		],
+		"refer": [
+			"html/official/document_sub.html"
+		]
+	},
+	"html/official/waitingdocuments_main.html": {
+		"resources": [
+			"html/official/waitingdocuments_sub.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css"
+		],
+		"refer": [
+			"html/official/waitingdocuments_sub.html"
+		]
+	},
+	"html/FAQ/FAQDetail.html": {
+		"resources": [
+			"css/iconfont/iconfont.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"html/FAQ/FAQDetail_sub.html",
+			"css/utils/common.css",
+			"js/app/FAQ/FAQDetail.js"
+		],
+		"refer": [
+			"html/FAQ/FAQDetail_sub.html"
+		]
+	},
+	"html/FAQ/FAQDetail_sub.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css",
+			"image/FAQ/u46.png",
+			"css/iconfont/iconfont.css",
+			"fonts/iconfont.ttf",
+			"js/app/FAQ/FAQDetail.js",
+			"image/FAQ/u50.png",
+			"js/utils/textarea.js",
+			"image/thirdParty/QQ.png",
+			"js/utils/grideControl.js",
+			"image/thirdParty/WeChat.png",
+			"image/thirdParty/QQ_space.png",
+			"image/thirdParty/sina_weibo.png",
+			"css/utils/imgeControl.css",
+			"css/utils/textarea.css",
+			"css/FAQ/FAQDetail.css"
+		],
+		"refer": []
+	},
+	"html/official/newofficial.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/app/official/addnotice.js",
+			"css/utils/common.css"
+		],
+		"refer": []
+	},
+	"html/FAQ/qiuZhi_FAQ.html": {
+		"resources": [
+			"js/utils/grideControl.js",
+			"css/iconfont/iconfont.css",
+			"js/mui.min.js",
+			"image/FAQ/u36.png",
+			"fonts/mui.ttf",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"image/FAQ/u34.png",
+			"css/utils/common.css",
+			"image/FAQ/u38.png",
+			"css/FAQ/FAQDetail.css",
+			"css/FAQ/qiuZhi_FAQ.css",
+			"html/FAQ/qiuZhi_FAQ_sub.html",
+			"js/utils/events.js"
+		],
+		"refer": [
+			"html/FAQ/qiuZhi_FAQ_sub.html",
+			"html/FAQ/myFAQ.html"
+		]
+	},
+	"html/FAQ/qiuZhi_FAQ_sub.html": {
+		"resources": [
+			"css/FAQ/qiuZhi_FAQ.css",
+			"image/FAQ/u36.png",
+			"image/FAQ/u34.png",
+			"image/FAQ/u38.png",
+			"js/utils/grideControl.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/app/FAQ/qiuZhi_FAQ.js",
+			"image/FAQ/faq2.png",
+			"image/FAQ/faq3.png",
+			"image/FAQ/faq0.png",
+			"js/utils/events.js",
+			"fonts/mui.ttf",
+			"css/utils/common.css",
+			"css/home/home.css"
+		],
+		"refer": [
+			"html/FAQ/FAQDetail.html",
+			"html/FAQ/myFAQ.html"
+		]
+	},
+	"html/FAQ/myFAQ.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css",
+			"html/FAQ/myFAQ_sub.html",
+			"js/utils/events.js"
+		],
+		"refer": [
+			"html/FAQ/myFAQ_sub.html"
+		]
+	},
+	"html/FAQ/myFAQ_sub.html": {
+		"resources": [
+			"js/app/FAQ/myFAQ.js",
+			"css/FAQ/myFAQ.css",
+			"js/mui.min.js",
+			"js/utils/events.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"css/utils/common.css"
+		]
+	},
+	"html/dynamic/schooldynamic_main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css",
+			"html/dynamic/dynamiclist_sub.html"
+		],
+		"refer": [
+			"html/dynamic/dynamiclist_sub.html"
+		]
+	},
+	"html/dynamic/dynamiclist_sub.html": {
+		"resources": [
+			"image/dynamic/icon_praise.png",
+			"image/dynamic/icon_praise_small.png",
+			"image/dynamic/icon_comment.png",
+			"image/home/u101.png",
+			"js/app/dynamic/dynamiclistitem.js",
+			"image/dynamic/icon_forward.png",
+			"image/dynamic/icon_Level39.png"
+		]
+	}
 }

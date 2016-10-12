@@ -113,8 +113,12 @@ var events=(function($){
 		$.init({
 		  preloadPages:[{
 		    id:tarPage,
-		    url:tarPage          
+		    url:tarPage,  
+		    styles: {
+			top: localStorage.getItem('$Statusbar'),
+			}
 		  }]
+		
 		});
 	}
 	/**

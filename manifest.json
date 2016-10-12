@@ -376,7 +376,14 @@
 					"image/official/u60.png",
 					"image/official/u62.png",
 					"css/utils/common.css",
-					"image/interaction/u24.png"
+					"image/interaction/u24.png",
+					"image/interaction/u96.png",
+					"image/interaction/u40.png",
+					"image/interaction/u64.png",
+					"image/interaction/u62.png",
+					"image/interaction/u60.png",
+					"image/interaction/u94.png",
+					"image/interaction/u42.png"
 				],
 				"refer": [
 					"html/official/documentlist.html"
