@@ -79,8 +79,8 @@ var openTarWindow=function(tarUrl,map,index, array){
 			top:localStorage.getItem('$Statusbar')//设置距离顶部的距离
 		},
 		extras:{//界面传值
-			name0:map.key,
-			name1:map.value,
+			name0:map.description,
+			name1:map.imgUrl,
 			index:index
 		}
 	});
