@@ -373,7 +373,9 @@
 					"js/utils/grideControl.js",
 					null
 				],
-				"refer": [],
+				"refer": [
+					"html/dynamic/schooldynamic_main.html"
+				],
 				"priority": 0
 			},
 			"html/tab_mine.html": {
@@ -658,6 +660,30 @@
 					null,
 					"fonts/mui.ttf",
 					"css/utils/common.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/schooldynamic_main.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/utils/common.css",
+					"html/dynamic/dynamiclist_sub.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/dynamiclist_sub.html": {
+				"resources": [
+					"image/dynamic/icon_praise.png",
+					"image/dynamic/icon_praise_small.png",
+					"image/dynamic/icon_comment.png",
+					"image/home/u101.png",
+					"js/app/dynamic/dynamiclistitem.js",
+					"image/dynamic/icon_forward.png",
+					"image/dynamic/icon_Level39.png"
 				],
 				"refer": [],
 				"priority": 0
