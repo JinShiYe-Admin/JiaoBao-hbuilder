@@ -6,119 +6,94 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
-		<link href="../css/mine/mine.css" rel="stylesheet" />
 		<link rel="stylesheet" href="../css/utils/common.css" />
-		<script src="../js/mui.min.js"></script>
-		<style>
-			.mui-table-view {
-				background: transparent;
-				/*背景透明*/
-			}
-
-			.mui-table-view-cell {
-				background: white;
-				/*背景白色*/
-			}
-
-			.mui-table-view:before,
-			.mui-table-view:after {
-				height: 0px;
-				/*头部和尾部*/
-			}
-
-			.mui-table-view-cell:after {
-				/*头部和尾部*/
-				width: 90%;
-			}
-
-			.mine-table:after {
-				height: 0px;
-				/*尾部*/
-			}
-
-			.mine-icon {
-				padding-top: 25;
-				height: 25px;
-				width: 25px;
-				max-height: 25px;
-				max-width: 25px;
-			}
-
-			.mine-text {
-				line-height: 25px;
-			}
-		</style>
-
+		<link rel="stylesheet" href="../css/mine/mine.css" />
+		<script type="text/javascript" src="../js/mui.min.js" ></script>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav common-background-bar">
 			<h1 class="mui-title common-color-white common-font-family-Regular">我的</h1>
 		</header>
-		
 		<div class="mui-content">
-			<ul class="mui-table-view mine-table">
-				<li class="mui-table-view-cell mui-media mine-table mine-info" id="info">
-					<a>
-						<img class="mui-media-object mui-pull-left" src="../image/home/u99.png" id="personalImage">
-						<div class="mui-media-body common-font-family-Regular"style="padding-top: 10px;">
-							小熊猫
-						</div>
-					</a>
-				</li>
-				<br />
-				<li class="mui-table-view-cell mui-media mine-function" id="editinfo">
-					<a class="mui-navigate-right">
-						<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_editinfo.png" id="personalImage">
-						<div class="mui-media-body common-font-family-Regular mine-text">
-							编辑资料
-						</div>
-					</a>
-				</li>
-			</ul>
-			<br />
-			<ul class="mui-table-view">
-				<li class="mui-table-view-cell mui-media mine-function" id="photoalbum">
-					<a class="mui-navigate-right">
-						<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_photoalbum.png" id="personalImage">
-						<div class="mui-media-body common-font-family-Regular mine-text">
-							相册
-						</div>
-					</a>
-				</li>
-				<li class="mui-table-view-cell mui-media mine-function" id="collect">
-					<a class="mui-navigate-right">
-						<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_collect.png" id="personalImage">
-						<div class="mui-media-body common-font-family-Regular mine-text">
-							收藏
-						</div>
-					</a>
-				</li>
-				<li class="mui-table-view-cell mui-media mine-function" id="setting">
-					<a class="mui-navigate-right">
-						<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_setting.png" id="personalImage">
-						<div class="mui-media-body common-font-family-Regular mine-text">
-							设置
-						</div>
-					</a>
-				</li>
-			</ul>
-			<br />
-			<ul class="mui-table-view mine-table">
-				<li class="mui-table-view-cell mui-media mine-function" id="address">
-					<a class="mui-navigate-right">
-						<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_address.png" id="personalImage">
-						<div class="mui-media-body common-font-family-Regular mine-text">
-							通讯录
-						</div>
-					</a>
-				</li>
-			</ul>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mine-table mine-margin-top-20px">
+						<div class="mine-line"></div>
+						<li class="mui-table-view-cell mui-media mine-table mine-info " id="info">
+							<a>
+								<img class="mui-media-object mui-pull-left" src="../image/home/u99.png" id="personalImage">
+								<div class="mui-media-body common-font-family-Regular" style="padding-top: 10px;">
+									小熊猫
+								</div>
+							</a>
+						</li>
+						<div class="mine-line"></div>
+						<li class="mui-table-view-cell mui-media mine-function mine-table" id="editinfo">
+							<a class="mui-navigate-right">
+								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_editinfo.png" id="personalImage">
+								<div class="mui-media-body common-font-family-Regular mine-text">
+									编辑资料
+								</div>
+							</a>
+						</li>
 
+						<div class="mine-line"></div>
+
+						<li class="mui-table-view-cell mui-media mine-function" id="photoalbum">
+							<a class="mui-navigate-right">
+								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_photoalbum.png" id="personalImage">
+								<div class="mui-media-body common-font-family-Regular mine-text">
+									相册
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mine-function" id="collect">
+							<a class="mui-navigate-right">
+								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_collect.png" id="personalImage">
+								<div class="mui-media-body common-font-family-Regular mine-text">
+									收藏
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mine-function mine-table" id="setting">
+							<a class="mui-navigate-right">
+								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_setting.png" id="personalImage">
+								<div class="mui-media-body common-font-family-Regular mine-text">
+									设置
+								</div>
+							</a>
+						</li>
+
+						<div class="mine-line"></div>
+
+						<li class="mui-table-view-cell mui-media mine-function" id="address">
+							<a class="mui-navigate-right">
+								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_address.png" id="personalImage">
+								<div class="mui-media-body common-font-family-Regular mine-text">
+									通讯录
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
-		mui.init();
+		mui.init()
+		mui.plusReady(function() {
+			mui('.mui-scroll-wrapper').scroll({
+				indicators: true, //是否显示滚动条
+				bounce: false, //是否启用回弹
+			});
+			mui('.mui-table-view').on('tap', '.mine-info', function() {
+				console.log(this.innerText);
+			});
+			mui('.mui-table-view').on('tap', '.mine-function', function() {
+				console.log(this.innerText);
+			});
+		});
 	</script>
 
 </html>

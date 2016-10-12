@@ -599,7 +599,9 @@
 					"html/FAQ/qiuZhi_FAQ_sub.html",
 					"js/utils/events.js"
 				],
-				"refer": [],
+				"refer": [
+					"html/FAQ/myFAQ.html"
+				],
 				"priority": 0
 			},
 			"html/FAQ/qiuZhi_FAQ_sub.html": {
@@ -619,8 +621,35 @@
 					"fonts/mui.ttf"
 				],
 				"refer": [
-					"html/FAQ/FAQDetail.html"
+					"html/FAQ/FAQDetail.html",
+					"html/FAQ/myFAQ.html"
 				],
+				"priority": 0
+			},
+			"html/FAQ/myFAQ.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/utils/common.css",
+					"html/FAQ/myFAQ_sub.html",
+					"js/utils/events.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/FAQ/myFAQ_sub.html": {
+				"resources": [
+					"js/app/FAQ/myFAQ.js",
+					"css/FAQ/myFAQ.css",
+					"js/mui.min.js",
+					"js/utils/events.js",
+					"css/mui.min.css",
+					null,
+					"fonts/mui.ttf",
+					"css/utils/common.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

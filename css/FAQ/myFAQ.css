@@ -1,0 +1,24 @@
+span{
+	padding: 5px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+.topical{
+	background-color: dodgerblue;
+	color: white;
+}
+.ask{
+	border: solid;
+	border-width: thin;
+	border-color: dodgerblue;
+	color: dodgerblue;
+}
+.answer{
+	border: solid;
+	border-width: thin;
+	border-color: orangered;
+	color: orangered;
+}
+.title{
+	color: dodgerblue;
+}

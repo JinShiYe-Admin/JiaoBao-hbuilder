@@ -71,7 +71,7 @@ var getRandomColor = function(){
 /**
  * 打开新页面
  */
-var openTarWindow=function(tarUrl,map, index, array){
+var openTarWindow=function(tarUrl,map,index, array){
 	mui.openWindow({
 		url:tarUrl,
 		id:tarUrl,

@@ -6,13 +6,53 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/utils/common.css" rel="stylesheet" />
+		<link href="../../css/FAQ/myFAQ.css" rel="stylesheet" />
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/utils/events.js"></script>
+		<script src="../../js/app/FAQ/myFAQ.js"></script>
 	</head>
 
 	<body>
-		<script src="../../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init()
-		</script>
+		
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+		  <div class="mui-scroll">
+		    <!--数据列表-->
+		    <ul id="myFAQ_list"  class="mui-table-view">
+		    </ul>
+		  </div>
+		</div>
 	</body>
+	<script>
+		events.initRefresh('myFAQ_list',
+		function(){
+			var item=document.getElementById('myFAQ_list');
+				myFAQ.clearChild(item)
+				choice()
+		},
+		function(){
+			choice()
+		});
+	</script>
+	<script>
+		mui.plusReady(function(){
+			window.addEventListener('data',function(event){
+				myFAQ.data=event.detail.data;
+				console.log(myFAQ.data)
+				var item=document.getElementById('myFAQ_list');
+				myFAQ.clearChild(item)
+				choice();
+			})
+			
+		});
+		var choice=function(){
+			if(myFAQ.data=='我的提问'){
+					myFAQ.createList('myFAQ_list',myFAQ.createQuestionData(5))
+				}else{
+					myFAQ.createList('myFAQ_list',myFAQ.createAnswerData(5))
+				}
+		}
+	</script>
 
 </html>

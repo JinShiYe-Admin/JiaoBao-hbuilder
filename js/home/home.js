@@ -41,7 +41,7 @@ var getPicInner = function(cellData) {
 		if(cellData.imgs) {
 			var imgHTML = '';
 			cellData.imgs.forEach(function(img, index, imgs) {
-				imgHTML += '<img class="cell-width-33" src="' + img + '"/>'
+				imgHTML += '<img class="cell-width-33 img" src="' + img + '"/>'
 			})
 			return imgHTML
 		} else {
@@ -158,8 +158,8 @@ var createSiftedList=function(item,siftedList){
  * @param {Object} item 子元素
  */
 var getSiftedCommonHTML=function(item){
-	return '<b>'+item.title+'<b></br>'
-		+'<p>'+item.words+'</p></br>'
+	return '<p class="p1Height"><b>'+item.title+'</b></p></br>'
+		+'<p class="p2Height">'+item.words+'</p></br>'
 		+'<img class="img-size" src="'+item.imgs[0]+'"/>';
 }
 /**
@@ -167,8 +167,8 @@ var getSiftedCommonHTML=function(item){
  * @param {Object} item 第四个子元素
  */
 var getSiftedForthHTML=function(item){
-	return '<b>'+item.title+'</b></br>'
-		+'<p>'+item.words+'</p></br>'
+	return '<p class="p1Height"><b >'+item.title+'</b></p></br>'
+		+'<p class="p2Height">'+item.words+'</p></br>'
 		+'<img class="img-size-half" src="'+item.imgs[0]+'"/>'
 		+'<img class="img-size-half" src="'+item.imgs[1]+'"/>';
 }
