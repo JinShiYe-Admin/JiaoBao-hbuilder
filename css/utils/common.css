@@ -24,6 +24,21 @@
 	/*字体样式*/
 	font-family:'微软雅黑 Bold', '微软雅黑';
 }
+/*header统一样式*/
+header:last-of-type{
+	/*背景颜色*/
+	background: #1277C7;
+	font-family:'微软雅黑 Bold', '微软雅黑';
+}
+/*header中的icon 白色*/
+header a{
+	color: white;
+}
+/*标题为白色*/
+h1:last-of-type{
+	color: white;
+}
+
 /*字体font-size：62.5%*/
 html{font-size: 62.5%;}
 /**常规大小*/
@@ -56,6 +71,12 @@ h6{font-size:1.6rem}
 /**更大设备*/
 /*@media only screen and (min-width:757px) and (max-width:1000px) {
     html{font-size:100% !important;}
+}*/
+body>div>div:last-of-type{
+	background-color: white;
+}
+/*body>div>div>div :last-of-type{
+	background-color: white;
 }*/
 
 

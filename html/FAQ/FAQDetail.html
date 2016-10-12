@@ -8,14 +8,16 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link href="../../css/iconfont/iconfont.css" rel="stylesheet" />
 		<link href="../../css/utils/common.css"  rel="stylesheet"/>
-	
-	</head>
-
-	<body>
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
 		</script>
+		<!--js 包含分享功能-->
+		<script src="../../js/app/FAQ/FAQDetail.js"></script>
+	</head>
+
+	<body>
+		
 		<header class="mui-bar mui-bar-nav common-background-bar">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left common-color-white"></a>
 		    <h1 class="mui-title common-color-white common-font-family-Bold">问答</h1>
@@ -23,11 +25,12 @@
 		    	<!--星星点灯-->
 			   	<a class="mui-icon mui-icon-star  common-color-white" style="padding-right: 20px;"></a>
 			   	<!--分享-->
-			    <a class="mui-icon iconfont icon-fenxiang common-color-white"></a>
+			    <a href="#sheet" id="share" class="mui-icon iconfont icon-fenxiang common-color-white"></a>
 		    </div>
 		    
 		 
 		</header>
+		<body>
 		<script type="text/javascript">
 		mui.init({
 			gestureConfig: {
@@ -51,6 +54,17 @@
 			contentWebview.evalJS("mui('#refreshContainer').pullRefresh().scrollTo(0,0,100)");
 		});
 	</script>
+	
 	</body>
-
+	<script>
+		
+		mui.plusReady(
+			function(){
+				//分享图标
+				var shareIcon=document.getElementById('share');
+				//分享功能
+				share(shareIcon);
+			}
+		)
+	</script>
 </html>
