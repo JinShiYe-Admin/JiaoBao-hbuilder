@@ -646,7 +646,8 @@
 					"js/utils/events.js",
 					"css/mui.min.css",
 					null,
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"css/utils/common.css"
 				],
 				"refer": [],
 				"priority": 0

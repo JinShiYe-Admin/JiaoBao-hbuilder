@@ -433,7 +433,8 @@
 			"js/mui.min.js",
 			"js/utils/events.js",
 			"css/mui.min.css",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"css/utils/common.css"
 		]
 	}
 }
