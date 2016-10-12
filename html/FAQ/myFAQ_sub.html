@@ -41,14 +41,10 @@
 				console.log(myFAQ.data)
 				var item=document.getElementById('myFAQ_list');
 				myFAQ.clearChild(item)
-				if(myFAQ.data=='我的提问'){
-					myFAQ.createList('myFAQ_list',myFAQ.createQuestionData(5))
-				}else{
-					myFAQ.createList('myFAQ_list',myFAQ.createAnswerData(5))
-				}
+				choice();
 			})
 			
-		})
+		});
 		var choice=function(){
 			if(myFAQ.data=='我的提问'){
 					myFAQ.createList('myFAQ_list',myFAQ.createQuestionData(5))
