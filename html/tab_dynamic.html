@@ -32,6 +32,8 @@
 			<h1 class="mui-title common-color-white common-font-family-Regular">动态</h1>
 		</header>
 		<!--加入九宫格-->
+				<div class="mui-scroll-wrapper" style="margin-top: 45px;">
+			<div class="mui-scroll">
 		<div class="mui-content background-white ">
 			<img src="../image/dynamic/dynamic3.jpeg" style="width: 100%; height: 180px;" />
 			<ul id="offcial" class="mui-table-view mui-grid-view mui-grid-9 ">
@@ -52,10 +54,17 @@
 			</div>
 
 		</div>
+					</div>
+		</div>
 
 	</body>
 	<script>
-		mui.init();
+		mui.init({
+			swipeBack:true//启用右滑关闭功能
+		});
+				mui('.mui-scroll-wrapper').scroll({
+			indicators: true, //是否显示滚动条
+		});
 		mui.plusReady(function() {
 				//给九宫格插入默认数据
 				var chars = ["学校动态", "班级动态", "校园秀"]

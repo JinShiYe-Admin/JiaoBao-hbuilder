@@ -90,7 +90,7 @@ var createGride = function(gride,array) {
 		var item=document.getElementById(itemId);
 		data.forEach(function(cell,index,data){
 			var li=document.createElement('li');
-			li.className='mui-table-view-cell mui-media';
+			li.className='mui-table-view-cell';
 			li.innerHTML=createQiuZhiLiInner(cell);
 			events.jumpPage(li,'FAQDetail.html');
 			item.appendChild(li);

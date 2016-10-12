@@ -315,7 +315,11 @@
 	},
 	"html/official/waitingdocuments_main.html": {
 		"resources": [
-			"html/official/waitingdocuments_sub.html"
+			"html/official/waitingdocuments_sub.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css"
 		],
 		"refer": [
 			"html/official/waitingdocuments_sub.html"
@@ -406,7 +410,9 @@
 			"image/FAQ/faq3.png",
 			"image/FAQ/faq0.png",
 			"js/utils/events.js",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"css/utils/common.css",
+			"css/home/home.css"
 		],
 		"refer": [
 			"html/FAQ/FAQDetail.html",

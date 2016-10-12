@@ -370,7 +370,8 @@
 					"image/home/u200.png",
 					"js/utils/carouselControl.js",
 					"css/utils/common.css",
-					"js/utils/grideControl.js"
+					"js/utils/grideControl.js",
+					null
 				],
 				"refer": [],
 				"priority": 0
@@ -459,7 +460,8 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"css/utils/common.css"
+					"css/utils/common.css",
+					null
 				],
 				"refer": [],
 				"priority": 0
@@ -474,7 +476,8 @@
 					"image/headimg2.png",
 					"image/white_point.png",
 					"css/utils/searchbar.css",
-					"js/app/official/documentlist.js"
+					"js/app/official/documentlist.js",
+					null
 				],
 				"refer": [
 					"html/official/officialdetails_main.html"
@@ -526,7 +529,11 @@
 			},
 			"html/official/waitingdocuments_main.html": {
 				"resources": [
-					"html/official/waitingdocuments_sub.html"
+					"html/official/waitingdocuments_sub.html",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/utils/common.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -618,7 +625,10 @@
 					"image/FAQ/faq3.png",
 					"image/FAQ/faq0.png",
 					"js/utils/events.js",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"css/utils/common.css",
+					null,
+					"css/home/home.css"
 				],
 				"refer": [
 					"html/FAQ/FAQDetail.html",
