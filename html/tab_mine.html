@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../css/utils/common.css" />
 		<link rel="stylesheet" href="../css/mine/mine.css" />
 		<script type="text/javascript" src="../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../js/utils/events.js"></script>
 	</head>
 
 	<body>
@@ -92,6 +93,7 @@
 			});
 			mui('.mui-table-view').on('tap', '.mine-function', function() {
 				console.log(this.innerText);
+				events.openNewWindow('mine/contacts.html');
 			});
 		});
 	</script>

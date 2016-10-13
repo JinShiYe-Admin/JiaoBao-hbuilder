@@ -435,9 +435,12 @@
 					"image/mine/icon_collect.png",
 					"css/utils/common.css",
 					"image/mine/icon_editinfo.png",
-					null
+					null,
+					"js/utils/events.js"
 				],
-				"refer": [],
+				"refer": [
+					"html/mine/contacts.html"
+				],
 				"priority": 0
 			},
 			"js/utils/gride.html": {

@@ -194,9 +194,12 @@
 			"image/mine/icon_address.png",
 			"image/mine/icon_collect.png",
 			"css/utils/common.css",
-			"image/mine/icon_editinfo.png"
+			"image/mine/icon_editinfo.png",
+			"js/utils/events.js"
 		],
-		"refer": []
+		"refer": [
+			"html/mine/contacts.html"
+		]
 	},
 	"js/utils/gride.html": {
 		"resources": [
