@@ -1,3 +1,6 @@
+<!--
+	@author an
+-->
 <!doctype html>
 <html>
 
@@ -25,27 +28,36 @@
 		</div>
 	</body>
 	<script>
-		events.initRefresh('myFAQ_list',
+		//加载刷新功能
+		events.initRefresh('myFAQ_list',//刷新数据控件
+		//下拉刷新
 		function(){
 			var item=document.getElementById('myFAQ_list');
-				myFAQ.clearChild(item)
-				choice()
+				myFAQ.clearChild(item);//清空子元素
+				choice();//根据不同类型加载不同数据
 		},
+		//上拉加载
 		function(){
-			choice()
+			choice();//根据不同类型加载不同数据
 		});
 	</script>
 	<script>
+		/**
+		 * 首次进入页面加载数据
+		 */
 		mui.plusReady(function(){
 			window.addEventListener('data',function(event){
-				myFAQ.data=event.detail.data;
-				console.log(myFAQ.data)
+				myFAQ.data=event.detail.data;//获取页面传值
+				console.log(myFAQ.data);
 				var item=document.getElementById('myFAQ_list');
-				myFAQ.clearChild(item)
-				choice();
+				myFAQ.clearChild(item);//清空子元素
+				choice();//根据类型不同，加载不同数据
 			})
 			
 		});
+		/**
+		 * 根据类型不同，加载不同数据
+		 */
 		var choice=function(){
 			if(myFAQ.data=='我的提问'){
 					myFAQ.createList('myFAQ_list',myFAQ.createQuestionData(5))

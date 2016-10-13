@@ -1,3 +1,4 @@
+<!--@author an-->
 <!doctype html>
 <html>
 
@@ -19,20 +20,25 @@
 		</header>
 	</body>
 	<script>
+	//加载子页面
 	 events.initSubPage('myFAQ_sub.html');
 		mui.plusReady(function(){
-			addEvent()
-		})
+			addEvent();//向子页面传递数据
+		});
+		/**
+		 *获取数据然后传递给子页面 
+		 */
 		function addEvent(){
 			window.addEventListener('sendData',function(event){
-			  //获得事件参数
-			  var data = event.detail.data;
-			  console.log(data);
-			  //根据id向服务器请求新闻详情
-			 document.getElementById('title').innerHTML=data;
-			var targetWeb=plus.webview.getWebviewById('myFAQ_sub.html');
-			mui.fire(targetWeb,'data',{data:data});
-			
+		    	//获得事件参数
+		    	var data = event.detail.data;
+		    	console.log(data);
+			  	//根据id向服务器请求新闻详情
+		 		document.getElementById('title').innerHTML=data;
+			 	//目标页面
+				var targetWeb=plus.webview.getWebviewById('myFAQ_sub.html');
+				//向目标页面传值
+				mui.fire(targetWeb,'data',{data:data});
 			});
 		}
 		

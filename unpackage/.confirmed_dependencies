@@ -139,7 +139,14 @@
 			"image/official/u60.png",
 			"image/official/u62.png",
 			"css/utils/common.css",
-			"image/interaction/u24.png"
+			"image/interaction/u24.png",
+			"image/interaction/u96.png",
+			"image/interaction/u40.png",
+			"image/interaction/u64.png",
+			"image/interaction/u62.png",
+			"image/interaction/u60.png",
+			"image/interaction/u94.png",
+			"image/interaction/u42.png"
 		],
 		"refer": [
 			"html/official/documentlist.html"
@@ -168,7 +175,9 @@
 			"js/utils/grideControl.js"
 		],
 		"refer": [
-			"html/dynamic/schooldynamic_main.html"
+			"html/dynamic/schooldynamic_main.html",
+			"html/dynamic/classdynamic_main.html",
+			"html/dynamic/schoolshow_main.html"
 		]
 	},
 	"html/tab_mine.html": {
@@ -185,9 +194,12 @@
 			"image/mine/icon_address.png",
 			"image/mine/icon_collect.png",
 			"css/utils/common.css",
-			"image/mine/icon_editinfo.png"
+			"image/mine/icon_editinfo.png",
+			"js/utils/events.js"
 		],
-		"refer": []
+		"refer": [
+			"html/mine/contacts.html"
+		]
 	},
 	"js/utils/gride.html": {
 		"resources": [
@@ -336,7 +348,8 @@
 			"fonts/iconfont.ttf",
 			"html/FAQ/FAQDetail_sub.html",
 			"css/utils/common.css",
-			"js/app/FAQ/FAQDetail.js"
+			"js/app/FAQ/FAQDetail.js",
+			"js/utils/events.js"
 		],
 		"refer": [
 			"html/FAQ/FAQDetail_sub.html"
@@ -361,7 +374,8 @@
 			"image/thirdParty/sina_weibo.png",
 			"css/utils/imgeControl.css",
 			"css/utils/textarea.css",
-			"css/FAQ/FAQDetail.css"
+			"css/FAQ/FAQDetail.css",
+			"js/utils/events.js"
 		],
 		"refer": []
 	},
@@ -465,7 +479,40 @@
 			"image/home/u101.png",
 			"js/app/dynamic/dynamiclistitem.js",
 			"image/dynamic/icon_forward.png",
-			"image/dynamic/icon_Level39.png"
+			"image/dynamic/icon_Level39.png",
+			"js/mui.min.js"
+		]
+	},
+	"html/dynamic/classdynamic_main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"html/dynamic/dynamiclist_sub.html",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css"
+		],
+		"refer": [
+			"html/dynamic/dynamiclist_sub.html"
+		]
+	},
+	"html/dynamic/schoolshow_main.html": {
+		"resources": [
+			"js/mui.min.js",
+			"html/dynamic/dynamiclist_sub.html",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css"
+		],
+		"refer": [
+			"html/dynamic/dynamiclist_sub.html"
+		]
+	},
+	"html/mine/contacts.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/utils/common.css"
 		]
 	}
 }

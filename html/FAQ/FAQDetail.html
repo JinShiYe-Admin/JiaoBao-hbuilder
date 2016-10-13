@@ -1,3 +1,6 @@
+<!--
+	@author an
+-->
 <!doctype html>
 <html>
 
@@ -14,6 +17,7 @@
 		</script>
 		<!--js 包含分享功能-->
 		<script src="../../js/app/FAQ/FAQDetail.js"></script>
+		<script src="../../js/utils/events.js"></script>
 	</head>
 
 	<body>
@@ -32,32 +36,13 @@
 		</header>
 		<body>
 		<script type="text/javascript">
-		mui.init({
-			gestureConfig: {
-				doubletap: true//启用双击监听
-			},
-			subpages: [{
-				url: 'FAQDetail_sub.html',
-				id: 'FAQDetail_sub.html',
-				styles: {
-					top: '45px',
-					bottom: localStorage.getItem('$Statusbar'),
-				}
-			}]
-		});
-
-		var contentWebview = null;
-		document.querySelector('header').addEventListener('doubletap', function() {
-			if(contentWebview == null) {
-				contentWebview = plus.webview.currentWebview().children()[0];
-			}
-			contentWebview.evalJS("mui('#refreshContainer').pullRefresh().scrollTo(0,0,100)");
-		});
-	</script>
+		//加载子页面
+		events.initSubPage('FAQDetail_sub.html')
+		</script>
 	
 	</body>
 	<script>
-		
+		//分享功能
 		mui.plusReady(
 			function(){
 				//分享图标

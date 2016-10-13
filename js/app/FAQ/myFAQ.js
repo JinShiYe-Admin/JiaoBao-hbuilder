@@ -1,5 +1,17 @@
+/**
+ * @author an
+ */
 var myFAQ=(function(){
+	//获取的数据
 	var data='';
+	/**
+	 * 
+	 * @param {Object} title 标题
+	 * @param {Object} question 问题
+	 * @param {Object} answer 回答
+	 * @param {Object} time 事件
+	 * @param {Object} type 类型 0我的提问 1我的回答
+	 */
 	var createItem=function(title,question,answer,time,type){
 		var item=new Object();
 		item.title=title;
@@ -9,6 +21,10 @@ var myFAQ=(function(){
 		item.type=type;
 		return item;
 	}
+	/**
+	 * 我的提问数据
+	 * @param {Object} len 数据长度
+	 */
 	var createQuestionData=function(len){
 		var titles=['生活'];
 		var questions=['老师，你好。我发小25了，女生，到现在还没谈过男朋友，她长相、身材都没问题，为什么都不找男朋友，当然她不是同性恋',
@@ -18,6 +34,10 @@ var myFAQ=(function(){
 		var type=0;
 		return createData(len,titles,questions,answers,times,type);
 	}
+	/**
+	 * 我的回答数据
+	 * @param {Object} len 数据长度
+	 */
 	var createAnswerData=function(len){
 		var titles=['UC头条新闻热点追踪'];
 		var questions=['还记得教室后窗无声的窥视，上课瞌睡时飞来的粉笔头，作文本上用红笔写下的长长评语吗？'+
@@ -27,6 +47,15 @@ var myFAQ=(function(){
 		var type=1;
 		return createData(len,titles,questions,answers,times,type);
 	}
+	/**
+	 * 根据长度 数据等获取数据
+	 * @param {Object} len 长度
+	 * @param {Object} titles 标题数组
+	 * @param {Object} questions  问题数组
+	 * @param {Object} answers 答案数组
+	 * @param {Object} times 事件数组
+	 * @param {Object} type 类型 0我的提问 1 我的回答
+	 */
 	var createData=function(len,titles,questions,answers,times,type){
 		var data=new Array();
 		for(i=0;i<len;i++){
@@ -35,6 +64,11 @@ var myFAQ=(function(){
 		}
 		return data;
 	}
+	/**
+	 * 创建list界面
+	 * @param {Object} id 需绑定的控件id
+	 * @param {Object} data 数据
+	 */
 	var createList=function(id,data){
 		var list=document.getElementById(id);
 		data.forEach(function(cell,index,data){
@@ -44,6 +78,10 @@ var myFAQ=(function(){
 			list.appendChild(li)
 		})
 	}
+	/**
+	 * 获取innerHTml
+	 * @param {Object} cell 单个数据
+	 */
 	var createCellInner=function(cell){
 		var answer='';
 		var time='';
@@ -69,16 +107,20 @@ var myFAQ=(function(){
                 	+time
                 +'</div>'
 	}
+	/**
+	 * 清空子元素
+	 * @param {Object} item 需清空子元素的控件
+	 */
 	var clearChild=function(item){
 		while(item.firstElementChild){
 			item.removeChild(item.firstElementChild);
 		}
 	}
 	return{
-		createQuestionData:createQuestionData,
-		createAnswerData:createAnswerData,
-		createList:createList,
-		clearChild:clearChild,
-		data:data
+		createQuestionData:createQuestionData,//创建我的提问数据
+		createAnswerData:createAnswerData,//创建我的回答数据
+		createList:createList,//创建列表界面
+		clearChild:clearChild,//清空子元素
+		data:data//传递的数据
 	}
 })(mui)

@@ -1,4 +1,7 @@
 /**
+ * @author an
+ */
+/**
  * 创建单个回答的model
  * @param {Object} imgUrl 头像
  * @param {Object} name 名字
