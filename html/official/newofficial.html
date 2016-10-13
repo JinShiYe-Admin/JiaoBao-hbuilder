@@ -27,6 +27,25 @@
 				/*边框样式*/
 				border: 1px solid gainsboro;
 			}
+			
+			.mui-radio.mui-left label {
+				padding-right: 0px;
+				padding-left: 50px;
+				font-size: 14px;
+			}
+			
+			.mui-radio input[type=radio] {
+				position: absolute;
+				left: 18px top: 4px;
+				right: 20px;
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				border: 0;
+				outline: 0!important;
+				background-color: transparent;
+				-webkit-appearance: none
+			}
 		</style>
 	</head>
 
@@ -39,65 +58,129 @@
 			<a class="mui-icon mui-icon-checkmarkempty mui-pull-right common-color-white"></a>
 		</header>
 		<div class="mui-content mo-background-color">
-			<br/>
-<form >
-	类型：
-<input type="radio" name="radiobutton" value="radiobutton" checked> 通知
-<input type="radio" name="radiobutton" value="radiobutton"> 工作流
-<input type="radio" name="radiobutton" value="radiobutton"> 讨论型
-<br/><br/>
-</form>
-		<!--输入框-->
-		<div class="mui-input-row"  >
-			<input type="text" class="mui-input-clear" placeholder="请输入标题">
-		</div>
-		<!--可换行输入框-->
-		<div class="mui-input-row">
-			<textarea id='content' class="mui-input-clear question" placeholder="请添加内容"></textarea>
-
-		</div>
-			<div id="btn-row">
-
-				<button type="button" class="mui-btn " onclick="getfile()">
-					添加附件
-				</button>
-				<!--发送短信-->
-				<div style="float: right; " class=" mui-checkbox mui-left">
-					<label style="margin-top: 8px;">发送短信</label>
-					<input name="checkbox1" value="" type="checkbox"></div>
-			</div>
-		<br/>
-		<p style="font-size: 18px;">附件列表</p>
-		<div class="mui-content">
-			<ul id="list" class="mui-table-view">
-
-			</ul>
 			<br />
-					<p style="font-size: 18px;">发送给</p>
+			<!--公文类型-->
 
-		</div>
-				<div class="mui-content">
-		        <ul class="mui-table-view mui-grid-view mui-grid-9">
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <div class="mui-media-body">孟祥菊</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <div class="mui-media-body">王树森</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <div class="mui-media-body">赵启旺</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <div class="mui-media-body">莫尚林</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <div class="mui-media-body">安琪</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <div class="mui-media-body">宋艳明</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <div class="mui-media-body">顾元生</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <div class="mui-media-body">陈国栋</div></a></li>
-		           <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <div class="mui-media-body"></div></a></li>
-		        </ul> 
-		</div>
+			<!--标题和内容-->
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<div style="float:left;font-size: 16px;margin-top: 7px;margin-right: -10px;margin-left: 12px;">类型:</div>
+					<div class=" mui-radio mui-left " style="float:left;">
+						<label>通知</label>
+						<input name="radio1" type="radio" checked>
+					</div>
+					<div class=" mui-radio mui-left" style="float:left;">
+						<label>工作流</label>
+						<input name="radio1" type="radio">
+					</div>
+					<div class=" mui-radio mui-left" style="float:left;">
+						<label>讨论型</label>
+						<input name="radio1" type="radio">
+					</div>
+				</div>
+				<!--输入框-->
+				<div class="mui-input-row">
+					<input type="text" class="mui-input-clear" placeholder="请输入标题">
+				</div>
+				<!--可换行输入框-->
+				<div class="mui-input-row" style="height: 80px;">
+					<textarea id='content' class="mui-input-clear question" placeholder="请添加内容"></textarea>
+
+				</div>
+
+				<!--发送短信-->
+				<div class="mui-input-row" style="width: 95%;">
+					<div class=" mui-radio mui-left " style="float:right;">
+						<label>发送短信</label>
+						<input name="radio2" type="radio">
+					</div>
+				</div>
+			</form>
+			<br/>
+			<!--附件列表-->
+			<p id="addfile" style="font-size: 18px;width: 95%;margin-left: 5px;">附件列表 <span style="float: right;margin-left: 5px;">
+		            添加附件
+		        </span>
+				<img src="../../image/official/add.png" width="20" height="20" style="float: right;" />
+			</p>
+			<div class="mui-content">
+				<ul id="list" class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle"> 1.doc</div>
+
+					</li>
+										<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle"> 2.doc</div>
+
+					</li>
+										<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle"> 3.doc</div>
+
+					</li>
+				</ul>
+				<br />
+				<!--发送人员-->
+				<p id="addmember" style="font-size: 18px;width: 95%;margin-left: 5px;">发送给<img src="../../image/official/rightarrow.png" width="20" height="20" style="float: right;" /></p>
+
+			</div>
+			<div class="mui-content" >
+				<ul class="mui-table-view mui-grid-view mui-grid-9" style="background-color: white;">
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+						<a href="#">
+							<div class="mui-media-body">孟祥菊</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+						<a href="#">
+							<div class="mui-media-body">王树森</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+						<a href="#">
+							<div class="mui-media-body">赵启旺</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+						<a href="#">
+							<div class="mui-media-body">莫尚林</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+						<a href="#">
+							<div class="mui-media-body">安琪</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+						<a href="#">
+							<div class="mui-media-body">宋艳明</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+						<a href="#">
+							<div class="mui-media-body">顾元生</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+						<a href="#">
+							<div class="mui-media-body">陈国栋</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+						<a href="#">
+							<div class="mui-media-body"></div>
+						</a>
+					</li>
+				</ul>
+			</div>
 
 		</div>
 		<script src="../../js/app/official/addnotice.js" type="text/javascript" charset="utf-8"></script>

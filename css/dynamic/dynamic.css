@@ -1,5 +1,5 @@
 .box{
-	width:50px; text-align:center; font-size:16px;
+	width:60px; text-align:center; font-size:16px;margin-top:-5px
 }
 /**
  * 背景色 白色
@@ -54,7 +54,7 @@
  */
 .cell-width-33{
 	width: 33.3333333333333333%;
-	height: auto;
+	height: 80px;
 	padding-left: 13px;
 	padding-right: 13px;
 	
@@ -64,7 +64,7 @@
  */
 .cell-width-67{
 	width: 66.66666666666667%;
-	height: auto;
+	height: 80px;
 	padding-left: 12px;
 	padding-right: 12px;
 }

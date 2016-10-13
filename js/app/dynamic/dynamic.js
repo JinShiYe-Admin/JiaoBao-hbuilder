@@ -12,9 +12,9 @@ var createList = function(item, listData) {
 			li.className = "mui-table-view-cell";
 			li.innerHTML = '<div>' +
 				'<div class="box " style="float:left ">' +
-				'<img src="' + cellData.headImg + '"align="middle"  />' + '<b style = "font-size:16px">' + '孟浩' + '</b>' +
+				'<img src="' + cellData.headImg + '"align="left"  />' + '<b style = "font-size:16px">' + '孟浩' + '</b>' +
 				'</div>' +
-				'<div style = "font-size:16px">' + cellData.name + '<p class= "content">' + cellData.words + '</p>' + '</div>' +
+				'<div style = "font-size:16px;">' + cellData.name + '<p class= "content">' + cellData.words + '</p>' + '</div>' +
 				'<div>' + //获取图片的innerHTML
 				getPicInner(cellData) +
 				'</div>' + '<p class="align-right">发表时间：' +
@@ -46,8 +46,8 @@ var getPicInner = function(cellData) {
 	 * 模拟服务器收到的数据
 	 */
 var createMoodList = function() {
-		var item1 = createMoodItem('../image/home/u74.png', '2015级3班', '今天心情很糟糕考试没有考好，继续努力', '2016.09.29', []);
-		var item2 = createMoodItem('../image/home/u70.png', '2015级3班', '今天心情不错哦，哎呦不错哦，就是不错哦，靠的不错哦，看来我的努力没有白费是的啊，人生就要这样，样式大概是这样哒，总之总之哎呦不错哦，就是不错哦', '2016.09.30', ['../image/home/u99.png', '../image/home/u101.png', '../image/home/u103.png'])
+		var item1 = createMoodItem('../image/document_headimg.png', '2015级3班', '今天心情很糟糕考试没有考好，继续努力', '2016.09.29', []);
+		var item2 = createMoodItem('../image/document_headimg.png', '2015级3班', '今天心情不错哦，哎呦不错哦，就是不错哦，靠的不错哦，看来我的努力没有白费是的啊，人生就要这样，样式大概是这样哒，总之总之哎呦不错哦，就是不错哦', '2016.09.30', ['../image/home/u99.png', '../image/home/u101.png', '../image/home/u103.png'])
 		var moodList = new Array();
 		console.log('第一个' + item1.imgs)
 		console.log('第二个' + item2.imgs)
