@@ -757,6 +757,16 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"html/mine/contacts.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/utils/common.css"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
