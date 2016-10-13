@@ -411,7 +411,8 @@
 					"js/utils/carouselControl.js",
 					"css/utils/common.css",
 					"js/utils/grideControl.js",
-					null
+					null,
+					"image/document_headimg.png"
 				],
 				"refer": [
 					"html/dynamic/schooldynamic_main.html",

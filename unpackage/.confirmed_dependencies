@@ -172,7 +172,8 @@
 			"image/home/u200.png",
 			"js/utils/carouselControl.js",
 			"css/utils/common.css",
-			"js/utils/grideControl.js"
+			"js/utils/grideControl.js",
+			"image/document_headimg.png"
 		],
 		"refer": [
 			"html/dynamic/schooldynamic_main.html",
