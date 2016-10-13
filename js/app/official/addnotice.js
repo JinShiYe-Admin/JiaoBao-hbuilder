@@ -4,16 +4,30 @@
 		swipeBack: true //启用右滑关闭功能
 	});
 	mui.plusReady(function() {
-		//请参考网址http://www.html5plus.org/doc/zh_cn/io.html#plus.io.PRIVATE_DOC
-		plus.io.requestFileSystem(plus.io.PUBLIC_DOCUMENTS, function(fs) {
-			// fs.root是根目录操作对象DirectoryEntry
-			//alert( "Request file system success: " + fs.root.fullPath );
+		//添加附件 刷新界面
+		window.addEventListener('updatefile', function(e) {
+				if(typeof(e.detail.data) !== 'undefined') {
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for(var i = cells.length, len = i + 1; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell ';
+						li.innerHTML = '<div class="mui-slider-right mui-disabled">\<a class="mui-btn mui-btn-red">删除</a>\</div>\<div class="mui-slider-handle">' + e.detail.data + '\</div>'
+							//下拉刷新，新纪录插到最前面；
+						table.insertBefore(li, table.firstChild);
+					}
+				}
 
-			// 可通过fs操作PRIVATE_WWW文件系统 
-			// ......
-		}, function(e) {
-			alert("Request file system failed: " + e.message);
-		});
+			})
+			//点击添加附件
+		document.getElementById("addfile").addEventListener('tap', function() {
+			getfile(); //跳转到本地文件界面
+		})
+					//点击添加附件
+		document.getElementById("addmember").addEventListener('tap', function() {
+			getmember(); //跳转到选择人员界面
+		})
+
 	})
 
 	//左滑删除按钮方法
@@ -157,14 +171,17 @@ var getimg = function() { //点击图片方法
 	}
 
 }
-var getfile = function() { //点击文件方法
-	var table = document.body.querySelector('.mui-table-view');
-	var cells = document.body.querySelectorAll('.mui-table-view-cell');
-	for(var i = cells.length, len = i + 1; i < len; i++) {
-		var li = document.createElement('li');
-		li.className = 'mui-table-view-cell ';
-		li.innerHTML = '<div class="mui-slider-right mui-disabled">\<a class="mui-btn mui-btn-red">删除</a>\</div>\<div class="mui-slider-handle">' + i + '.doc\</div>'
-			//下拉刷新，新纪录插到最前面；
-		table.insertBefore(li, table.firstChild);
-	}
+var getfile = function() { //跳转到本地文件界面
+	mui.openWindow({
+		url: 'addfile.html',
+		id: 'addFile'
+	});
+
+}
+var getmember = function() { //跳转到本地文件界面
+	mui.openWindow({
+		url: 'addmember.html',
+		id: 'addmember'
+	});
+
 }
