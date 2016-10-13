@@ -1,3 +1,6 @@
+/**
+ * @author an
+ */
 var events=(function($){
 	/**
 	 * 加载跳转界面监听的公用方法 
@@ -106,7 +109,7 @@ var events=(function($){
 	}
 	/**
 	 * 预加载页面
-	 * @param {Object} tarPage
+	 * @param {Object} tarPage 目标页面
 	 */
 	var preLoad=function(tarPage){
 		//初始化预加载详情页面
@@ -122,29 +125,38 @@ var events=(function($){
 		});
 	}
 	/**
-	 * 
-	 * @param {Object} tarPage
-	 * @param {Object} listener
-	 * @param {Object} item
+	 * 传递数据到指定页面
+	 * @param {Object} tarPage 目标页面
+	 * @param {Object} listener 事件名称
+	 * @param {Object} item 绑定控件
 	 * @param {Object} datas
 	 */
 	var fireToNewPage=function(tarPage,listener,item,datas){
 		
-		console.log('tarPage'+tarPage);
-		var detailPage = null;
+		console.log('tarPage:'+tarPage);
+		var targetPage = null;
 		//添加列表项的点击事件
 		item.addEventListener('tap',function() {
-		  //获得详情页面
-		  if(!detailPage){
-		    detailPage = plus.webview.getWebviewById(tarPage);
+		  //获得目标页面
+		  if(!targetPage){
+		    targetPage = plus.webview.getWebviewById(tarPage);
 		  }
-		  //触发详情页面的newsId事件
-		  $.fire(detailPage,listener,{
+		  //触发目标页面的listener事件
+		  $.fire(targetPage,listener,{
 		    data:datas
 		  });
-		//打开详情页面          
+		//打开m目标页面          
 		 openNewWindow(tarPage)
 		});  
+	}
+	/**
+	 * 清空子元素
+	 * @param {Object} item 需清空子元素的控件
+	 */
+	var clearChild=function(item){
+		while(item.firstElementChild){
+			item.removeChild(item.firstElementChild);
+		}
 	}
 	
 	return {
@@ -153,7 +165,8 @@ var events=(function($){
 		initSubPage:initSubPage,//加载子页面
 		initRefresh:initRefresh,//刷新
 		preLoad:preLoad,//预加载
-		fireToNewPage:fireToNewPage//传递数据到新界面
+		fireToNewPage:fireToNewPage,//传递数据到新界面
+		clearChild:clearChild//清空子元素
 	}
 
 })(mui);

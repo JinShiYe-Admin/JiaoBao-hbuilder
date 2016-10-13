@@ -345,7 +345,8 @@
 			"fonts/iconfont.ttf",
 			"html/FAQ/FAQDetail_sub.html",
 			"css/utils/common.css",
-			"js/app/FAQ/FAQDetail.js"
+			"js/app/FAQ/FAQDetail.js",
+			"js/utils/events.js"
 		],
 		"refer": [
 			"html/FAQ/FAQDetail_sub.html"
@@ -370,7 +371,8 @@
 			"image/thirdParty/sina_weibo.png",
 			"css/utils/imgeControl.css",
 			"css/utils/textarea.css",
-			"css/FAQ/FAQDetail.css"
+			"css/FAQ/FAQDetail.css",
+			"js/utils/events.js"
 		],
 		"refer": []
 	},

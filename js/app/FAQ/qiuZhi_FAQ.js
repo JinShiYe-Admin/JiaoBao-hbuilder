@@ -122,11 +122,11 @@ var createGride = function(gride,array) {
 			        +'</a>'
 	}
 	return{
-		createGride:createGride,
-		createArray:createArray,
-		createFAQItem:createFAQItem,
-		createFAQData:createFAQData,
-		createQiuZhiFAQList:createQiuZhiFAQList,
-		createQiuZhiLiInner:createQiuZhiLiInner
+		createGride:createGride,//创建9宫格
+		createArray:createArray,//创建9宫格数据
+		createFAQItem:createFAQItem,//创建单个item
+		createFAQData:createFAQData,//创建求知问答问答数据
+		createQiuZhiFAQList:createQiuZhiFAQList,//创建求知问答列表
+		createQiuZhiLiInner:createQiuZhiLiInner//创建cell的innerHTML
 	}
 })(mui)
