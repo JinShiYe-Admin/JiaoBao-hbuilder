@@ -8,7 +8,7 @@
 		<link href="../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="../css/utils/common.css" />
 		<link rel="stylesheet" href="../css/mine/mine.css" />
-		<script type="text/javascript" src="../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
 		<script type="text/javascript" src="../js/utils/events.js"></script>
 	</head>
 
@@ -16,68 +16,61 @@
 		<header class="mui-bar mui-bar-nav common-background-bar">
 			<h1 class="mui-title common-color-white common-font-family-Regular">我的</h1>
 		</header>
-		<div class="mui-content">
-			<div class="mui-scroll-wrapper">
-				<div class="mui-scroll">
-					<ul class="mui-table-view mine-table mine-margin-top-20px">
-						<div class="mine-line"></div>
-						<li class="mui-table-view-cell mui-media mine-table mine-info " id="info">
-							<a>
-								<img class="mui-media-object mui-pull-left" src="../image/home/u99.png" id="personalImage">
-								<div class="mui-media-body common-font-family-Regular" style="padding-top: 10px;">
-									小熊猫
-								</div>
-							</a>
-						</li>
-						<div class="mine-line"></div>
-						<li class="mui-table-view-cell mui-media mine-function mine-table" id="editinfo">
-							<a class="mui-navigate-right">
-								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_editinfo.png" id="personalImage">
-								<div class="mui-media-body common-font-family-Regular mine-text">
-									编辑资料
-								</div>
-							</a>
-						</li>
-
-						<div class="mine-line"></div>
-
-						<li class="mui-table-view-cell mui-media mine-function" id="photoalbum">
-							<a class="mui-navigate-right">
-								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_photoalbum.png" id="personalImage">
-								<div class="mui-media-body common-font-family-Regular mine-text">
-									相册
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media mine-function" id="collect">
-							<a class="mui-navigate-right">
-								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_collect.png" id="personalImage">
-								<div class="mui-media-body common-font-family-Regular mine-text">
-									收藏
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media mine-function mine-table" id="setting">
-							<a class="mui-navigate-right">
-								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_setting.png" id="personalImage">
-								<div class="mui-media-body common-font-family-Regular mine-text">
-									设置
-								</div>
-							</a>
-						</li>
-
-						<div class="mine-line"></div>
-
-						<li class="mui-table-view-cell mui-media mine-function" id="address">
-							<a class="mui-navigate-right">
-								<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_address.png" id="personalImage">
-								<div class="mui-media-body common-font-family-Regular mine-text">
-									通讯录
-								</div>
-							</a>
-						</li>
-					</ul>
-				</div>
+		<div class="mui-scroll-wrapper mui-content">
+			<div class="mui-scroll">
+				<ul class="mui-table-view mine-table mine-margin-top-10px">
+					<li class="mui-table-view-cell mui-media mine-table " id="info">
+						<a>
+							<img class="mui-media-object mui-pull-left" src="../image/home/u99.png" id="personalImage">
+							<div class="mui-media-body common-font-family-Regular" style="padding-top: 10px;">
+								小熊猫
+							</div>
+						</a>
+					</li>
+					<div class="mine-line"></div>
+					<li class="mui-table-view-cell mui-media mine-table" id="editinfo">
+						<a class="mui-navigate-right">
+							<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_editinfo.png" id="personalImage">
+							<div class="mui-media-body common-font-family-Regular mine-text">
+								编辑资料
+							</div>
+						</a>
+					</li>
+					<div class="mine-line"></div>
+					<li class="mui-table-view-cell mui-media" id="photoalbum">
+						<a class="mui-navigate-right">
+							<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_photoalbum.png" id="personalImage">
+							<div class="mui-media-body common-font-family-Regular mine-text">
+								相册
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media" id="collect">
+						<a class="mui-navigate-right">
+							<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_collect.png" id="personalImage">
+							<div class="mui-media-body common-font-family-Regular mine-text">
+								收藏
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mine-table" id="setting">
+						<a class="mui-navigate-right">
+							<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_setting.png" id="personalImage">
+							<div class="mui-media-body common-font-family-Regular mine-text">
+								设置
+							</div>
+						</a>
+					</li>
+					<div class="mine-line"></div>
+					<li class="mui-table-view-cell mui-media" id="address">
+						<a class="mui-navigate-right">
+							<img class="mui-media-object mui-pull-left mine-icon" src="../image/mine/icon_address.png" id="personalImage">
+							<div class="mui-media-body common-font-family-Regular mine-text">
+								通讯录
+							</div>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</body>
@@ -88,12 +81,25 @@
 				indicators: true, //是否显示滚动条
 				bounce: false, //是否启用回弹
 			});
-			mui('.mui-table-view').on('tap', '.mine-info', function() {
-				console.log(this.innerText);
-			});
-			mui('.mui-table-view').on('tap', '.mine-function', function() {
-				console.log(this.innerText);
-				events.openNewWindow('mine/contacts.html');
+
+			mui('.mui-table-view').on('tap', '.mui-table-view-cell', function() {
+				var id = this.getAttribute('id');
+				mui.toast(id);
+				switch(id) {
+					case 'info': //信息
+						break;
+					case 'editinfo': //编辑资料
+						break;
+					case 'photoalbum': //相册
+						break;
+					case 'collect': //收藏
+						break;
+					case 'setting': //设置
+						break;
+					case 'address': //通讯录
+						events.openNewWindow('mine/contacts.html');
+						break;
+				}
 			});
 		});
 	</script>
