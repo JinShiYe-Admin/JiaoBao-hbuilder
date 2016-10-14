@@ -1,43 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="css/mui.min.css" rel="stylesheet" />
+		<title></title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
 		<link href="../../css/mui.css" rel="stylesheet" />
-		<link href="../../css/utils/common.css" rel="stylesheet" />
-
-		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
-
+		<link rel="stylesheet" type="text/css" href="../../css/utils/common.css"/>
+		<link href="../../css/official/mui.indexedlist.css" rel="stylesheet" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+		</style>
 	</head>
 
 	<body>
-		<script src="js/mui.min.js"></script>
 		<header class="mui-bar mui-bar-nav">
-			<h1 class="mui-title">选择发送人员</h1>
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-
+			<h1 class="mui-title">选择发送人员</h1>
 		</header>
-
-		<div class="mui-content ">
-
-			<ul id="list" class="mui-table-view mui-table-view-radio">
-				<li class="mui-table-view-cell">
-					安琪
-				</li>
-				<li class="mui-table-view-cell">
-					赵启旺
-				</li>
-				<li class="mui-table-view-cell">
-					莫尚林
-				</li>
-				<li class="mui-table-view-cell">
-					宋艳明
-				</li>
-			</ul>
+		<div class="mui-content">
+			<div id='list' class="mui-indexed-list">
+				<div class="mui-indexed-list-search mui-input-row mui-search">
+					<input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索">
+				</div>
+				<div class="mui-indexed-list-bar">
+					<a>A</a>
+					<a>B</a>
+					<a>C</a>
+					<a>D</a>
+					<a>E</a>
+					<a>F</a>
+					<a>G</a>
+					<a>H</a>
+					<a>I</a>
+					<a>J</a>
+					<a>K</a>
+					<a>L</a>
+					<a>M</a>
+					<a>N</a>
+					<a>O</a>
+					<a>P</a>
+					<a>Q</a>
+					<a>R</a>
+					<a>S</a>
+					<a>T</a>
+					<a>U</a>
+					<a>V</a>
+					<a>W</a>
+					<a>X</a>
+					<a>Y</a>
+					<a>Z</a>
+				</div>
+				<div class="mui-indexed-list-alert"></div>
+				<div class="mui-indexed-list-inner">
+					<div class="mui-indexed-list-empty-alert">没有数据</div>
+					<ul class="mui-table-view mui-table-view-radio">
+						<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
+						<li data-value="AQ" data-tags="AnQi" class="mui-table-view-cell mui-indexed-list-item"><a class="mui-navigate-right">安琪</a></li>
+						
+						<li data-group="M" class="mui-table-view-divider mui-indexed-list-group">B</li>
+						<li data-value="MSL" data-tags="MoShangLin" class="mui-table-view-cell mui-indexed-list-item"><a class="mui-navigate-right">莫尚林</a></li>
+						
+						<li data-group="Z" class="mui-table-view-divider mui-indexed-list-group">Z</li>
+						<li data-value="ZQW" data-tags="ZhaoQiWang" class="mui-table-view-cell mui-indexed-list-item"><a class="mui-navigate-right">赵启旺</a></li>
+						
+					</ul>
+				</div>
+			</div>
 		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/app/official/mui.indexedlist.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			mui.ready(function() {
+				var header = document.querySelector('header.mui-bar');
+				var list = document.getElementById('list');
+				//calc hieght
+				list.style.height = (document.body.offsetHeight - header.offsetHeight) + 'px';
+				//create
+				window.indexedList = new mui.IndexedList(list);
+			});
+		</script>
 	</body>
 
 </html>
