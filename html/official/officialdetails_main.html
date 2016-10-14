@@ -1,5 +1,5 @@
 <!--
-	作者：444811716@qq.com
+	作者：公文详情
 	时间：2016-09-27
 	描述：公文详情页
 -->
@@ -7,7 +7,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>公文详情</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -46,6 +46,14 @@
 			}
 			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
 		});
+
+		mui.plusReady(function () {
+		    //显示等待窗口
+			plus.nativeUI.showWaiting("正在加载公文详情...", {
+				background: "#1277C7",
+			});
+		})
+
 	</script>
 
 </html>

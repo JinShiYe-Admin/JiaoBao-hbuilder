@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>公文详情页</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -22,7 +22,7 @@
 			<div class="mui-scroll ">
 				<!--数据列表-->
 				<ul class="mui-table-view">
-					<li class="mui-table-view-cell">
+					<!--<li class="mui-table-view-cell">
 						<div class="mui-row">
 							<div class=" mui-col-xs-2 mui-col-sm-2">
 								<div align=center><img class="offical-bottom-image" src="../../image/home/u292.png"></div>
@@ -115,7 +115,7 @@
 								</div>
 							</div>
 						</div>
-					</li>
+					</li>-->
 				</ul>
 			</div>
 		</div>
@@ -169,7 +169,18 @@
 			}
 
 			mui.plusReady(function() {
-
+				setTimeout(function() {
+					plus.nativeUI.closeWaiting(); //让等待窗口消失
+				}, 1000);
+				var table = document.body.querySelector('.mui-table-view');
+				var top = officialdetailsAddTop(); //返回一条顶部数据
+				var bottom1 = officialdetailsAddBottom(); //返回一条底部数据
+				var bottom2 = officialdetailsAddBottom2(); //返回一条底部数据
+				var bottom3 = officialdetailsAddBottom3(); //返回一条底部数据
+				officialdetails.addTop(table, top); //增加顶部
+				officialdetails.addBottom(table, bottom1[0], bottom1[1]); //增加一条底部数据
+				officialdetails.addBottom(table, bottom2[0], bottom2[1]); //增加一条底部数据
+				officialdetails.addBottom(table, bottom3[0], bottom3[1]); //增加一条底部数据
 			});
 
 			/**
