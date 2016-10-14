@@ -172,7 +172,8 @@
 			"image/home/u200.png",
 			"js/utils/carouselControl.js",
 			"css/utils/common.css",
-			"js/utils/grideControl.js"
+			"js/utils/grideControl.js",
+			"image/document_headimg.png"
 		],
 		"refer": [
 			"html/dynamic/schooldynamic_main.html",
@@ -512,7 +513,19 @@
 			"js/mui.min.js",
 			"fonts/mui.ttf",
 			"css/mui.min.css",
-			"css/utils/common.css"
+			"css/utils/common.css",
+			"js/app/mine/contacts.js",
+			"image/mine/img0.jpeg",
+			"image/mine/img6.jpg",
+			"image/mine/img3.jpg",
+			"image/mine/img2.jpg",
+			"image/mine/u32.png",
+			"image/mine/img5.jpg",
+			"image/mine/img4.jpg",
+			"image/mine/img1.jpeg",
+			"css/mine/contacts.css",
+			"css/utils/mui.indexedlist.css",
+			"js/mui.indexedlist.js"
 		]
 	}
 }
