@@ -1,12 +1,14 @@
 /**
- * 通知列表
+ * 作者：莫尚霖
+ * 时间：2016-09-27
+ * 描述：通知公告列表页
  */
 var noticelist = (function($) {
 
 	/**
 	 * 增加一项通知
 	 * @param {Object} mElement 父元素
-	 * @param {Object} data 内容数据，一个数组[unread,title,content,staff,time,from],是否显示未读（1-显示），标题，内容，人员，时间,来自
+	 * @param {Object} data 内容数据，一个数组[unread,title,content,staff,time,from],是否显示未读（1-显示），标题，内容，人员，时间,发布通知的部门
 	 * @param {Object} accessory 附件数据数组
 	 */
 	var addItem = function(mElement, data, accessory) {
@@ -15,16 +17,23 @@ var noticelist = (function($) {
 		var htmlAccessory = '';
 
 		var html1 = '';
+		//显示未读图标
 		if(data[0] === 1) {
 			html1 = '<div><img class="notice-unread" src="../../image/icon-unread.png" />';
 		}
+		//标题
 		var html2 = '<p class="notice-title">' + data[1] + '</p>';
+		//内容
 		var html3 = '<font class="notice-content">' + data[2] + '</font>';
+		//时间
 		var html4 = '<p class="notice-time">【' + data[3] + '】</p>';
+		//人员
 		var html5 = '<p class="notice-time">' + data[4] + '</p>';
+		//发布通知的部门
 		if(data.length == 6) {
 			htmlFrom = '<p class="notice-time">' + data[5] + '</p>';
 		}
+		//附件列表
 		var html6 = '<div class="notice-accessory">';
 		$.each(accessory, function(index, element) {
 			var html7 = '<img src="../../image/icon-accessory.png" />';

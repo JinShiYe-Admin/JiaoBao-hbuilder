@@ -1,5 +1,5 @@
 <!--
-	作者：444811716@qq.com
+	作者：莫尚霖
 	时间：2016-09-27
 	描述：通知公告列表页
 -->
@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>通知公告列表</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -39,7 +39,7 @@
 			<div class="mui-scroll">
 				<!--数据列表-->
 				<ul class="mui-table-view">
-					<li class="mui-table-view-cell">
+					<!--<li class="mui-table-view-cell">
 						<div>
 							<img class="notice-unread" src="../../image/icon-unread.png" />
 							<p class="notice-title">
@@ -74,9 +74,8 @@
 							<font class="notice-content">端午节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~</font>
 							<p class="notice-time">【公司全体】</p>
 							<p class="notice-time">2016-9-27 11:47</p>
-
 						</div>
-					</li>
+					</li>-->
 				</ul>
 			</div>
 		</div>
@@ -94,22 +93,22 @@
 					}
 				}
 			});
+
 			/**
 			 * 下拉刷新具体业务实现
 			 */
 			function pulldownRefresh() {
 				setTimeout(function() {
 					var table = document.body.querySelector('.mui-table-view');
-					table.innerHTML = '';
-
-					var add1 = addData1(); //返回一条底部数据
-					var add2 = addData2(); //返回一条底部数据
-
+					table.innerHTML = ''; //清空列表
+					var add1 = addData1(); //返回一条数据数组[data, accessory]，[通知详情,附件列表]
+					var add2 = addData2(); //返回一条数据数组[data, accessory]，[通知详情,附件列表]
 					noticelist.addItem(table, add1[0], add1[1]);
 					noticelist.addItem(table, add2[0], add2[1]);
 					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 				}, 1500);
 			}
+
 			/**
 			 * 上拉加载具体业务实现
 			 */
@@ -117,31 +116,50 @@
 				setTimeout(function() {
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh(); //参数为true代表没有更多数据了。
 					var table = document.body.querySelector('.mui-table-view');
-					var add1 = addData1(); //返回一条底部数据
-					var add2 = addData2(); //返回一条底部数据
+					var add1 = addData1(); //返回一条数据数组[data, accessory]，[通知详情,附件列表]
+					var add2 = addData2(); //返回一条数据数组[data, accessory]，[通知详情,附件列表]
 
 					noticelist.addItem(table, add1[0], add1[1]);
 					noticelist.addItem(table, add2[0], add2[1]);
-
 				}, 1500);
 			}
 
 			mui.plusReady(function() {
 
+				setTimeout(function() {
+					plus.nativeUI.closeWaiting(); //让等待窗口消失
+				}, 1000);
+
+				var table = document.body.querySelector('.mui-table-view');
+				var add1 = addData1(); //返回一条数据数组[data, accessory]，[通知详情,附件列表]
+				var add2 = addData2(); //返回一条数据数组[data, accessory]，[通知详情,附件列表]
+
+				noticelist.addItem(table, add1[0], add1[1]);
+				noticelist.addItem(table, add2[0], add2[1]);
+
+				//打开通知详情页界面
 				mui(".mui-table-view").on('tap', '.mui-table-view-cell', function() {
-					//打开详情页界面
 					mui.openWindow({
 						url: 'noticedetails_main.html',
 						id: 'noticedetails_main.html',
 						styles: {
 							top: localStorage.getItem('$Statusbar') //设置距离顶部的距离
-						}
+						},
+						show: {
+							anishow: 'slide-in-right'
+						},
+						waiting: {
+							title: '正在加载...',
+							options: {
+								background: "#1277C7"
+							}
+						},
 					});
 				});
 			});
 
 			/**
-			 * 返回一条数据
+			 * 返回一条数据数组[data, accessory]，[通知详情,附件列表]
 			 */
 			function addData1() {
 				var unread = 1;
@@ -149,11 +167,14 @@
 				var content = '中秋节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~';
 				var staff = '公司全体';
 				var time = '2016-10-9 11:24';
+				//通知详情
+				//unread：是否显示未读（1-显示），title：标题，content：内容，staff：人员，time：时间
 				var data = [unread, title, content, staff, time];
 
 				var accessory1 = '中秋节放假安排时间通知表1';
 				var accessory2 = '中秋节放假安排时间通知表2';
 				var accessory3 = '中秋节放假安排时间通知表3';
+				//附件列表
 				var accessory = [];
 				accessory.push(accessory1);
 				accessory.push(accessory2);
@@ -163,7 +184,7 @@
 			}
 
 			/**
-			 * 返回一条数据
+			 * 返回一条数据数组[data, accessory]，[通知详情,附件列表]
 			 */
 			function addData2() {
 				var unread = 0;
@@ -171,8 +192,11 @@
 				var content = '端午节放假三天，有工作放假三天，无工作放假俩天，具体放假安排时间看附件，放假期间保持电话畅通，不要关机，注意安全，放假期间注意事项也请看附件吧，在这里我就不啰嗦了哈，哎呦喂，微笑pasty~~~';
 				var staff = '公司全体';
 				var time = '2016-10-9 11:24';
+				//通知详情
+				//unread：是否显示未读（1-显示），title：标题，content：内容，staff：人员，time：时间
 				var data = [unread, title, content, staff, time];
 
+				//附件列表
 				var accessory1 = '端午节放假安排时间通知表1';
 				var accessory2 = '端午节放假安排时间通知表2';
 				var accessory = [];

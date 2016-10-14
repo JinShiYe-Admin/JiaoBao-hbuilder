@@ -1,5 +1,5 @@
 <!--
-	作者：444811716@qq.com
+	作者：莫尚霖
 	时间：2016-09-27
 	描述：通知公告列表页
 -->
@@ -8,13 +8,14 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>通知公告列表</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="../../css/mui.min.css">
 		<link rel="stylesheet" href="../../css/utils/common.css" />
 		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/utils/events.js"></script>
 	</head>
 
 	<body>
@@ -41,7 +42,14 @@
 				}
 			}]
 		});
+
 		mui.plusReady(function() {
+			//显示等待窗口
+			plus.nativeUI.showWaiting("正在加载通知公告列表...", {
+				background: "#1277C7",
+			});
+
+			//双击顶部导航返回顶部
 			var contentWebview = null;
 			document.querySelector('header').addEventListener('doubletap', function() {
 				if(contentWebview == null) {
@@ -49,16 +57,26 @@
 				}
 				contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
 			});
+
+			//打开新建通知公告
 			document.getElementById('add').addEventListener('tap', function() {
-				//打开登录页面
 				mui.openWindow({
 					url: 'addnotice.html',
 					id: 'addnotice',
+					show: {
+						anishow: 'slide-in-right'
+					},
+					waiting: {
+						title: '正在加载...',
+						options: {
+							background: "#1277C7"
+						}
+					},
 					styles: {
 						top: localStorage.getItem('$Statusbar') //设置距离顶部的距离
 					}
 				});
-			})
+			});
 		});
 	</script>
 
